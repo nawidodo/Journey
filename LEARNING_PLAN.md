@@ -41,8 +41,8 @@ Symmetric/modes (padding oracle) → RSA/ECC + attacks → hashes/MACs/side-chan
 ## Track M — Detection engineering + DFIR
 Memory forensics → log analysis + threat hunting → Sigma/YARA as code → disk/artifact forensics → IR capstone (memory + disk + logs → root cause → detection rule). The blue-team counterweight to the offensive tracks.
 
-## Track N — Embedded USB device development (keystroke-injection hardware)
-USB device firmware + HID injection (TinyUSB on RP2040) → own DuckyScript engine → ESP32 WiFi C2 (softAP, web UI, exfil) → stealth/detection + USB-C hardware path → capstone: O.MG-cable clone; stretch: KiCad inline PCB. Builds the device Track F attacks.
+## Track N — Embedded USB device development (attack-USB hardware)
+USB device firmware + HID injection (TinyUSB on RP2040) → own DuckyScript engine → ESP32 WiFi C2 (softAP, web UI, exfil) → stealth/detection + USB-C hardware path → network-adapter pivot (WiFi client→AP bridge, LAN-Turtle mode) → advanced firmware (composite USB, exfil queue, OTA, self-destruct) → capstone: plugandpwn/O.MG-class device; stretch: KiCad inline PCB. Builds the device Track F attacks.
 
 ---
 
@@ -244,13 +244,15 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 
 ---
 
-## Phase 22 · Embedded USB device development — Track N (W28–34, parallel, low priority)
+## Phase 22 · Embedded USB device development — Track N (W28–36, parallel, low priority)
 - W28–29: USB device firmware + HID — Raspberry Pi Pico + TinyUSB; enumeration, HID keyboard descriptor, keystroke injection (pico-ducky-class); first time you're the *device*, not the host
 - W30: DuckyScript engine — own parser → compiler → HID reports; layouts (US/ISO/JIS); corpus of public payloads runs on your engine
 - W31–32: ESP32 port — WiFi softAP + HTTP web UI + payload store (LittleFS) + exfil; over-the-air control, no physical access (O.MG feature set)
 - W33: stealth + hardware — how keystroke injection is detected (HID cadence, VID/PID, Sysmon), write the detections for your own device; USB-C CC/power, inline-board path, KiCad stretch
-- W34: capstone — full chain on one device (plug → auto-run → exfil → UI) + defender round-trip + writeup
-- **Exit:** **M23** — O.MG-class device works end-to-end; stretch: fabricated inline PCB
+- W34: network-adapter pivot — WiFi client joins victim network + attacker AP with NAT bridging (LAN-Turtle mode); exfil over victim network; pivot + HID in one plug-in
+- W35: advanced firmware — composite USB (HID + CDC + vendor), exfil queue w/ retry, multi-payload + encrypted config, signed OTA, self-destruct/panic (plugandpwn feature set)
+- W36: capstone — full chain on one device (plug → auto-run → exfil over AP *and* victim net → pivot → UI) + defender round-trip + writeup
+- **Exit:** **M23** — plugandpwn/O.MG-class device works end-to-end; stretch: fabricated inline PCB
 
 ---
 
@@ -285,7 +287,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 | 28–41 | — | Driver dev all OS (Track G) |
 | 29–30 | — | Windows userland expl (Track D pre) |
 | 30–36 | — | Detection/DFIR (Track M) |
-| 28–34 | — | Embedded USB device dev (Track N) |
+| 28–36 | — | Embedded USB device dev (Track N) |
 | 30–44 | — | Windows kernel (Track D) |
 | 34–39 | Sandbox escapes (parallel) | — |
 | 35–46 | iOS exploits / jailbreak / Dopamine | — |
@@ -321,7 +323,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - [ ] M20: own from-scratch hook engine on ≥5 platforms (W32, Track K)
 - [ ] M21: weak crypto scheme broken end-to-end (W20, Track L)
 - [ ] M22: memory+disk+logs → root cause → detection rule (W36, Track M)
-- [ ] M23: O.MG-clone cable works end-to-end (W34, Track N)
+- [ ] M23: plugandpwn/O.MG-class attack-USB device works end-to-end (W36, Track N)
 
 ## Resources master list
 - Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)

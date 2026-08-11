@@ -1,6 +1,6 @@
 # 22-04 · Stealth, Detection, and the Hardware Path
 
-**Week:** W33 · **Track:** N · **Prev:** [`../03-esp32-wifi-c2`](../03-esp32-wifi-c2/README.md) · **Next:** [`../05-capstone-omg-clone`](../05-capstone-omg-clone/README.md)
+**Week:** W33 · **Track:** N · **Prev:** [`../03-esp32-wifi-c2`](../03-esp32-wifi-c2/README.md) · **Next:** [`../05-network-adapter-pivot`](../05-network-adapter-pivot/README.md)
 
 ## Objective
 Two halves: (1) think like the defender your device just attacked — how is keystroke injection caught, and what does evasion mean *physically*; (2) the real-hardware path from dev board to inline cable board.
