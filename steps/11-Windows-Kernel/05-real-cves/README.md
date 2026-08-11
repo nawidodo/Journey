@@ -1,6 +1,6 @@
-# 11-04 · Real Windows Kernel CVEs
+# 11-05 · Real Windows Kernel CVEs
 
-**Week:** W36–40 · **Track:** D · **Prev:** [`../03-pool-overflow-token-stealing`](../03-pool-overflow-token-stealing/README.md) · **Next:** [`../05-mitigations-rop-ret2dir`](../05-mitigations-rop-ret2dir/README.md)
+**Week:** W36–40 · **Track:** D · **Prev:** [`../04-pool-overflow-token-stealing`](../04-pool-overflow-token-stealing/README.md) · **Next:** [`../06-mitigations-rop-ret2dir`](../06-mitigations-rop-ret2dir/README.md)
 
 ## Objective
 Take the HEVD skill to shipped bugs, same re-derive rule as Linux Phase 5.

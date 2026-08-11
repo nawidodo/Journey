@@ -1,6 +1,6 @@
-# 11-02 · Driver Reverse Engineering + HEVD
+# 11-03 · Driver Reverse Engineering + HEVD
 
-**Week:** W31–33 · **Track:** D · **Prev:** [`../01-windows-internals-debugger`](../01-windows-internals-debugger/README.md) · **Next:** [`../03-pool-overflow-token-stealing`](../03-pool-overflow-token-stealing/README.md)
+**Week:** W31–33 · **Track:** D · **Prev:** [`../02-windows-internals-debugger`](../02-windows-internals-debugger/README.md) · **Next:** [`../04-pool-overflow-token-stealing`](../04-pool-overflow-token-stealing/README.md)
 
 ## Objective
 Your lab target: HackSys Extreme Vulnerable Driver (HEVD) — the Windows "pwn.college". Reverse it, find each bug, understand the IOCTL dispatch.

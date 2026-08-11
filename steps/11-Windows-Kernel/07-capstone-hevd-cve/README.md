@@ -1,6 +1,6 @@
-# 11-06 · Capstone: HEVD → Real CVE 🚩 M12
+# 11-07 · Capstone: HEVD → Real CVE 🚩 M12
 
-**Week:** W43–44 · **Track:** D · **Prev:** [`../05-mitigations-rop-ret2dir`](../05-mitigations-rop-ret2dir/README.md)
+**Week:** W43–44 · **Track:** D · **Prev:** [`../06-mitigations-rop-ret2dir`](../06-mitigations-rop-ret2dir/README.md)
 
 ## Objective
 Prove the full loop: bug discovery → exploit → mitigation-aware variant.

@@ -19,7 +19,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 |---|---|---|---|
 | `00-Foundations` | C, memory model, tooling, Swift | 1–3 | A (+B Swift) |
 | `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
-| `02-TrackB-Emulator` | CHIP-8 → NES → Metal → iOS app | 6–18 | B |
+| `02-Emulator` | CHIP-8 → NES → Metal → iOS app | 6–18 | B |
 | `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms | 10–14 | A |
 | `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security | 14–20 | A |
 | `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology (11 steps) | 20–30 | A |
@@ -44,8 +44,8 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 ## Checkpoint tracker (from LEARNING_PLAN.md)
 - [ ] **M1** trace xv6 syscall → `01-xv6-riscv/03-lab-syscall`
 - [ ] **M2** xv6 answers ping → `01-xv6-riscv/09-lab-net-e1000`
-- [ ] **M3** NES via Metal on macOS → `02-TrackB-Emulator/07-metal-mtkview-renderer`
-- [ ] **M4** NES on iPhone → `02-TrackB-Emulator/08-ios-app-on-device`
+- [ ] **M3** NES via Metal on macOS → `02-Emulator/07-metal-mtkview-renderer`
+- [ ] **M4** NES on iPhone → `02-Emulator/08-ios-app-on-device`
 - [ ] **M5** KTRR/PPL/PAC matrix → `04-Real-Kernels-Linux-XNU/07-apple-security-guide-ktrr-ppl-pac-aprr-ssv`
 - [ ] **M6** pwn.college solo → `03-Exploitation-Fundamentals/05-pwn-college-labs`
 - [ ] **M7** Vermin re-derived → `05-Linux-Kernel-Exploitation/06-vermin-cve-2021-22555`

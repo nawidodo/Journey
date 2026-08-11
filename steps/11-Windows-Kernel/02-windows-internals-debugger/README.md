@@ -1,6 +1,6 @@
-# 11-01 · Windows Internals + Debugger
+# 11-02 · Windows Internals + Debugger
 
-**Week:** W30–31 · **Track:** D · **Prev:** — · **Next:** [`../02-driver-re-hemd`](../02-driver-re-hemd/README.md)
+**Week:** W30–31 · **Track:** D · **Prev:** — · **Next:** [`../03-driver-re-hemd`](../03-driver-re-hemd/README.md)
 
 ## Objective
 Third kernel, new rules: Windows has no `commit_creds`, has IRQLs, SSDT, KPCR, and pool internals that differ from Linux/XNU.

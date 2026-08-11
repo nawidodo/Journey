@@ -1,6 +1,6 @@
-# 11-05 · Modern Mitigations: ROP, ret2dir, Data-only
+# 11-06 · Modern Mitigations: ROP, ret2dir, Data-only
 
-**Week:** W40–43 · **Track:** D · **Prev:** [`../04-real-cves`](../04-real-cves/README.md) · **Next:** [`../06-capstone-hevd-cve`](../06-capstone-hevd-cve/README.md)
+**Week:** W40–43 · **Track:** D · **Prev:** [`../05-real-cves`](../05-real-cves/README.md) · **Next:** [`../07-capstone-hevd-cve`](../07-capstone-hevd-cve/README.md)
 
 ## Objective
 Windows 10/11 hardening: KVA shadow, CET (shadow stack + IBT), HVCI (VBS), WDAC. How modern exploits still work.

@@ -1,6 +1,6 @@
-# 11-03 · Pool Overflow → Token Stealing
+# 11-04 · Pool Overflow → Token Stealing
 
-**Week:** W33–36 · **Track:** D · **Prev:** [`../02-driver-re-hemd`](../02-driver-re-hemd/README.md) · **Next:** [`../04-real-cves`](../04-real-cves/README.md)
+**Week:** W33–36 · **Track:** D · **Prev:** [`../03-driver-re-hemd`](../03-driver-re-hemd/README.md) · **Next:** [`../05-real-cves`](../05-real-cves/README.md)
 
 ## Objective
 The Windows replacement for `commit_creds`: token stealing. Exploit HEVD pool overflow end-to-end.

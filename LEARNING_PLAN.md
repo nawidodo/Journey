@@ -141,7 +141,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - **Exit:** **M11** — chosen capstone at target (N-body FPS or 3-way renderer)
 
 ## Phase 11 · Windows kernel exploitation — Track D (W29–44, parallel)
-- W29–30: **Windows userland exploitation first** (the missing discipline — Phase 3 was Linux, Track D is kernel): SEH overwrite, egg hunters, Windows ROP, CFG/ACG/CET — on OSED-style binaries in the VM. See `11-00-userland-exploit-dev`.
+- W29–30: **Windows userland exploitation first** (the missing discipline — Phase 3 was Linux, Track D is kernel): SEH overwrite, egg hunters, Windows ROP, CFG/ACG/CET — on OSED-style binaries in the VM. See `11-01-userland-exploit-dev`.
 - W30–31: Windows internals + WinDbg (IRQL, pool, `_EPROCESS`/token); userland privesc ladder — 20 techniques, non-admin → SYSTEM [Sektor7 Privesc course]
 - W31–33: HEVD RE (Ghidra/IDA; IOCTL dispatch; find all bug classes)
 - W33–36: pool overflow → token stealing; SMEP/SMAP
