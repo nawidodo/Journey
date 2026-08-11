@@ -1,0 +1,73 @@
+# Journey — Step Scaffold
+
+Step-by-step folders for the **Systems Security Engineer** roadmap in [`../LEARNING_PLAN.md`](../LEARNING_PLAN.md).
+One folder per learnable step. Each step's `README.md` holds its objective, tasks, resources, and exit criteria — tick boxes as you go and mirror progress in the tracker below.
+
+Every step has three subfolders:
+- `notes/` — writeups, book notes, diagrams
+- `code/` — source you write
+- `labs/` — lab work, POCs, exploit artifacts
+
+## Structure
+| Phase | Contents | Weeks | Track |
+|---|---|---|---|
+| `00-Foundations` | C, memory model, tooling, Swift | 1–3 | A (+B Swift) |
+| `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
+| `02-TrackB-Emulator` | CHIP-8 → NES → Metal → iOS app | 6–18 | B |
+| `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations | 10–14 | A |
+| `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security | 14–20 | A |
+| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice (10 steps) | 20–30 | A |
+| `06-Sandbox-Escape` | seccomp → container escapes → Seatbelt → VM escapes | 34–39 | A |
+| `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
+| `08-Browser-Exploitation` | JS engines → d8 CVE | 47+ | A |
+| `09-Real-World-Chains` | ForcedEntry, Pegasus, Pwn2Own | capstone | A |
+| `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone | 12–28 | C |
+| `11-Windows-Kernel` | internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 30–44 | D |
+| `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) | 18–30 | E |
+| `13-USB-Security` | protocol/stack → Linux driver → attack surface → fuzzing/emulation → iOS/Windows links → capstone | 24–32 | F |
+| `14-Cross-OS-Driver-Dev` | Linux craft → MMIO/DMA/IRQ → Windows KMDF → macOS dext → cross-OS fuzzing → real USB device + userspace driver + app → capstone | 28–41 | G |
+| `15-Reverse-Engineering` | Ghidra → kernelcache → crackmes/Flare-On → patch-diff → crash triage | 16–20 | — |
+| `16-Android-Exploitation` | security model → app surface → binder/kernel → real CVEs → root → capstone | 34–44 | H |
+| `17-Android-Malware-Dev` | APK/dex/smali → implant → C2/evasion → fraud → detection → capstone | 40–48 | I |
+| `18-Rootkit-Bootkit` | principles → Linux LKM/eBPF → Windows rootkit → UEFI bootkit → macOS → mobile → capstone | 44–56 | J |
+| `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
+
+## Checkpoint tracker (from LEARNING_PLAN.md)
+- [ ] **M1** trace xv6 syscall → `01-xv6-riscv/03-lab-syscall`
+- [ ] **M2** xv6 answers ping → `01-xv6-riscv/09-lab-net-e1000`
+- [ ] **M3** NES via Metal on macOS → `02-TrackB-Emulator/07-metal-mtkview-renderer`
+- [ ] **M4** NES on iPhone → `02-TrackB-Emulator/08-ios-app-on-device`
+- [ ] **M5** KTRR/PPL/PAC matrix → `04-Real-Kernels-Linux-XNU/07-apple-security-guide-ktrr-ppl-pac-aprr-ssv`
+- [ ] **M6** pwn.college solo → `03-Exploitation-Fundamentals/05-pwn-college-labs`
+- [ ] **M7** Vermin re-derived → `05-Linux-Kernel-Exploitation/06-vermin-cve-2021-22555`
+- [ ] **S1** container escape re-derived → `06-Sandbox-Escape/03-container-escape-runc-cves`
+- [ ] **S2** VM escape re-derived → `06-Sandbox-Escape/07-device-emulation-escapes`
+- [ ] **M8** KFD re-derived → `07-XNU-iOS-Exploitation/05-kfd-pattern-f`
+- [ ] **M9** Dopamine explained → `07-XNU-iOS-Exploitation/08-dopamine-source-libjailbreak-launchdhook-systemhook-choma`
+- [ ] **M10** d8 CVE exploited → `08-Browser-Exploitation/03-sandboxed-d8-cve`
+- [ ] **M11** chosen capstone at target → `10-GPU-Compute/12-capstone-renderer-nbody`
+- [ ] **M12** 2 HEVD classes + 1 real CVE → `11-Windows-Kernel/06-capstone-hevd-cve`
+- [ ] **M13** implant survives own Sigma rules → `12-Malware-Dev/06-capstone-implant`
+- [ ] **M14** USB attack + own detection rules → `13-USB-Security/06-capstone-usb-attack`
+- [ ] **M15** driver on Linux+Windows+macOS → `14-Cross-OS-Driver-Dev/07-capstone-cross-os-driver`
+- [ ] **M16** crash → root cause chain → `15-Reverse-Engineering/05-capstone-crash-triage`
+- [ ] **M17** Android root from exploit chain → `16-Android-Exploitation/06-capstone-android-root-chain`
+- [ ] **M18** Android implant survives own detections → `17-Android-Malware-Dev/06-capstone-android-implant`
+- [ ] **M19** rootkit/bootkit chain + own detections → `18-Rootkit-Bootkit/07-capstone-rootkit-bootkit`
+- [ ] **M20** own from-scratch hook engine on ≥5 platforms → `19-Runtime-Hooking/07-capstone-cross-platform-hooking`
+
+## Path
+Track A sequential: `00` → `01` → `03` → `04` → `05` → `06` → `07` → `08` → `09`
+Track B parallel (start after W6, alongside xv6): `02`
+Track C parallel (start W12, alongside Track B Metal app): `10`
+Track D parallel (start W30, alongside Phase 5 tail): `11`
+Track E parallel (start W18, alongside Phase 3/4; advanced step feeds Track D): `12`
+Track F parallel (start W24, alongside Phase 5/6): `13`
+Track G parallel (start W28, alongside Phase 5/6): `14`
+Reverse engineering parallel (start W16, alongside Phase 4 tail; feeds Track D/F/Phase 7): `15`
+Track H parallel (start W34, alongside Phase 7/Track D): `16`
+Track I parallel (start W40, Android malware; Track E concepts transfer): `17`
+Track J parallel (start W44, capstone of the offensive tracks; reuses D/G/H/Phase 7): `18`
+Track K parallel (start W20, feeds Track E evasion + Track J kernel hooks): `19`
+
+Start: [`00-Foundations/01-c-knr-ch1-6`](00-Foundations/01-c-knr-ch1-6/README.md)
