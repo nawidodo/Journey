@@ -1,6 +1,6 @@
 # MASTER ROADMAP — Systems Security Engineer
 
-Thirteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR).
+Thirteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F).
 
 ## Track A — security core
 Foundations → xv6-riscv → exploit basics → Linux → Linux kernel exploits → sandbox escapes → XNU → iOS exploits/jailbreak → browser → chains
@@ -40,6 +40,9 @@ Symmetric/modes (padding oracle) → RSA/ECC + attacks → hashes/MACs/side-chan
 
 ## Track M — Detection engineering + DFIR
 Memory forensics → log analysis + threat hunting → Sigma/YARA as code → disk/artifact forensics → IR capstone (memory + disk + logs → root cause → detection rule). The blue-team counterweight to the offensive tracks.
+
+## Track N — Embedded USB device development (keystroke-injection hardware)
+USB device firmware + HID injection (TinyUSB on RP2040) → own DuckyScript engine → ESP32 WiFi C2 (softAP, web UI, exfil) → stealth/detection + USB-C hardware path → capstone: O.MG-cable clone; stretch: KiCad inline PCB. Builds the device Track F attacks.
 
 ---
 
@@ -241,10 +244,20 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 
 ---
 
+## Phase 22 · Embedded USB device development — Track N (W28–34, parallel, low priority)
+- W28–29: USB device firmware + HID — Raspberry Pi Pico + TinyUSB; enumeration, HID keyboard descriptor, keystroke injection (pico-ducky-class); first time you're the *device*, not the host
+- W30: DuckyScript engine — own parser → compiler → HID reports; layouts (US/ISO/JIS); corpus of public payloads runs on your engine
+- W31–32: ESP32 port — WiFi softAP + HTTP web UI + payload store (LittleFS) + exfil; over-the-air control, no physical access (O.MG feature set)
+- W33: stealth + hardware — how keystroke injection is detected (HID cadence, VID/PID, Sysmon), write the detections for your own device; USB-C CC/power, inline-board path, KiCad stretch
+- W34: capstone — full chain on one device (plug → auto-run → exfil → UI) + defender round-trip + writeup
+- **Exit:** **M23** — O.MG-class device works end-to-end; stretch: fabricated inline PCB
+
+---
+
 ## Load control & priorities (W20+ crowded middle)
 - **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B.** Pick one mobile platform primary; the other goes secondary (re-run later).
 - **>2 concurrent tracks in a week → defer, don't grind.** Track J (W44–56) is the exception — most prior tracks are done; treat it as the graduation project.
-- First cuts if behind: Track I (Android malware — Track E concepts transfer) and Track B stretch (APU, extra mappers). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half can slip.
+- First cuts if behind: Track I (Android malware — Track E concepts transfer), Track B stretch (APU, extra mappers), and Track N (embedded USB — needs cheap hardware, no deadline pressure). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half can slip.
 - W34–46 is the worst squeeze (iOS Phase 7 + Track D + Track H + sandbox + DFIR capstone): stagger capstones, lean on the defer rule.
 
 ---
@@ -272,6 +285,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 | 28–41 | — | Driver dev all OS (Track G) |
 | 29–30 | — | Windows userland expl (Track D pre) |
 | 30–36 | — | Detection/DFIR (Track M) |
+| 28–34 | — | Embedded USB device dev (Track N) |
 | 30–44 | — | Windows kernel (Track D) |
 | 34–39 | Sandbox escapes (parallel) | — |
 | 35–46 | iOS exploits / jailbreak / Dopamine | — |
@@ -307,6 +321,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - [ ] M20: own from-scratch hook engine on ≥5 platforms (W32, Track K)
 - [ ] M21: weak crypto scheme broken end-to-end (W20, Track L)
 - [ ] M22: memory+disk+logs → root cause → detection rule (W36, Track M)
+- [ ] M23: O.MG-clone cable works end-to-end (W34, Track N)
 
 ## Resources master list
 - Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)

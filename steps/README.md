@@ -39,6 +39,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
 | `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone | 14–20 | L |
 | `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone | 30–36 | M |
+| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → O.MG-clone capstone | 28–34 | N |
 
 ## Checkpoint tracker (from LEARNING_PLAN.md)
 - [ ] **M1** trace xv6 syscall → `01-xv6-riscv/03-lab-syscall`
@@ -65,6 +66,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 - [ ] **M20** own from-scratch hook engine on ≥5 platforms → `19-Runtime-Hooking/07-capstone-cross-platform-hooking`
 - [ ] **M21** weak crypto scheme broken end-to-end → `20-Cryptography/06-capstone-crypto-weak-scheme`
 - [ ] **M22** memory+disk+logs → root cause → detection rule → `21-Detection-DFIR/05-capstone-ir-scenario`
+- [ ] **M23** O.MG-class cable works end-to-end → `22-Embedded-USB/05-capstone-omg-clone`
 
 ## Path
 Track A sequential: `00` → `01` → `03` → `04` → `05` → `06` → `07` → `08` → `09`
@@ -81,5 +83,6 @@ Track J parallel (start W44, capstone of the offensive tracks; reuses D/G/H/Phas
 Track K parallel (start W20, feeds Track E evasion + Track J kernel hooks): `19`
 Track L parallel (start W14, alongside Phase 4 kernel reading): `20`
 Track M parallel (start W30, the defensive counterweight to Track D/F): `21`
+Track N parallel (start W28, low-priority, after Track F protocol basics; builds the device Track F attacks): `22`
 
 Start: [`00-Foundations/01-c-knr-ch1-6`](00-Foundations/01-c-knr-ch1-6/README.md)
