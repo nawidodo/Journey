@@ -17,3 +17,7 @@ What a macOS rootkit looks like in the DriverKit era — and the Secure Enclave 
 
 ## Exit Criteria
 - [ ] macOS rootkit (Intel VM) + ESF detection notes — `labs/` + `notes/`
+
+## Links
+- [Apple kext docs (archive)](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KEXTConcept/)
+- [DriverKit docs](https://developer.apple.com/documentation/driverkit)

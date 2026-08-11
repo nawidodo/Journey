@@ -20,3 +20,8 @@ Shaders are kernels with a fixed I/O contract. Write the same effect in all thre
 ## Exit Criteria
 - [ ] Same effect in MSL + GLSL + HLSL — `code/`
 - [ ] Perf notes: what moves occupancy in each — `notes/`
+
+## Links
+- [MSL spec PDF](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf)
+- [docs.gl (GLSL lookup)](https://docs.gl/)
+- [HLSL docs](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl)

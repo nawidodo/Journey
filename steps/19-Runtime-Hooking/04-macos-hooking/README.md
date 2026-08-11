@@ -17,3 +17,7 @@ Mach-O-specific interception — dyld interpose, fishhook, ObjC swizzle. Host-sa
 
 ## Exit Criteria
 - [ ] fishhook + swizzle demos — `code/`
+
+## Links
+- [fishhook (Facebook)](https://github.com/facebook/fishhook)
+- [dyld interpose docs](https://opensource.apple.com/source/dyld/) — search 'interpose'

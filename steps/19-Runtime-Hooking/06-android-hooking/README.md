@@ -17,3 +17,7 @@ The Android hooking stack — ART/dex + native. Rootable AVD only.
 
 ## Exit Criteria
 - [ ] Own native hooks + tool-based Java hooks on AVD — `code/` + `labs/`
+
+## Links
+- [LSPosed](https://github.com/LSPosed/LSPosed)
+- [bhook (ByteDance)](https://github.com/bytedance/bhook)

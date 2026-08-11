@@ -21,3 +21,7 @@ Upgrade from "wrote a few rules against my own implant" to building a real detec
 ## Exit Criteria
 - [ ] 5 Sigma + 3 YARA rules, linted and converted — `labs/`
 - [ ] Detection-tuning notes (precision vs recall) — `notes/`
+
+## Links
+- [Sigma spec](https://github.com/SigmaHQ/sigma-specification)
+- [YARA (VirusTotal)](https://github.com/VirusTotal/yara)

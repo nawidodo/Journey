@@ -21,3 +21,7 @@ Know block ciphers and modes cold — and the classic attacks on how they're use
 ## Exit Criteria
 - [ ] Padding-oracle decrypts a target ciphertext without the key — `labs/`
 - [ ] Mode-selection notes (when GCM, when CTR+CBC) — `notes/`
+
+## Links
+- [CryptoPals (sets 1-2)](https://cryptopals.com/)
+- [Padding-oracle attack writeup](https://robertheaton.com/2013/07/29/padding-oracle-attack/)

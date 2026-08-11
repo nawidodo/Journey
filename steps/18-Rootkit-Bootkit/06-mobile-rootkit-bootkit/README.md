@@ -17,3 +17,7 @@ The mobile variants — persistence in boot images and kernel modules, jailbreak
 
 ## Exit Criteria
 - [ ] One mobile platform rootkit + bootkit demo — `labs/`
+
+## Links
+- [LSPosed (Android framework hooking)](https://github.com/LSPosed/LSPosed)
+- [Dopamine jailbreak source](https://github.com/opa334/Dopamine)

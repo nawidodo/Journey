@@ -18,3 +18,7 @@ Threads, scheduling, and locking — foundation for `cred`/race reasoning later.
 ## Exit Criteria
 - [ ] `make grade` thread tests pass
 - [ ] Explain a context switch in `notes/`
+
+## Links
+- [6.S081 thread lab](https://pdos.csail.mit.edu/6.S081/2023/labs/thread.html)
+- [xv6 book ch.7 (scheduling)](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf)

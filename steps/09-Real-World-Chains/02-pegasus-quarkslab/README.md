@@ -17,3 +17,7 @@ Deep-dive the Pegasus spyware chain via Quarkslab's technical analysis.
 
 ## Exit Criteria
 - [ ] Pegasus chain documented end-to-end — `notes/`
+
+## Links
+- [Amnesty Tech investigations (MVT)](https://github.com/AmnestyTech/investigations)
+- [Citizen Lab Pegasus report](https://citizenlab.ca/2016/08/million-dollar-dissident-iphone-zero-day/)

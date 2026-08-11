@@ -19,3 +19,7 @@ Your first compute kernels: Metal Shading Language (MSL), buffers, command queue
 ## Exit Criteria
 - [ ] Dot-product kernel returns correct result vs CPU reference — `code/`
 - [ ] Threadgroup-size sweep benchmark (speed vs size) in `notes/`
+
+## Links
+- [Metal compute tutorial (Apple)](https://developer.apple.com/documentation/metal/compute_passes/creating_a_thread_group_addressable_compute_kernel)
+- [Metal Shading Language spec](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf)

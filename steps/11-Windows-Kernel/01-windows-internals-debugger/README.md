@@ -21,3 +21,7 @@ Third kernel, new rules: Windows has no `commit_creds`, has IRQLs, SSDT, KPCR, a
 ## Exit Criteria
 - [ ] Debugger session: break, walk `_EPROCESS` list, find system token — `labs/`
 - [ ] Diagram: IRQL / dispatch / pool in `notes/`
+
+## Links
+- [WinDbg docs](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/)
+- [ired.team Windows kernel exploitation](https://www.ired.team/offensive-security/privilege-escalation/windows-kernel-exploitation)

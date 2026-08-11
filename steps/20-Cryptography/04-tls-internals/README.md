@@ -20,3 +20,7 @@ Read TLS 1.2/1.3 handshakes like a protocol — the transport layer every C2 cha
 ## Exit Criteria
 - [ ] Handshake decoded message-by-message from a live capture — `labs/`
 - [ ] "TLS attack history" one-pager — `notes/`
+
+## Links
+- [RFC 8446 (TLS 1.3)](https://www.rfc-editor.org/rfc/rfc8446)
+- [Cloudflare TLS 1.3 explainer](https://blog.cloudflare.com/tls-1-3-overview-and-q-and-a/)

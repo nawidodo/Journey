@@ -19,3 +19,7 @@ Write the Windows-side driver — device objects, IRPs, IOCTL dispatch — the w
 ## Exit Criteria
 - [ ] KMDF driver + client demo — `code/`
 - [ ] "IRP → IOCTL" flow notes — `notes/`
+
+## Links
+- [WDK/KMDF docs](https://learn.microsoft.com/en-us/windows-hardware/drivers/)
+- [Windows driver samples](https://github.com/microsoft/Windows-driver-samples)

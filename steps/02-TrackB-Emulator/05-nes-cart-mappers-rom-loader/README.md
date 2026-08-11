@@ -19,3 +19,7 @@ Load real ROMs: iNES header, PRG/CHR banking, mapper logic.
 
 ## Exit Criteria
 - [ ] SMB1 and one MMC1 game playable end-to-end — `labs/`
+
+## Links
+- [Nesdev mapper wiki](https://www.nesdev.org/wiki/Mapper)
+- [iNES format wiki](https://www.nesdev.org/wiki/INES)

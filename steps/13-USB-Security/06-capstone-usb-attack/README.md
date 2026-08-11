@@ -19,3 +19,7 @@ Ship one USB attack end-to-end with its own detection rules — offensive and de
 ## Exit Criteria
 - [ ] **M14:** USB attack + own detection rules, full chain in lab — `labs/`
 - [ ] Defense-oriented writeup — `notes/`
+
+## Links
+- [GreatFET docs](https://greatscottgadgets.com/greatfet/)
+- [Facedancer framework](https://github.com/greatscottgadgets/facewhisperer)

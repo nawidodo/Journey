@@ -16,3 +16,7 @@ Study recent Pwn2Own Mobile entries; identify the winning techniques and where y
 
 ## Exit Criteria
 - [ ] Gap analysis + 2 chain writeups — `notes/`
+
+## Links
+- [ZDI Pwn2Own events](https://www.zerodayinitiative.com/events/)
+- [P0 in-the-wild database](https://googleprojectzero.github.io/0days-in-the-wild/)

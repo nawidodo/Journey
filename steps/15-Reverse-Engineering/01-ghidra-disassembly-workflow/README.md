@@ -18,3 +18,7 @@ Fast enough with a decompiler to triage real binaries — the prerequisite every
 ## Exit Criteria
 - [ ] Crackme writeups — `notes/`
 - [ ] A reusable Ghidra project — `code/`
+
+## Links
+- [Ghidra (NSA)](https://github.com/NationalSecurityAgency/ghidra)
+- [Ghidra cheat sheet](https://ghidra-sre.org/CheatSheet.html)

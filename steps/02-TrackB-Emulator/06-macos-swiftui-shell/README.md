@@ -19,3 +19,7 @@ Wrap the portable C NES core in a Swift + SwiftUI macOS app.
 
 ## Exit Criteria
 - [ ] App loads a ROM and logs frames — `code/`
+
+## Links
+- [SwiftUI docs](https://developer.apple.com/documentation/swiftui)
+- [SwiftUI by Example](https://www.hackingwithswift.com/quick-start/swiftui)

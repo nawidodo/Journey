@@ -18,3 +18,7 @@ Audio Processing Unit: pulse, triangle, noise, DMC channels.
 
 ## Exit Criteria
 - [ ] Audio output (test ROMs with tone/SFX) — `labs/`
+
+## Links
+- [Nesdev APU wiki](https://www.nesdev.org/wiki/APU)
+- [Nesdev APU mixer](https://www.nesdev.org/wiki/APU_Mixer)

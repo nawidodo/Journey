@@ -20,3 +20,7 @@ Read a compromised machine's RAM like a file system — the reverse of everythin
 ## Exit Criteria
 - [ ] One incident image fully triaged (rogue process → injected code → C2 → persistence) — `labs/`
 - [ ] Notes: plugin→artifact map — `notes/`
+
+## Links
+- [Volatility 3](https://github.com/volatilityfoundation/volatility3)
+- [The Art of Memory Forensics (No Starch)](https://nostarch.com/artmemoryforensics)

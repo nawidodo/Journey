@@ -19,3 +19,7 @@ Your USB knowledge pays off — the bootrom over USB (checkm8), and the Windows 
 ## Exit Criteria
 - [ ] 1-page checkm8 root cause (USB → bootrom bug) — `notes/`
 - [ ] 1 Windows USB bug class mapped to your Track D plan — `notes/`
+
+## Links
+- [USBPcap](https://github.com/desowin/usbpcap)
+- [Windows USB driver docs](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/)

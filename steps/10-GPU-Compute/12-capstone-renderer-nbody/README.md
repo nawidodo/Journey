@@ -21,3 +21,7 @@ Everything together. Pick the path you enjoyed:
 ## Exit Criteria
 - [ ] **M11:** chosen capstone hits target (N-body FPS or 3-way renderer) — `labs/`
 - [ ] Writeup — `notes/`
+
+## Links
+- [GPU Gems 3 ch.31 (N-body)](https://developer.nvidia.com/gpugems/gpugems3/gpugems3_ch31.html)
+- [Apple Metal sample code](https://developer.apple.com/metal/sample-code/)

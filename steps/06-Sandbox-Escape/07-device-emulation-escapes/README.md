@@ -24,3 +24,7 @@ Exploit bugs in emulated hardware — the classic VM-escape class. **New checkpo
 
 ## Exit Criteria
 - [ ] **S2: one device-emulation escape re-derived from scratch** — `labs/`
+
+## Links
+- [P0: QEMU fuzzing deep dive](https://googleprojectzero.blogspot.com/2020/09/a-deep-dive-into-qemu-fuzzing-with.html)
+- [QEMU source (hw/)](https://github.com/qemu/qemu/tree/master/hw)

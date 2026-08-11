@@ -19,3 +19,7 @@ First emulator: CPU, instruction set, timers, input — pure portable C, CLI ren
 
 ## Exit Criteria
 - [ ] PONG-style ROM runs at 60 Hz in the CLI — `code/`
+
+## Links
+- [Write a CHIP-8 emulator guide](https://tobiasvl.github.io/blog/write-a-chip-8-emulator/)
+- [CHIP-8 test suite](https://github.com/Timendus/chip8-test-suite)

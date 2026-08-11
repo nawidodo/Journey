@@ -18,3 +18,7 @@ ARM64 assembly — RISC-V knowledge transfers; needed for all iOS work.
 
 ## Exit Criteria
 - [ ] Hand-disassemble + explain a 20-instruction ARM64 function — `labs/`
+
+## Links
+- [Azeria Labs ARM64 series](https://azeria-labs.com/arm64-assembly-part-1/)
+- [Armv8-A reference manual](https://developer.arm.com/documentation/ddi0487/latest)

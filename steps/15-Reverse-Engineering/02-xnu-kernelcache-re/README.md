@@ -18,3 +18,7 @@ Apple's release kernels are stripped and encrypted at rest — the skill that ma
 
 ## Exit Criteria
 - [ ] One function fully reconstructed from a stripped kernelcache — `notes/`
+
+## Links
+- [jtool (newosxbook)](http://newosxbook.com/tools/jtool.html)
+- [kcache_id](https://github.com/blacktop/kcache_id)

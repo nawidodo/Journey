@@ -20,3 +20,7 @@ Enumerate a real USB device end-to-end from wire capture — the substrate every
 ## Exit Criteria
 - [ ] Annotated enumeration capture — `labs/`
 - [ ] 1-page "USB model from SYNC to URB" — `notes/`
+
+## Links
+- [USB in a Nutshell](https://www.beyondlogic.org/usbnutshell/usb1.shtml)
+- [USB spec (usb.org)](https://www.usb.org/documents)

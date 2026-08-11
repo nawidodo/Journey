@@ -20,3 +20,7 @@ A single driver idea shipped on Linux, Windows, and macOS — plus a deliberate 
 ## Exit Criteria
 - [ ] **M15:** working driver trio + shared client — `code/`
 - [ ] Comparison + bug-report writeup — `notes/`
+
+## Links
+- [Windows driver samples](https://github.com/microsoft/Windows-driver-samples)
+- [DriverKit docs](https://developer.apple.com/documentation/driverkit)

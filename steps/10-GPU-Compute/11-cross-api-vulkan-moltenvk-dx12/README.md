@@ -20,3 +20,8 @@ One renderer, three APIs. Vulkan is the cross-platform one (Android/Linux/Window
 ## Exit Criteria
 - [ ] Same scene in Metal + Vulkan; DX12 stretch on the Windows VM — `code/`
 - [ ] 3-API comparison — `notes/`
+
+## Links
+- [Vulkan spec + tutorial](https://vulkan-tutorial.com/)
+- [MoltenVK](https://github.com/KhronosGroup/MoltenVK)
+- [Direct3D 12 docs](https://learn.microsoft.com/en-us/windows/win32/direct3d12/)

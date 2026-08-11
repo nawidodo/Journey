@@ -18,3 +18,7 @@ The one skill, five platform mechanisms. When hooking is a feature (EDR, devtool
 
 ## Exit Criteria
 - [ ] One-page "hook taxonomy per OS" map — `notes/`
+
+## Links
+- [Frida docs](https://frida.re/docs/hooking/)
+- [LiveOverflow: hooking overview](https://www.youtube.com/watch?v=Q5qY8V3cB_o)

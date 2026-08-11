@@ -22,3 +22,7 @@ Apple's sandbox: seatbelt profiles, MACF enforcement, entitlements — the bound
 ## Exit Criteria
 - [ ] Explain profile → operation → verdict pipeline from memory — `notes/`
 - [ ] Working `sandbox-exec` demo — `labs/`
+
+## Links
+- [App Sandbox design guide (archive)](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/)
+- [P0 sandbox posts](https://googleprojectzero.blogspot.com/)

@@ -19,3 +19,7 @@ Write the driver layer that touches hardware — the part no userspace can reach
 ## Exit Criteria
 - [ ] Platform driver with working DMA path — `code/`
 - [ ] "MMIO → DMA → IRQ" flow diagram — `notes/`
+
+## Links
+- [Linux DMA-API docs](https://docs.kernel.org/core-api/dma-api.html)
+- [Linux IRQ docs](https://docs.kernel.org/core-api/genericirq.html)

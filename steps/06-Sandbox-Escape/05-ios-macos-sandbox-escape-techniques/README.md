@@ -20,3 +20,7 @@ How Apple's sandbox actually falls: kernel bugs, TCC abuse, extension/container 
 
 ## Exit Criteria
 - [ ] One real iOS sandbox escape analyzed end-to-end — `notes/`
+
+## Links
+- [P0 in-the-wild 0day database](https://googleprojectzero.github.io/0days-in-the-wild/)
+- [Siguza blog](https://siguza.github.io/)

@@ -21,3 +21,7 @@ Build the guest↔host boundary yourself once — then the escape writeups in 06
 ## Exit Criteria
 - [ ] Guest prints from your VMM — `labs/`
 - [ ] "Boundary map" (vCPU exit → emulated device → host) — `notes/`
+
+## Links
+- [Apple Hypervisor framework](https://developer.apple.com/documentation/hypervisor)
+- [KVM kernel docs](https://docs.kernel.org/virt/kvm/)

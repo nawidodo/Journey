@@ -19,3 +19,7 @@ Texture memory (the GPU's other fast path) + sampling: filter modes, mipmaps, wh
 ## Exit Criteria
 - [ ] Texture-sampled quad with mipmaps + anisotropic — `code/`
 - [ ] Filter chain runs on GPU, before/after images in `notes/`
+
+## Links
+- [Metal textures docs](https://developer.apple.com/documentation/metal/textures)
+- [GPU Gems 2 (mipmaps/filtering)](https://developer.nvidia.com/gpugems/gpugems2/part-iii-high-quality-rendering)

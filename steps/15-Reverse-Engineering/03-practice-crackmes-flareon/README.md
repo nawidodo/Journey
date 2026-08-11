@@ -18,3 +18,7 @@ Reps. RE is a hands-on skill — volume beats theory here.
 ## Exit Criteria
 - [ ] 20+ target writeups — `notes/`
 - [ ] One disassembly-only solve — `notes/`
+
+## Links
+- [crackmes.one](https://crackmes.one/)
+- [Flare-On](https://flare-on.com/)

@@ -17,3 +17,7 @@ Trap handling and register-context surgery.
 ## Exit Criteria
 - [ ] `make grade` traps tests pass
 - [ ] Explain `userret`/`trampoline` flow in `notes/`
+
+## Links
+- [6.S081 traps lab](https://pdos.csail.mit.edu/6.S081/2023/labs/traps.html)
+- [xv6 book ch.4 (traps)](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf)

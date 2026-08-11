@@ -19,3 +19,7 @@ Your lab target: HackSys Extreme Vulnerable Driver (HEVD) — the Windows "pwn.c
 ## Exit Criteria
 - [ ] Find-and-confirm ≥3 HEVD bugs from source + disassembly — `labs/`
 - [ ] IOCTL + dispatch map drawn — `notes/`
+
+## Links
+- [HEVD (HackSysTeam)](https://github.com/hacksysteam/HackSysExtremeVulnerableDriver)
+- [HEVD solutions](https://github.com/hacksysteam/HEVD-Solutions)

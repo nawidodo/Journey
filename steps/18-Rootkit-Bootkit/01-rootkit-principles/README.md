@@ -18,3 +18,7 @@ What rootkits actually do and where they live — before writing one. The taxono
 
 ## Exit Criteria
 - [ ] Per-OS hook/hide/trust map — `notes/`
+
+## Links
+- [The Rootkit Arsenal (book site)](https://www.securityfocus.com/) — see plan Resources for the book
+- [MITRE ATT&CK (rootkit techniques)](https://attack.mitre.org/techniques/T1014/)

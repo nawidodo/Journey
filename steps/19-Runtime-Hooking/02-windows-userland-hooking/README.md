@@ -19,3 +19,7 @@ The malware-dev hooking layer — directly feeds Track E's AMSI/ETW bypasses.
 
 ## Exit Criteria
 - [ ] Own engine: IAT + detour demos + detection — `code/` + `labs/`
+
+## Links
+- [MinHook](https://github.com/TsudaKageyu/minhook)
+- [Detours (Microsoft)](https://github.com/microsoft/Detours)

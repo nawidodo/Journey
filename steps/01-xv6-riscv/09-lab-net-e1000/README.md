@@ -21,3 +21,7 @@ NIC driver: TX/RX descriptor rings, ARP, ICMP. **Your NIC-driver goal from the r
 ## Exit Criteria
 - [ ] **M2: xv6 answers `ping`**
 - [ ] Packet path diagram (mbuf → ring → wire) — `notes/`
+
+## Links
+- [6.S081 net lab](https://pdos.csail.mit.edu/6.S081/2023/labs/net.html)
+- [e1000 datasheet (Intel)](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/pci-pci-x-family-gbe-controllers-software-dev-manual.pdf)

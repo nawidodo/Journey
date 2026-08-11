@@ -17,3 +17,7 @@ Turn skills into original findings: fuzz XNU with syzkaller.
 
 ## Exit Criteria
 - [ ] Fuzzing loop running + ≥1 triaged crash (bug or benign panic)
+
+## Links
+- [syzkaller macOS docs](https://github.com/google/syzkaller/blob/master/docs/macos/README.md)
+- [XNU source](https://github.com/apple-oss-distributions/xnu)

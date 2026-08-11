@@ -17,3 +17,7 @@ On-disk filesystem structure and syscall-level filesystem semantics.
 ## Exit Criteria
 - [ ] `make grade` fs tests pass
 - [ ] Sketch inode/block-layer layout — `notes/`
+
+## Links
+- [6.S081 fs lab](https://pdos.csail.mit.edu/6.S081/2023/labs/fs.html)
+- [Linux VFS docs](https://docs.kernel.org/filesystems/vfs.html)

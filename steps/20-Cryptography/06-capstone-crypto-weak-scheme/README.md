@@ -19,3 +19,7 @@ Everything together: a multi-layer "product-grade" weak scheme you must break en
 ## Exit Criteria
 - [ ] **M21: weak scheme broken end-to-end** — `labs/`
 - [ ] Re-design writeup — `notes/`
+
+## Links
+- [CryptoPals (remaining sets)](https://cryptopals.com/)
+- [CryptoHack](https://cryptohack.org/)

@@ -19,3 +19,8 @@ Build and boot xv6-riscv (MIT 6.S081/6.1810) on macOS.
 
 ## Exit Criteria
 - [ ] xv6 boots in QEMU on this machine
+
+## Links
+- [xv6-riscv repo](https://github.com/mit-pdos/xv6-riscv)
+- [6.S081 tools page](https://pdos.csail.mit.edu/6.S081/2023/tools.html)
+- [RISC-V ISA specs](https://riscv.org/technical/specifications/)

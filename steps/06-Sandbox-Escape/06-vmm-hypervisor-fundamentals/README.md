@@ -20,3 +20,7 @@ Know the virtualization boundary cold: where guest code meets host code, and eve
 
 ## Exit Criteria
 - [ ] Guest→host attack-surface map with every channel annotated — `notes/`
+
+## Links
+- [QEMU docs](https://www.qemu.org/docs/master/)
+- [Intel SDM (virtualization)](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)

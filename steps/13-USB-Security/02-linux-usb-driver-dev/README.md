@@ -20,3 +20,7 @@ Write a driver for a simple USB device — descriptor tables and URBs stop being
 ## Exit Criteria
 - [ ] Module source + probe→URB→data demo log — `code/`
 - [ ] Diagram of probe/bind/URB flow — `notes/`
+
+## Links
+- [Linux USB driver docs](https://docs.kernel.org/driver-api/usb/index.html)
+- [LDD3 ch. USB](https://lwn.net/Kernel/LDD3/)

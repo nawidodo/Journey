@@ -20,3 +20,7 @@ Know *why* GPUs are fast before writing any kernel: SIMT, warps/wavefronts, occu
 ## Exit Criteria
 - [ ] Explain warp divergence + occupancy from memory — `notes/`
 - [ ] Given a kernel, classify it compute-bound vs memory-bound — `labs/`
+
+## Links
+- [A Trip Through the Graphics Pipeline](https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/)
+- [GPU Gems 3 ch.1 (SIMT)](https://developer.nvidia.com/gpugems/gpugems3/gpugems3_ch01.html)

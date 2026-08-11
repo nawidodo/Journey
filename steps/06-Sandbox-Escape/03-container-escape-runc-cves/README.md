@@ -24,3 +24,7 @@ Real container escapes — the boundary between your kernel-exploit skills and p
 
 ## Exit Criteria
 - [ ] **S1: one container escape re-derived from scratch** — `labs/`
+
+## Links
+- [CVE-2019-5736 writeup (DragonSector)](https://blog.dragonsector.pl/2019/02/cve-2019-5736-escape-from-docker-and.html)
+- [runC repo](https://github.com/opencontainers/runc)

@@ -18,3 +18,7 @@ Windows 10/11 hardening: KVA shadow, CET (shadow stack + IBT), HVCI (VBS), WDAC.
 ## Exit Criteria
 - [ ] One data-only exploit variant for an HEVD bug — `labs/`
 - [ ] Mitigation matrix (like your KTRR/PPL/PAC matrix, but Windows) — `notes/`
+
+## Links
+- [Windows mitigations docs](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox)
+- [ret2dir paper (USENIX)](https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/evtyushkin)

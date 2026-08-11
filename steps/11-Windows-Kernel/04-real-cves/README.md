@@ -18,3 +18,8 @@ Take the HEVD skill to shipped bugs, same re-derive rule as Linux Phase 5.
 ## Exit Criteria
 - [ ] 2 real Windows CVEs re-derived (or full POC) — `labs/`
 - [ ] One-pager per CVE: bug → primitive → technique — `notes/`
+
+## Links
+- [NVD search: Windows kernel](https://nvd.nist.gov/vuln/search/results?query=windows%20kernel&search_type=all)
+- [ZDI advisories](https://www.zerodayinitiative.com/advisories/)
+- [kernelCTF Windows track](https://github.com/google/security-research/tree/master/pocs/windows)

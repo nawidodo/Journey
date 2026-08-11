@@ -21,3 +21,7 @@ Data-level parallelism on the CPU — the twin of GPU SIMT, and the substrate of
 
 ## Exit Criteria
 - [ ] Benchmarks scalar vs SIMD + SoA rewrite, ≥2× on a real workload — `code/` + `notes/`
+
+## Links
+- [Apple Accelerate docs](https://developer.apple.com/documentation/accelerate)
+- [Agner Fog optimization manuals](https://www.agner.org/optimize/)

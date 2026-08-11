@@ -19,3 +19,7 @@ First kernel code: loadable module touching `/dev`, proc/sysfs, and module param
 
 ## Exit Criteria
 - [ ] Module loads, logs, and device works — `labs/`
+
+## Links
+- [Linux kernel module programming guide](https://sysprog21.github.io/lkmpg/)
+- [LDD3 (free online)](https://lwn.net/Kernel/LDD3/)

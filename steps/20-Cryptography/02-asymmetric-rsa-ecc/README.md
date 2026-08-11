@@ -20,3 +20,7 @@ The math behind RSA/ECC and why bad parameters = broken crypto. Feeds implant co
 ## Exit Criteria
 - [ ] One RSA attack + ECDSA nonce-reuse key recovery — `labs/`
 - [ ] "Why padding matters" notes — `notes/`
+
+## Links
+- [CryptoHack (RSA/ECC challenges)](https://cryptohack.org/)
+- [Serious Cryptography (No Starch)](https://nostarch.com/seriouscrypto)

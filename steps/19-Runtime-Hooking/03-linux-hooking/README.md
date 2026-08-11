@@ -17,3 +17,7 @@ Userland + kernel-assisted hooking on Linux.
 
 ## Exit Criteria
 - [ ] LD_PRELOAD + GOT hook demos — `code/`
+
+## Links
+- [LD_PRELOAD tutorial (man7)](https://man7.org/linux/man-pages/man8/ld.so.8.html)
+- [PLT/GOT explanation (blog)](https://www.technovelty.org/linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html)

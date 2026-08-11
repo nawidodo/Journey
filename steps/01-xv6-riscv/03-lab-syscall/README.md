@@ -17,3 +17,7 @@ Add a syscall; trace the full `ecall` → kernel → return path. **Milestone M1
 ## Exit Criteria
 - [ ] `trace 32 grep hello` shows every syscall
 - [ ] **M1: explain `ecall` → kernel → return from memory** — `notes/`
+
+## Links
+- [6.S081 syscall lab](https://pdos.csail.mit.edu/6.S081/2023/labs/syscall.html)
+- [xv6 book ch.4 (traps)](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf)

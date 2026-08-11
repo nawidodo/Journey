@@ -8,6 +8,12 @@ Every step has three subfolders:
 - `code/` — source you write
 - `labs/` — lab work, POCs, exploit artifacts
 
+## When is a step done?
+A step is **finished** when every box under its `## Exit Criteria` is ticked and the required artifact exists in `labs/` (or `code/`/`notes/` per the criterion). That is your per-step capstone — tick the tracker row below and move to the next step. Steps flagged **🚩 M#** are phase checkpoints (the phase's real capstone — re-derive it with the writeup closed). No exit-criteria boxes ticked = step not done, regardless of time spent.
+
+## Links
+Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, practice platforms) for that step — open them before starting, bookmark what you use.
+
 ## Structure
 | Phase | Contents | Weeks | Track |
 |---|---|---|---|

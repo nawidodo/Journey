@@ -31,3 +31,7 @@ Build something real you can hold: an actual USB device (Raspberry Pi Pico, ~$5,
 ## Exit Criteria
 - [ ] App controls the physical device end-to-end — `code/` (firmware + app + libusb client)
 - [ ] "userspace vs kernel driver — when each" decision notes — `notes/`
+
+## Links
+- [TinyUSB](https://github.com/hathach/tinyusb)
+- [Raspberry Pi Pico docs](https://www.raspberrypi.com/documentation/microcontrollers/)

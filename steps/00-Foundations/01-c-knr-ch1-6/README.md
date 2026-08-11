@@ -21,3 +21,7 @@ C solid enough to read and write kernel-level C: types, pointers, structs, stack
 ## Exit Criteria
 - [ ] Linked list in raw C (malloc/free by hand, no containers) — `labs/`
 - [ ] Heap vs stack explained from memory — `notes/`
+
+## Links
+- [C reference (cppreference)](https://en.cppreference.com/w/c)
+- [glibc manual](https://www.gnu.org/software/libc/manual/)

@@ -19,3 +19,7 @@ First syscall-level programs; learn the user/kernel boundary of xv6.
 
 ## Exit Criteria
 - [ ] `make grade` util tests pass
+
+## Links
+- [6.S081 util lab](https://pdos.csail.mit.edu/6.S081/2023/labs/util.html)
+- [xv6 book](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf)

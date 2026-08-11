@@ -20,3 +20,7 @@ Enumerate the attack classes — what a malicious device or malicious driver can
 ## Exit Criteria
 - [ ] Attack-class matrix (attack → surface → defense) — `notes/`
 - [ ] One USB CVE studied in depth (write-up) — `notes/`
+
+## Links
+- [P0: hunting USB driver bugs](https://googleprojectzero.blogspot.com/2016/02/hunting-vulnerabilities-in-usb-drivers.html)
+- [usbguard](https://usbguard.github.io/)

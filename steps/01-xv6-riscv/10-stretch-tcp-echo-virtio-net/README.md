@@ -16,3 +16,7 @@ Go deeper on the network stack. Choose one.
 
 ## Exit Criteria
 - [ ] Host `nc`/curl exchanges data with xv6 over one of the two paths
+
+## Links
+- [virtio spec](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html)
+- [Linux virtio-net source](https://github.com/torvalds/linux/tree/master/drivers/net/virtio_net.c)

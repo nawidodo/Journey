@@ -20,3 +20,7 @@ Hash/MAC internals and the attacks that survive modern designs — plus timing: 
 ## Exit Criteria
 - [ ] Length-extension + timing attack working — `labs/`
 - [ ] Notes: hash/MAC choice matrix for your future implants — `notes/`
+
+## Links
+- [CryptoPals set 4](https://cryptopals.com/sets/4)
+- [constant-time compare (Linux crypto_memneq)](https://github.com/torvalds/linux/blob/master/lib/crypto/memneq.c)

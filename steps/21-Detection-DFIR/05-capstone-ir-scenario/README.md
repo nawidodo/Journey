@@ -20,3 +20,7 @@ One incident, three artifacts (memory + disk + logs), one root-cause chain and a
 ## Exit Criteria
 - [ ] **M22: memory + disk + logs → root cause → detection rule** — `labs/`
 - [ ] Analyst writeup — `notes/`
+
+## Links
+- [Your 21-01–04 outputs] — composition step
+- [SANS DFIR posters](https://www.sans.org/posters/dfir/)

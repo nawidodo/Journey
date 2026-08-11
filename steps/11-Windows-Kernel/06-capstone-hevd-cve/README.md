@@ -18,3 +18,7 @@ Prove the full loop: bug discovery → exploit → mitigation-aware variant.
 ## Exit Criteria
 - [ ] **M12:** 2 HEVD classes re-derived + 1 real CVE variant — `labs/`
 - [ ] Publishable writeup — `notes/`
+
+## Links
+- [kernelCTF Windows challenges](https://github.com/google/security-research/tree/master/pocs/windows)
+- [HEVD full checklist](https://github.com/hacksysteam/HackSysExtremeVulnerableDriver)

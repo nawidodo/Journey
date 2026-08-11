@@ -19,3 +19,7 @@ The performance heart of GPU programming: make memory access patterns that the h
 ## Exit Criteria
 - [ ] Tiled transpose ≥3× faster than naive — `labs/`
 - [ ] Bandwidth numbers recorded (GB/s vs theoretical peak) — `notes/`
+
+## Links
+- [GPU Gems 3 ch.39 (coalescing)](https://developer.nvidia.com/gpugems/gpugems3/gpugems3_ch39.html)
+- [WWDC: Optimizing Metal performance](https://developer.apple.com/videos/play/wwdc2022/10161/)

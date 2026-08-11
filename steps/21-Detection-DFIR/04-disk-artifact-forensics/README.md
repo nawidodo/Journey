@@ -19,3 +19,7 @@ The persistence side of the story: what survives reboot on disk, and how to find
 ## Exit Criteria
 - [ ] Full artifact timeline from one lab image (login → malware → persistence → exfil) — `labs/`
 - [ ] Carved + recovered file with integrity hash — `labs/`
+
+## Links
+- [Sleuth Kit](https://github.com/sleuthkit/sleuthkit)
+- [Velociraptor](https://github.com/Velocidex/velociraptor)

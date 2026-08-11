@@ -18,3 +18,7 @@ Copy-on-write `fork` — page-fault-driven memory management. Direct conceptual 
 ## Exit Criteria
 - [ ] `make grade` cow tests pass
 - [ ] Write up refcount + COW fault flow — `notes/`
+
+## Links
+- [6.S081 cow lab](https://pdos.csail.mit.edu/6.S081/2023/labs/cow.html)
+- [Linux COW (kernel docs)](https://docs.kernel.org/mm/copy_page.html)

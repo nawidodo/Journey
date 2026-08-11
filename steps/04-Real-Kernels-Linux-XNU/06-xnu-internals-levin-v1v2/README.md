@@ -19,3 +19,7 @@ Apple's kernel: Mach IPC, vm_map, code signing, AMFI.
 ## Exit Criteria
 - [ ] Notes: Mach IPC + `vm_map` structures — `notes/`
 - [ ] Explain where AMFI checks run
+
+## Links
+- [newosxbook.com (Levin)](http://newosxbook.com/)
+- [XNU source (apple-oss-distributions)](https://github.com/apple-oss-distributions/xnu)

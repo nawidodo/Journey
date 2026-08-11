@@ -20,3 +20,8 @@ Picture Processing Unit: rendering pipeline that turns tile/attribute data into 
 
 ## Exit Criteria
 - [ ] Scrollable background + sprites render (use `ppu_test` ROMs) — `labs/`
+
+## Links
+- [Nesdev PPU wiki](https://www.nesdev.org/wiki/PPU)
+- [Nesdev PPU rendering](https://www.nesdev.org/wiki/PPU_rendering)
+- [Mesen emulator (debugger to compare)](https://github.com/SourMesen/Mesen2)

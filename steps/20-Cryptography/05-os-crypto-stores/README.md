@@ -21,3 +21,8 @@ Where crypto actually lives on your target platforms — the boundaries your exp
 ## Exit Criteria
 - [ ] Per-OS key-location + compromise map — `notes/`
 - [ ] Explain one store's key lifecycle from memory
+
+## Links
+- [Apple Platform Security Guide](https://support.apple.com/guide/security/)
+- [Android Keystore docs](https://developer.android.com/training/articles/keystore)
+- [BitLocker docs (Microsoft)](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/)

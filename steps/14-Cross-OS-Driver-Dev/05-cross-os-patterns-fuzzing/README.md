@@ -19,3 +19,7 @@ The same driver written three ways — and break your own before someone else do
 ## Exit Criteria
 - [ ] Fuzz findings + fixes for ≥1 driver — `labs/`
 - [ ] Cross-OS comparison table — `notes/`
+
+## Links
+- [syzkaller](https://github.com/google/syzkaller)
+- [Trail of Bits Fuzzing 101](https://github.com/trailofbits/fuzzing101)

@@ -19,3 +19,7 @@ Turn Phase 4's hello-module into a real device: char driver with ioctl, wait que
 ## Exit Criteria
 - [ ] Char driver + userspace harness — `code/`
 - [ ] "`file_operations` lifecycle" notes — `notes/`
+
+## Links
+- [LDD3 (free)](https://lwn.net/Kernel/LDD3/)
+- [Linux driver API docs](https://docs.kernel.org/driver-api/index.html)

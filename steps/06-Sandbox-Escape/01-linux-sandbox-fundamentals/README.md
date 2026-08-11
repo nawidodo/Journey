@@ -21,3 +21,7 @@ Know the Linux sandbox primitives cold — seccomp, namespaces, capabilities, LS
 ## Exit Criteria
 - [ ] Notes: each mechanism — what it blocks, where it lives, how to inspect it — `notes/`
 - [ ] Working seccomp demo filter — `labs/`
+
+## Links
+- [cgroup v2 docs](https://docs.kernel.org/admin-guide/cgroup-v2.html)
+- [namespaces (man7)](https://man7.org/linux/man-pages/man7/namespaces.7.html)

@@ -17,3 +17,7 @@ Analyze a full in-the-wild iOS chain (NSExpression, WebKit, kernel) and write yo
 
 ## Exit Criteria
 - [ ] ForcedEntry kill-chain diagram + stage-by-stage notes — `notes/`
+
+## Links
+- [Citizen Lab ForcedEntry analysis](https://citizenlab.ca/2021/09/forcedentry-nso-group-imessage-zero-click-exploit-captured-in-the-wild/)
+- [Google TAG blog](https://blog.google/threat-analysis-group/)

@@ -19,3 +19,8 @@ Daily-driver tooling for every later phase.
 ## Exit Criteria
 - [ ] Debug a segfault with gdb/lldb and explain root cause — `labs/`
 - [ ] `make` builds a multi-file C project from a `Makefile`
+
+## Links
+- [Pro Git book](https://git-scm.com/book/en/v2)
+- [GDB docs](https://sourceware.org/gdb/current/onlinedocs/gdb/) / [LLDB docs](https://lldb.llvm.org/)
+- [Make manual](https://www.gnu.org/software/make/manual/make.html)

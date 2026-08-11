@@ -17,3 +17,7 @@ Classic LKM rootkit plus the modern eBPF variant — Phase 5 kernel skills appli
 
 ## Exit Criteria
 - [ ] Working LKM rootkit + detection-bypass notes — `labs/`
+
+## Links
+- [Diamorphine](https://github.com/m0nad/Diamorphine)
+- [eBPF rootkit research (Palo Alto Unit 42)](https://unit42.paloaltonetworks.com/)

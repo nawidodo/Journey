@@ -18,3 +18,7 @@ RISC-V Sv39 three-level page tables; virtual memory from the inside.
 ## Exit Criteria
 - [ ] `make grade` pgtbl tests pass
 - [ ] Draw the Sv39 walk (VPN → PTE → physical) — `notes/`
+
+## Links
+- [6.S081 pgtbl lab](https://pdos.csail.mit.edu/6.S081/2023/labs/pgtbl.html)
+- [RISC-V privileged spec (sv39)](https://riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf)

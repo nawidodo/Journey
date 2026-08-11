@@ -19,3 +19,7 @@ GPU render the NES framebuffer via Metal. **Milestone M3: NES via Metal on macOS
 
 ## Exit Criteria
 - [ ] **M3: NES frame rendered via Metal on macOS** — `code/`
+
+## Links
+- [Metal docs](https://developer.apple.com/documentation/metal)
+- [Metal by Tutorials](https://www.kodeco.com/books/metal-by-tutorials)

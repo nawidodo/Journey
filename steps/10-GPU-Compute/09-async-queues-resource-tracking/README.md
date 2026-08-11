@@ -19,3 +19,7 @@ GPU is a separate async engine: CPU encodes, GPU executes later. Understand the 
 ## Exit Criteria
 - [ ] Animation with 3 command buffers in flight, no stalls (CPU ≤2ms ahead) — `code/`
 - [ ] Timeline diagram CPU/GPU overlap — `notes/`
+
+## Links
+- [Metal command queues docs](https://developer.apple.com/documentation/metal/command_queues)
+- [WWDC Metal sessions](https://developer.apple.com/videos/all-videos/?q=metal)

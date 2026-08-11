@@ -18,3 +18,7 @@ Real-kernel fundamentals: processes, scheduling, syscalls, memory.
 
 ## Exit Criteria
 - [ ] Notes: Linux scheduler vs xv6; syscall entry flow — `notes/`
+
+## Links
+- [OSTEP (free book)](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+- [Linux kernel docs](https://docs.kernel.org/)

@@ -20,3 +20,7 @@ The Windows replacement for `commit_creds`: token stealing. Exploit HEVD pool ov
 ## Exit Criteria
 - [ ] HEVD pool overflow → SYSTEM, from scratch — `labs/`
 - [ ] Grooming layout diagram in `notes/`
+
+## Links
+- [ired.team token stealing](https://www.ired.team/offensive-security/privilege-escalation/windows-kernel-exploitation)
+- [FuzzySecurity kernel exploitation](https://fuzzysecurity.com/tutorials/expDev/14.html)

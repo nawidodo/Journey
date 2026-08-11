@@ -20,3 +20,7 @@ Swift for Track B (macOS/iOS app work from W12+). Foundation only now.
 ## Exit Criteria
 - [ ] Small Swift CLI runs — `code/`
 - [ ] Explain `struct` vs `class` memory behavior from memory
+
+## Links
+- [The Swift Programming Language (free)](https://docs.swift.org/swift-book/)
+- [Swift standard library](https://developer.apple.com/documentation/swift)

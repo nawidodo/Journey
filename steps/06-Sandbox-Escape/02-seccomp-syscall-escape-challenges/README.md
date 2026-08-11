@@ -19,3 +19,7 @@ Escape naive seccomp filters using only what's still allowed — the practical s
 
 ## Exit Criteria
 - [ ] ≥3 sandboxed challenges solved solo, each with a distinct bypass technique — `labs/`
+
+## Links
+- [seccomp man page](https://man7.org/linux/man-pages/man2/seccomp.2.html)
+- [seccomp filters (kernel docs)](https://docs.kernel.org/userspace-api/seccomp_filter.html)

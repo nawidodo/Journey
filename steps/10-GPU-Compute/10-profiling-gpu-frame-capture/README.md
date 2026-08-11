@@ -19,3 +19,7 @@ The skill that separates "writes kernels" from "fast kernels": measure first, op
 ## Exit Criteria
 - [ ] Before/after frame times for one optimized pass — `labs/`
 - [ ] You can name what the HUD numbers mean — `notes/`
+
+## Links
+- [Xcode GPU frame capture](https://developer.apple.com/documentation/xcode/analyzing-gpu-work-with-the-metal-debugger)
+- [Instruments docs](https://developer.apple.com/documentation/xcode/measuring-performance-with-instruments)

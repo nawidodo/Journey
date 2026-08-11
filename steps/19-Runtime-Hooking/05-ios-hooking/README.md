@@ -17,3 +17,7 @@ The tweak model — how jailbreak tweaks actually hook, and Frida's non-jailbrea
 
 ## Exit Criteria
 - [ ] Own engine + swizzle demo; tweak if a device is available — `code/` + `labs/`
+
+## Links
+- [libjailbreak](https://github.com/opa334/libjailbreak)
+- [Frida iOS docs](https://frida.re/docs/ios/)

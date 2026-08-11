@@ -17,3 +17,7 @@ Triage one real crash from a stripped binary to a root-cause chain, with a Ghidr
 
 ## Exit Criteria
 - [ ] **M16:** crash → root-cause chain + Ghidra walkthrough — `notes/` + `labs/`
+
+## Links
+- [Volatility 3](https://github.com/volatilityfoundation/volatility3)
+- [Ghidra](https://github.com/NationalSecurityAgency/ghidra)

@@ -19,3 +19,7 @@ Escape through the guest↔host service channels — shared folders, tools RPC, 
 
 ## Exit Criteria
 - [ ] ≥1 CTF/known VM escape exploited end-to-end — `labs/`
+
+## Links
+- [ZDI blog (guest-tools bugs)](https://www.zerodayinitiative.com/blog)
+- [P0 in-the-wild database](https://googleprojectzero.github.io/0days-in-the-wild/)

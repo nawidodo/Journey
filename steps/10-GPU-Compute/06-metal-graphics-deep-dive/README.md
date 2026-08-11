@@ -19,3 +19,7 @@ Revisit your Track B MTKView step with full understanding: render pipeline stage
 ## Exit Criteria
 - [ ] Depth-tested, MSAA 3D cube — `code/`
 - [ ] Pipeline-stage diagram drawn by hand — `notes/`
+
+## Links
+- [Metal graphics docs](https://developer.apple.com/documentation/metal/graphics)
+- [Metal sample code](https://developer.apple.com/metal/sample-code/)

@@ -19,3 +19,7 @@ Modern macOS drivers. Apple Silicon killed kexts; **DriverKit (dext)** is the on
 ## Exit Criteria
 - [ ] dext + client app demo — `code/`
 - [ ] "dext vs kext vs ioctl/IOCTL" comparison — `notes/`
+
+## Links
+- [DriverKit docs](https://developer.apple.com/documentation/driverkit)
+- [DriverKit samples (Apple)](https://developer.apple.com/documentation/driverkit/developing_a_driver_with_driverkit)

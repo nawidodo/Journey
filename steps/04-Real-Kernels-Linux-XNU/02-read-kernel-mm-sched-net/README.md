@@ -17,3 +17,8 @@ Read real kernel source where future exploits will live.
 
 ## Exit Criteria
 - [ ] **skb lifecycle from memory** — `notes/`
+
+## Links
+- [Linux MM docs](https://docs.kernel.org/mm/index.html)
+- [Linux scheduler docs](https://docs.kernel.org/scheduler/index.html)
+- [Linux networking docs](https://docs.kernel.org/networking/index.html)

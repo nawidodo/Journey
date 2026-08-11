@@ -20,3 +20,7 @@ Map Apple's hardware/software security architecture. **Milestone M5: KTRR/PPL/PA
 
 ## Exit Criteria
 - [ ] **M5: KTRR/PPL/PAC attack matrix** — `notes/`
+
+## Links
+- [Apple Platform Security Guide](https://support.apple.com/guide/security/)
+- [Project Zero blog](https://googleprojectzero.blogspot.com/)

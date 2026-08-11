@@ -18,3 +18,7 @@ One interception harness — "log calls to a target function, modify one argumen
 
 ## Exit Criteria
 - [ ] **M20:** own from-scratch engine on ≥5 platforms + comparison — `code/` + `notes/`
+
+## Links
+- [Frida internals](https://frida.re/docs/hooking/)
+- [Your 19-01–06 outputs] — composition step

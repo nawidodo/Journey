@@ -17,3 +17,7 @@ The full offensive capstone on one platform: persist below the OS, hide, evade â
 
 ## Exit Criteria
 - [ ] **M19:** working chain + catching detections â€” `labs/` + `notes/`
+
+## Links
+- [Diamorphine](https://github.com/m0nad/Diamorphine)
+- [efi-mimikatz](https://github.com/gentilkiwi/efi-mimikatz)

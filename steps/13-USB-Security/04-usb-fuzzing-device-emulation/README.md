@@ -24,3 +24,7 @@ Act as the malicious device — emulate and fuzz a host stack, trigger a real dr
 ## Exit Criteria
 - [ ] Malicious-HID demo or fuzz-crash repro — `labs/`
 - [ ] Detection rules for your gadget — `labs/`
+
+## Links
+- [syzkaller USB fuzzing docs](https://github.com/google/syzkaller/blob/master/docs/linux/external_fuzzing_usb.md)
+- [GreatFET/Facedancer](https://github.com/greatscottgadgets/greatfet)

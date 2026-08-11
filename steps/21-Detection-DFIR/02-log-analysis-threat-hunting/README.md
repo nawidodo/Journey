@@ -20,3 +20,8 @@ The hunting loop: hypothesis → data source → query → validate. Turns the "
 ## Exit Criteria
 - [ ] One hypothesis → query → confirmed finding on your own lab — `labs/`
 - [ ] "Hunt loop" notes (source→query→validate) — `notes/`
+
+## Links
+- [Sigma HQ](https://github.com/SigmaHQ/sigma)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Zeek](https://github.com/zeek/zeek)

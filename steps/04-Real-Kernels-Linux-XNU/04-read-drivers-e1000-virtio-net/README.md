@@ -18,3 +18,7 @@ Production-grade NIC drivers — direct upgrade of your xv6 E1000 work.
 
 ## Exit Criteria
 - [ ] Notes: xv6 E1000 vs Linux e1000 vs virtio-net — `notes/`
+
+## Links
+- [e1000 driver source](https://github.com/torvalds/linux/tree/master/drivers/net/ethernet/intel/e1000)
+- [virtio spec](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html)

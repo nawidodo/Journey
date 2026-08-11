@@ -16,3 +16,7 @@ Persistence below the OS — ESP/NVRAM bootkit (BlackLotus/LoJax class). **OVMF/
 
 ## Exit Criteria
 - [ ] Working UEFI bootkit in OVMF VM — `labs/`
+
+## Links
+- [BlackLotus analysis (ESET)](https://www.welivesecurity.com/en/eset-research/blacklotus/)
+- [UEFI spec](https://uefi.org/specifications)

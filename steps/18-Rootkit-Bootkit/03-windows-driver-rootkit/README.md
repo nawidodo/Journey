@@ -17,3 +17,7 @@ Kernel rootkit on Windows — callbacks, DKOM, minifilter. Reuses Track D (kerne
 
 ## Exit Criteria
 - [ ] Callback + DKOM rootkit on your VM — `labs/`
+
+## Links
+- [Rootkits: Subverting the Windows Kernel (book info)](https://www.oreilly.com/library/view/rootkits-subverting-the/0321294319/)
+- [MiniFilter samples (Microsoft)](https://github.com/microsoft/Windows-driver-samples)
