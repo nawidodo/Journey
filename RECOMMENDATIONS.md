@@ -3,6 +3,13 @@
 All advice in one place. Applied items marked ✅, open items have a "when" trigger.
 
 ## Applied (Aug 2026)
+- ✅ **Applied cryptography track added** (phase `20-Cryptography`, 6 steps, Track L, W14–20, checkpoint M21). Crypto was entirely absent. Covers symmetric/modes with a built-by-hand padding-oracle, RSA/ECC + textbook attacks (incl. ECDSA nonce reuse), hashes/MACs + timing side channels, TLS 1.2/1.3 internals, and OS crypto stores (Keychain/SEP, Keystore/StrongBox, DPAPI/BitLocker, LUKS/TPM). Capstone: build a deliberately-weak scheme and break it (M21). Lands W14–20 alongside Phase 4 kernel reading.
+- ✅ **Detection engineering + DFIR track added** (phase `21-Detection-DFIR`, 5 steps, Track M, W30–36, checkpoint M22). The blue-team counterweight to an ~80% offensive plan: Volatility memory forensics, log analysis + the threat-hunting loop, Sigma/YARA as production code, disk/artifact forensics (the Track J persistence list, inverted), and an IR capstone over memory+disk+logs → root cause → detection rule. Uses your own Track E/J artifacts as the lab.
+- ✅ **Windows userland exploitation step added** (`11-Windows-Kernel/00-userland-exploit-dev`, W29–30, Track D pre). The one missing discipline: SEH overwrite → egg hunters → Windows ROP → CFG/ACG/CET, on OSED-style binaries in the VM, before the kernel work.
+- ✅ **General fuzzing methodology step added** (`05-Linux-Kernel-Exploitation/11-fuzzing-vulnerability-research`, W26–30). libFuzzer/AFL++ basics, crash triage (minimize → dedupe → root-cause), and **syzkaller on XNU promoted out of optional Phase 9 into this step**. Exit: one real bug found + minimized + root-caused.
+- ✅ **Practice-platform ladder + CTF cadence added**: `03-Exploitation-Fundamentals/06-practice-platforms` (ROP Emporium all 8 → pwnable.tw → exploit.education, parallel W11–14) plus a one-CTF-per-phase line in Phase 3 — the structured reps between pwn.college steps.
+- ✅ **Own-hypervisor stretch added** (`06-Sandbox-Escape/09-own-hypervisor`, W38–39): Hypervisor.framework on Apple Silicon or KVM; makes VM-escape writeups read like your own code review.
+- ✅ **Priority + load-control synced into `LEARNING_PLAN.md`**: priority A>C>D>G>H>K>F>E>I>B, ">2 concurrent tracks → defer", Track I + Track B stretch = first cuts, Track J (W44–56) = graduation project, W34–46 flagged as worst squeeze.
 - ✅ **Real USB device step added to Track G** (`14-Cross-OS-Driver-Dev/06-usb-device-driver-app`, W37–38): the missing real-hardware link — Track G 02 and Track F 02 both used virtual/emulated devices. Build a Raspberry Pi Pico (TinyUSB) vendor-class device, control it from userspace via IOKit (macOS) + libusb (Linux), SwiftUI control app; optional NES-emulator controller cross-link. Capstone renumbered `06→07` and now targets the real device on all 3 OSes (option d). Track G now W28–41 (7 steps); total ~24 moderate.
 - ✅ `LEARNING_PLAN.md` synced with `steps/README.md`: added Phase 6 · Sandbox escape (W34–39), S1/S2 checkpoints, timeline row, renumbered Phases 6→9
 - ✅ **Kernel-Exploit-Dojo added** (step `05-10`): practice ladder parallel to Phase 5 — Easy challenges per technique class before each CVE, Medium during, re-derive rule. Rationale: Dojo = realistic *workflow* (unfamiliar modules, discovery, graded repetition), CVE ladder = realistic *bugs*. Both, sequenced: Dojo for fluency, CVEs for fidelity.
@@ -30,22 +37,14 @@ All advice in one place. Applied items marked ✅, open items have a "when" trig
    - Practice: crackmes (crackmes.one), Flare-On, microcorruption (embedded RE)
    - *Practical Binary Analysis* (Andriesse); *Reverse Engineering for Beginners* (Yurichev)
    - Exit: triage one real iOS crash log → root cause chain
-2. **Fuzzing + vulnerability research methodology** — ✅ **partially covered**: Track G step 05 (`14-Cross-OS-Driver-Dev/05-cross-os-patterns-fuzzing`) now fuzzes your own Linux/Windows/macOS drivers (syzkaller, IOCTL harness, dext fuzz). Still open: the general method step:
-   - libFuzzer/AFL++ basics; `honggfuzz`
-   - Crash triage: minimize, dedupe, root-cause, patch-diff
-   - Move "optional syzkaller on XNU" up from Phase 9 into a real fuzzing step (W26–30, parallel with Phase 5 tail)
-   - Exit: find a real (even trivial) bug in a local target; write it up
-3. **More practice platforms in Phase 4** (currently pwn.college only):
-   - ROP Emporium (ROP ladder, best structured intro)
-   - pwnable.tw (classic, harder than pwn.college)
-   - exploit.education (Phoenix/Protostar-style)
-   - Add before Phase 5 kernel work — cheap wins, big confidence
+2. **Fuzzing + vulnerability research methodology** — ✅ **fully applied**: `05-Linux-Kernel-Exploitation/11-fuzzing-vulnerability-research` (W26–30, parallel with Phase 5 tail) covers libFuzzer/AFL++ basics, crash triage (minimize → dedupe → root-cause), the patch-diff loop, and syzkaller-on-XNU promoted up from Phase 9. Exit: one real bug found + writeup. Track G step 05 keeps the driver-fuzzing angle.
+3. **More practice platforms in Phase 4** — ✅ **applied**: `03-Exploitation-Fundamentals/06-practice-platforms` (W11–14, parallel): ROP Emporium all 8 → pwnable.tw → exploit.education.
 4. **Patch-diffing / CVE research workflow** — add to Phase 3 or as 1 step in Phase 5:
    - `git log` on stable kernel branches, upstream fix commits
    - Learn to find the bug from the patch alone (one CVE per week)
 5. **Track B load check** — W6–10 runs xv6 labs + CHIP-8, W12–16 kernel reading + Metal app. If it crushes you: drop APU (step 04) to stretch, keep CPU+PPU. Emulator goal is the Metal renderer, not audio.
-6. **Load control — this plan is ~24 months of full-time work.** W20–40 is the crowded middle (Phase 5 + malware E + USB F + hooking K + graphics C tail + drivers G); W34–46 is the worst single squeeze: iOS (Phase 7) + Windows (Track D) + Android (Track H) + sandbox escapes. Cut line: Track I (Android malware — Track E concepts transfer, least novel skill) and Track B stretch; drop those first if you fall behind. Priority: A (core) > C (graphics — your pick) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B. Pick one mobile platform as primary; the other goes secondary (re-run later). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half (W27–32) can slip if the window is tight. If a week has >2 concurrent tracks, defer, don't grind. Track J (W44–56) is the exception — most prior tracks are done by then; treat it as the graduation project.
-7. **CTF cadence** — one CTF per phase (~2/year): picoCTF, then HTB / ctftime archive. Forces the skills at real targets and builds the professional loop. pwn.college already covers the exploit-only part.
+6. **Load control — this plan is ~24 months of full-time work.** W20–40 is the crowded middle (Phase 5 + malware E + USB F + hooking K + graphics C tail + drivers G); W34–46 is the worst single squeeze: iOS (Phase 7) + Windows (Track D) + Android (Track H) + sandbox escapes. Cut line: Track I (Android malware — Track E concepts transfer, least novel skill) and Track B stretch; drop those first if you fall behind. Priority: A (core) > C (graphics — your pick) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B. Pick one mobile platform as primary; the other goes secondary (re-run later). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half (W27–32) can slip if the window is tight. If a week has >2 concurrent tracks, defer, don't grind. Track J (W44–56) is the exception — most prior tracks are done by then; treat it as the graduation project. — ✅ **synced into `LEARNING_PLAN.md`** (new "Load control & priorities" section) so it lives where you'll actually read it.
+7. **CTF cadence** — ✅ **applied**: one CTF per phase (~2/year): picoCTF, then HTB / ctftime archive. Note added to Phase 3 in `LEARNING_PLAN.md`.
 
 ## Workflow recommendations
 - `git init` this folder now — not a repo, so no history/rollback on the plan

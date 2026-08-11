@@ -14,15 +14,15 @@ Every step has three subfolders:
 | `00-Foundations` | C, memory model, tooling, Swift | 1–3 | A (+B Swift) |
 | `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
 | `02-TrackB-Emulator` | CHIP-8 → NES → Metal → iOS app | 6–18 | B |
-| `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations | 10–14 | A |
+| `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms | 10–14 | A |
 | `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security | 14–20 | A |
-| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice (10 steps) | 20–30 | A |
-| `06-Sandbox-Escape` | seccomp → container escapes → Seatbelt → VM escapes | 34–39 | A |
+| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology (11 steps) | 20–30 | A |
+| `06-Sandbox-Escape` | seccomp → container escapes → Seatbelt → VM escapes + own hypervisor (stretch) | 34–39 | A |
 | `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
 | `08-Browser-Exploitation` | JS engines → d8 CVE | 47+ | A |
 | `09-Real-World-Chains` | ForcedEntry, Pegasus, Pwn2Own | capstone | A |
 | `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone | 12–28 | C |
-| `11-Windows-Kernel` | internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 30–44 | D |
+| `11-Windows-Kernel` | userland exploit dev → internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 29–44 | D |
 | `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) | 18–30 | E |
 | `13-USB-Security` | protocol/stack → Linux driver → attack surface → fuzzing/emulation → iOS/Windows links → capstone | 24–32 | F |
 | `14-Cross-OS-Driver-Dev` | Linux craft → MMIO/DMA/IRQ → Windows KMDF → macOS dext → cross-OS fuzzing → real USB device + userspace driver + app → capstone | 28–41 | G |
@@ -31,6 +31,8 @@ Every step has three subfolders:
 | `17-Android-Malware-Dev` | APK/dex/smali → implant → C2/evasion → fraud → detection → capstone | 40–48 | I |
 | `18-Rootkit-Bootkit` | principles → Linux LKM/eBPF → Windows rootkit → UEFI bootkit → macOS → mobile → capstone | 44–56 | J |
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
+| `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone | 14–20 | L |
+| `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone | 30–36 | M |
 
 ## Checkpoint tracker (from LEARNING_PLAN.md)
 - [ ] **M1** trace xv6 syscall → `01-xv6-riscv/03-lab-syscall`
@@ -55,6 +57,8 @@ Every step has three subfolders:
 - [ ] **M18** Android implant survives own detections → `17-Android-Malware-Dev/06-capstone-android-implant`
 - [ ] **M19** rootkit/bootkit chain + own detections → `18-Rootkit-Bootkit/07-capstone-rootkit-bootkit`
 - [ ] **M20** own from-scratch hook engine on ≥5 platforms → `19-Runtime-Hooking/07-capstone-cross-platform-hooking`
+- [ ] **M21** weak crypto scheme broken end-to-end → `20-Cryptography/06-capstone-crypto-weak-scheme`
+- [ ] **M22** memory+disk+logs → root cause → detection rule → `21-Detection-DFIR/05-capstone-ir-scenario`
 
 ## Path
 Track A sequential: `00` → `01` → `03` → `04` → `05` → `06` → `07` → `08` → `09`
@@ -69,5 +73,7 @@ Track H parallel (start W34, alongside Phase 7/Track D): `16`
 Track I parallel (start W40, Android malware; Track E concepts transfer): `17`
 Track J parallel (start W44, capstone of the offensive tracks; reuses D/G/H/Phase 7): `18`
 Track K parallel (start W20, feeds Track E evasion + Track J kernel hooks): `19`
+Track L parallel (start W14, alongside Phase 4 kernel reading): `20`
+Track M parallel (start W30, the defensive counterweight to Track D/F): `21`
 
 Start: [`00-Foundations/01-c-knr-ch1-6`](00-Foundations/01-c-knr-ch1-6/README.md)

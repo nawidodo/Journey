@@ -1,6 +1,6 @@
 # MASTER ROADMAP — Systems Security Engineer
 
-Eleven tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes).
+Thirteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR).
 
 ## Track A — security core
 Foundations → xv6-riscv → exploit basics → Linux → Linux kernel exploits → sandbox escapes → XNU → iOS exploits/jailbreak → browser → chains
@@ -35,6 +35,12 @@ Principles → Linux LKM/eBPF → Windows driver rootkit → UEFI bootkit → ma
 ## Track K — Runtime hooking (all OSes, from scratch)
 Fundamentals → Windows → Linux → macOS → iOS → Android → capstone: your own engine on all (tools as cross-check only)
 
+## Track L — Applied cryptography
+Symmetric/modes (padding oracle) → RSA/ECC + attacks → hashes/MACs/side-channels → TLS internals → OS crypto stores (Keychain/SEP/Keystore/BitLocker) → capstone: break a deliberately-weak scheme
+
+## Track M — Detection engineering + DFIR
+Memory forensics → log analysis + threat hunting → Sigma/YARA as code → disk/artifact forensics → IR capstone (memory + disk + logs → root cause → detection rule). The blue-team counterweight to the offensive tracks.
+
 ---
 
 ## Phase 0 · Foundations (W1–3)
@@ -62,7 +68,8 @@ Fundamentals → Windows → Linux → macOS → iOS → Android → capstone: y
 ## Phase 3 · Exploitation fundamentals (W10–14)
 - Buffer overflow, UAF, OOB, type confusion; ROP/JOP, shellcode
 - Mitigations: ASLR, canaries, NX, SMEP/SMAP, PAC
-- Practice: pwn.college; PwnFunction/LiveOverflow videos
+- Practice: pwn.college; PwnFunction/LiveOverflow videos; **practice-platform ladder (W11–14, parallel): ROP Emporium (all 8) → pwnable.tw → exploit.education — the reps that make 03-02 fluent**
+- **CTF cadence: one CTF per phase (~2/yr) — picoCTF, then HTB / ctftime archive; forces skills at real targets**
 - **Exit:** pwn.college labs solo
 
 ## Phase 4 · Real kernels: Linux → XNU (W14–20)
@@ -89,12 +96,14 @@ Easy→hard; skill = re-derive writeups with POC closed.
 
 Sources: xairy/linux-kernel-exploitation, pwn.college kernel pwn, ctf-wiki.org, chuj.blog
 Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges before each CVE step, Medium during, re-derive rule. See `10-kernel-exploit-dojo` step.
+Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ harness, crash triage (minimize/dedupe/root-cause), **syzkaller on XNU promoted up from Phase 9 optional into this step**. See `05-11`.
 **Exit:** re-derive Vermin from scratch
 
 ## Phase 6 · Sandbox escape (W34–39, parallel with Phases 5/7)
 - Linux: seccomp, namespaces; container escapes (runc CVEs, e.g. CVE-2019-5736)
 - Apple: App Sandbox / Seatbelt profiles; macOS/iOS sandbox escape techniques
 - VMM: hypervisor fundamentals; device-emulation escapes; guest-tools CVEs
+- Stretch (W38–39): **write your own hypervisor once** (Hypervisor.framework on Apple Silicon or KVM) — the escapes then read like your own code. See `09-own-hypervisor`.
 - **Exit:** container escape re-derived (**S1**); VM escape re-derived (**S2**)
 
 ## Phase 7 · XNU/iOS exploitation = jailbreak (W35–46)
@@ -128,7 +137,8 @@ Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges be
 - W27–28: capstone — N-body **or** renderer (software rasterizer + Metal + Vulkan ports)
 - **Exit:** **M11** — chosen capstone at target (N-body FPS or 3-way renderer)
 
-## Phase 11 · Windows kernel exploitation — Track D (W30–44, parallel)
+## Phase 11 · Windows kernel exploitation — Track D (W29–44, parallel)
+- W29–30: **Windows userland exploitation first** (the missing discipline — Phase 3 was Linux, Track D is kernel): SEH overwrite, egg hunters, Windows ROP, CFG/ACG/CET — on OSED-style binaries in the VM. See `11-00-userland-exploit-dev`.
 - W30–31: Windows internals + WinDbg (IRQL, pool, `_EPROCESS`/token); userland privesc ladder — 20 techniques, non-admin → SYSTEM [Sektor7 Privesc course]
 - W31–33: HEVD RE (Ghidra/IDA; IOCTL dispatch; find all bug classes)
 - W33–36: pool overflow → token stealing; SMEP/SMAP
@@ -212,6 +222,31 @@ Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges be
 - W31–32: capstone — your own engine on ≥5 platforms (same harness), Frida only to verify, memory-scanner detections
 - **Exit:** **M20** — own from-scratch engine on ≥5 platforms + comparison
 
+## Phase 20 · Applied cryptography — Track L (W14–20, parallel)
+- W14–15: symmetric ciphers + modes — AES/ChaCha, ECB→GCM; **padding-oracle attack built by hand**; CryptoPals sets 1–2
+- W15–16: RSA/ECC — math, textbook-RSA attacks (small e/d, Håstad, Wiener), ECDSA nonce-reuse key recovery; CryptoPals 5–6
+- W16–17: hashes/MACs — length extension, HMAC, **timing side channels** (constant-time compare, attack a victim)
+- W17–18: TLS 1.2/1.3 internals — handshake decoded from a live capture; Bleichenbacher/POODLE/CRIME/ALPACA history
+- W18–19: OS crypto stores — Keychain/Data Protection/SEP, Android Keystore/StrongBox, DPAPI/BitLocker, LUKS/TPM — the "where keys live" map Phase 7/Track D/H consume
+- W19–20: capstone — build a deliberately-weak multi-layer scheme, break it end-to-end, re-design it properly
+- **Exit:** **M21** — weak scheme broken end-to-end
+
+## Phase 21 · Detection engineering + DFIR — Track M (W30–36, parallel)
+- W30–31: memory forensics — Volatility 3 (pslist/psscan/malfind/net); triage an incident image; see your Track E implant the way a defender does
+- W31–32: log analysis + threat hunting — the hypothesis → source → query → validate loop; your own Dojo + implant as the hunt target
+- W32–34: detection-as-code — production-quality Sigma + YARA, validation/conversion, FP engineering, adversary-in-the-loop tuning
+- W34–35: disk/artifact forensics — timelines, persistence hunting (the Track J list, inverted), carving, evidence hygiene
+- W35–36: capstone — one IR scenario across memory + disk + logs → root cause → shipping detection rule
+- **Exit:** **M22** — full IR chain + detection rule
+
+---
+
+## Load control & priorities (W20+ crowded middle)
+- **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B.** Pick one mobile platform primary; the other goes secondary (re-run later).
+- **>2 concurrent tracks in a week → defer, don't grind.** Track J (W44–56) is the exception — most prior tracks are done; treat it as the graduation project.
+- First cuts if behind: Track I (Android malware — Track E concepts transfer) and Track B stretch (APU, extra mappers). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half can slip.
+- W34–46 is the worst squeeze (iOS Phase 7 + Track D + Track H + sandbox + DFIR capstone): stagger capstones, lean on the defer rule.
+
 ---
 
 ## Combined timeline
@@ -226,13 +261,17 @@ Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges be
 | 12–16 | — | Metal macOS app |
 | 12–28 | — | Graphics (Track C) |
 | 14–20 | Linux → XNU | — |
+| 14–20 | — | Applied crypto (Track L) |
 | 16–18 | — | iOS app |
 | 16–20 | — | Reverse engineering |
 | 18–30 | — | Malware dev (Track E) |
 | 20–30 | Linux kernel exploits | — |
 | 20–32 | — | Hooking (Track K) |
 | 24–32 | — | USB security (Track F) |
+| 26–30 | Fuzzing method (A, parallel) | — |
 | 28–41 | — | Driver dev all OS (Track G) |
+| 29–30 | — | Windows userland expl (Track D pre) |
+| 30–36 | — | Detection/DFIR (Track M) |
 | 30–44 | — | Windows kernel (Track D) |
 | 34–39 | Sandbox escapes (parallel) | — |
 | 35–46 | iOS exploits / jailbreak / Dopamine | — |
@@ -241,7 +280,7 @@ Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges be
 | 44–56 | — | Rootkit/bootkit (Track J) |
 | 47+ | Browser → chains | — |
 
-**Total:** ~17 months focused / ~24 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking tracks). Browser: open-ended.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
@@ -266,9 +305,11 @@ Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges be
 - [ ] M18: Android implant survives own detections (W48, Track I)
 - [ ] M19: rootkit/bootkit chain + own detections (W56, Track J)
 - [ ] M20: own from-scratch hook engine on ≥5 platforms (W32, Track K)
+- [ ] M21: weak crypto scheme broken end-to-end (W20, Track L)
+- [ ] M22: memory+disk+logs → root cause → detection rule (W36, Track M)
 
 ## Resources master list
-- Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden)
-- Sites: MIT 6.S081, pwn.college, ctf-wiki.org, xairy list, Project Zero, Quarkslab, pattern-f, gbdev.io, OSDev wiki, saelo.github.io, Hacking with Swift, Apple Metal docs + WWDC sessions, "A Trip Through the Graphics Pipeline" (Giesen), HEVD (HackSysTeam), ired.team, maldevacademy.com, Sliver docs, loldrivers.io, Sigma repo, USB in a Nutshell, USB Made Simple, Linux kernel USB docs, usbguard, Facedancer/GreatFET, syzkaller USB, USBView/USBPcap, WDK/KMDF samples, Apple DriverKit docs + WWDC sessions, virtio spec, Ghidra, jtool/kcache_id/kerneldiff, crackmes.one, Flare-On archive, AOSP security docs + Android security bulletins, Frida, objection, drozer, apktool/jadx/smali, Play Protect, Mobile Threat Catalogue, BlackLotus analyses (ESET, SentinelOne), Diamorphine, UEFI spec, efi-mimikatz, QEMU/OVMF, MinHook/Detours, fishhook, LSPosed/Xposed, bhook/Dobby, LD_PRELOAD + dyld interpose docs
+- Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)
+- Sites: MIT 6.S081, pwn.college, ROP Emporium, pwnable.tw, exploit.education, ctf-wiki.org, xairy list, Project Zero, Quarkslab, pattern-f, gbdev.io, OSDev wiki, saelo.github.io, Hacking with Swift, Apple Metal docs + WWDC sessions, "A Trip Through the Graphics Pipeline" (Giesen), HEVD (HackSysTeam), ired.team, maldevacademy.com, Sliver docs, loldrivers.io, Sigma repo, USB in a Nutshell, USB Made Simple, Linux kernel USB docs, usbguard, Facedancer/GreatFET, syzkaller USB, USBView/USBPcap, WDK/KMDF samples, Apple DriverKit docs + WWDC sessions, virtio spec, Ghidra, jtool/kcache_id/kerneldiff, crackmes.one, Flare-On archive, AOSP security docs + Android security bulletins, Frida, objection, drozer, apktool/jadx/smali, Play Protect, Mobile Threat Catalogue, BlackLotus analyses (ESET, SentinelOne), Diamorphine, UEFI spec, efi-mimikatz, QEMU/OVMF, MinHook/Detours, fishhook, LSPosed/Xposed, bhook/Dobby, LD_PRELOAD + dyld interpose docs, cryptopals.com, cryptohack.org, *The Fuzzing Book* (Zeller), Trail of Bits Fuzzing 101, Volatility 3 docs, corelan.be + FuzzySecurity (Windows userland expl), Apple Hypervisor.framework docs
 - Code: xv6-riscv, torvalds/linux, apple-oss-distributions/xnu, felix-pb/kfd, opa334/Dopamine, checkra1n
 
