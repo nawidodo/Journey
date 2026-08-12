@@ -10,6 +10,7 @@ Self-paced roadmap to **Systems Security Engineer** — exploit development, ker
 | [`steps/`](steps/) | The work — one folder per step, in order. |
 | [`steps/README.md`](steps/README.md) | Step conventions, structure table (phase → contents → weeks → track), milestone tracker. |
 | [`steps/23-Career`](steps/23-Career) | Post-plan career phase (Track O): writeups/portfolio, resume/interview, coordinated disclosure, career-launch capstone. |
+| [`steps/24-Make-Your-Own`](steps/24-Make-Your-Own) | Optional from-scratch reinforcement (Track P, W46+): own OS, DB, git, shell, TCP/IP, regex, assembler, micro-transformer. |
 | [`RECOMMENDATIONS.md`](RECOMMENDATIONS.md) | Gap analysis & how the plan evolved (what was added and why). |
 
 ## How to navigate
