@@ -1,6 +1,6 @@
 # 22-06 · Advanced Firmware: Multi-Interface, Exfil Queue, OTA, Self-Destruct
 
-**Week:** W35 · **Track:** N · **Prev:** [`../05-network-adapter-pivot`](../05-network-adapter-pivot/README.md) · **Next:** [`../07-capstone-attack-device`](../07-capstone-attack-device/README.md)
+**Week:** W35 · **Track:** N · **Prev:** [`../05-network-adapter-pivot`](../05-network-adapter-pivot/README.md) · **Next:** [`../07-fault-injection-glitching`](../07-fault-injection-glitching/README.md)
 
 ## Objective
 Turn the 22-01…05 feature pile into a *product-grade* attack device — the firmware hardening plugandpwn-class tools ship: composite USB, reliable exfil, remote updates, and operational failure modes. This is where a hack becomes a tool.

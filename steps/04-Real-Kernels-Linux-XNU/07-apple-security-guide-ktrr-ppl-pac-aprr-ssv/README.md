@@ -1,6 +1,6 @@
 # 03-07 · Apple Platform Security — KTRR/PPL/PAC/APRR/SSV 🚩 M5
 
-**Week:** W19–20 · **Track:** A · **Prev:** [`../06-xnu-internals-levin-v1v2`](../06-xnu-internals-levin-v1v2/README.md) · **Next:** [`../../05-Linux-Kernel-Exploitation/01-modprobe-path`](../../05-Linux-Kernel-Exploitation/01-modprobe-path/README.md)
+**Week:** W19–20 · **Track:** A · **Prev:** [`../06-xnu-internals-levin-v1v2`](../06-xnu-internals-levin-v1v2/README.md) · **Next:** [`../08-rust-for-systems-programming`](../08-rust-for-systems-programming/README.md)
 
 ## Objective
 Map Apple's hardware/software security architecture. **Milestone M5: KTRR/PPL/PAC attack matrix.**

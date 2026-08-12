@@ -21,11 +21,11 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
 | `02-Emulator` | CHIP-8 → NES → Metal → iOS app | 6–18 | B |
 | `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms | 10–14 | A |
-| `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security | 14–20 | A |
+| `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security (+ Rust, 08) | 14–20 | A |
 | `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology (11 steps) | 20–30 | A |
 | `06-Sandbox-Escape` | seccomp → container escapes → Seatbelt → VM escapes + own hypervisor (stretch) | 34–39 | A |
 | `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
-| `08-Browser-Exploitation` | JS engines → d8 CVE | 47+ | A |
+| `08-Browser-Exploitation` | JS engines → d8 CVE → JSC/WebKit (04, optional) | 47+ | A |
 | `09-Real-World-Chains` | ForcedEntry, Pegasus, Pwn2Own | capstone | A |
 | `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone | 12–28 | C |
 | `11-Windows-Kernel` | userland exploit dev → internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 29–44 | D |
@@ -39,7 +39,8 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
 | `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone | 14–20 | L |
 | `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone | 30–36 | M |
-| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → plugandpwn-class capstone | 28–36 | N |
+| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone | 28–36 | N |
+| `23-Career` | writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone | post-M23 | O |
 
 ## Checkpoint tracker (from LEARNING_PLAN.md)
 - [ ] **M1** trace xv6 syscall → `01-xv6-riscv/03-lab-syscall`
@@ -66,7 +67,8 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 - [ ] **M20** own from-scratch hook engine on ≥5 platforms → `19-Runtime-Hooking/07-capstone-cross-platform-hooking`
 - [ ] **M21** weak crypto scheme broken end-to-end → `20-Cryptography/06-capstone-crypto-weak-scheme`
 - [ ] **M22** memory+disk+logs → root cause → detection rule → `21-Detection-DFIR/05-capstone-ir-scenario`
-- [ ] **M23** plugandpwn/O.MG-class attack-USB device (injection + pivot + exfil) → `22-Embedded-USB/07-capstone-attack-device`
+- [ ] **M23** plugandpwn/O.MG-class attack-USB device (injection + pivot + exfil) → `22-Embedded-USB/08-capstone-attack-device`
+- [ ] **M24** portfolio live + one disclosed advisory + resume v2 → `23-Career/04-capstone-career-launch`
 
 ## Path
 Track A sequential: `00` → `01` → `03` → `04` → `05` → `06` → `07` → `08` → `09`
@@ -84,5 +86,6 @@ Track K parallel (start W20, feeds Track E evasion + Track J kernel hooks): `19`
 Track L parallel (start W14, alongside Phase 4 kernel reading): `20`
 Track M parallel (start W30, the defensive counterweight to Track D/F): `21`
 Track N parallel (start W28, low-priority, after Track F protocol basics; builds the device Track F attacks): `22`
+Track O (start post-M23, career — writeups/portfolio, resume/interview, coordinated disclosure): `23`
 
 Start: [`00-Foundations/01-c-knr-ch1-6`](00-Foundations/01-c-knr-ch1-6/README.md)

@@ -1,6 +1,6 @@
 # Journey
 
-Self-paced roadmap to **Systems Security Engineer** — exploit development, kernel internals, malware dev, and defense. Built as 14 parallel learning tracks mapped to numbered phases, one folder per learnable step, with a master plan, per-phase checkpoints, and gap analysis.
+Self-paced roadmap to **Systems Security Engineer** — exploit development, kernel internals, malware dev, and defense. Built as 15 parallel learning tracks mapped to numbered phases, one folder per learnable step, with a master plan, per-phase checkpoints, and gap analysis.
 
 ## What's inside
 
@@ -9,6 +9,7 @@ Self-paced roadmap to **Systems Security Engineer** — exploit development, ker
 | [`LEARNING_PLAN.md`](LEARNING_PLAN.md) | **Master roadmap** — tracks A–N, phases 0–22, week-by-week plan, milestones 🚩 M1–M23, load-control notes. Start here. |
 | [`steps/`](steps/) | The work — one folder per step, in order. |
 | [`steps/README.md`](steps/README.md) | Step conventions, structure table (phase → contents → weeks → track), milestone tracker. |
+| [`steps/23-Career`](steps/23-Career) | Post-plan career phase (Track O): writeups/portfolio, resume/interview, coordinated disclosure, career-launch capstone. |
 | [`RECOMMENDATIONS.md`](RECOMMENDATIONS.md) | Gap analysis & how the plan evolved (what was added and why). |
 
 ## How to navigate

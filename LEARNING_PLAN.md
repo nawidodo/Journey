@@ -1,6 +1,6 @@
 # MASTER ROADMAP — Systems Security Engineer
 
-Thirteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F).
+Fifteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F), Track O (career — post-plan professional completion, Phase 23).
 
 ## Track A — security core
 Foundations → xv6-riscv → exploit basics → Linux → Linux kernel exploits → sandbox escapes → XNU → iOS exploits/jailbreak → browser → chains
@@ -42,7 +42,10 @@ Symmetric/modes (padding oracle) → RSA/ECC + attacks → hashes/MACs/side-chan
 Memory forensics → log analysis + threat hunting → Sigma/YARA as code → disk/artifact forensics → IR capstone (memory + disk + logs → root cause → detection rule). The blue-team counterweight to the offensive tracks.
 
 ## Track N — Embedded USB device development (attack-USB hardware)
-USB device firmware + HID injection (TinyUSB on RP2040) → own DuckyScript engine → ESP32 WiFi C2 (softAP, web UI, exfil) → stealth/detection + USB-C hardware path → network-adapter pivot (WiFi client→AP bridge, LAN-Turtle mode) → advanced firmware (composite USB, exfil queue, OTA, self-destruct) → capstone: plugandpwn/O.MG-class device; stretch: KiCad inline PCB. Builds the device Track F attacks.
+USB device firmware + HID injection (TinyUSB on RP2040) → own DuckyScript engine → ESP32 WiFi C2 (softAP, web UI, exfil) → stealth/detection + USB-C hardware path → network-adapter pivot (WiFi client→AP bridge, LAN-Turtle mode) → advanced firmware (composite USB, exfil queue, OTA, self-destruct) → fault injection/glitching stretch → capstone: plugandpwn/O.MG-class device; stretch: KiCad inline PCB. Builds the device Track F attacks.
+
+## Track O — Career (post-M23, Phase 23, no week load)
+Writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone (M24). The job-conversion half: publication of labs, diligence on the disclosure process, mock interviews. Runs after the technical plan, so it competes for zero study weeks.
 
 ---
 
@@ -80,6 +83,7 @@ USB device firmware + HID injection (TinyUSB on RP2040) → own DuckyScript engi
 - XNU: `apple-oss-distributions/xnu` + Jonathan Levin Vol 1–2 (Mach ports, vm_map, code signing/AMFI)
 - Security: Apple *Platform Security Guide* — code signing, entitlements, sandbox, KTRR/PPL/PAC/APRR, SSV
 - ARM64 basics (Azeria) — RISC-V transfers; ARM64 specifics for iOS later
+- Rust for systems programming (`04-08`, W14–20 parallel): ownership/borrowing/lifetimes, `unsafe` rules and audit, reimplement one Phase 1/4 kernel-adjacent structure in Rust, read the Linux kernel `rust/` subsystem. The memory-safety half of modern kernel work (Linux/Android/Windows all moving).
 - **Exit:** skb lifecycle from memory; KTRR/PPL/PAC attack matrix
 
 ## Phase 5 · Linux kernel exploitation ladder (W20–30)
@@ -119,6 +123,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - saelo.github.io JS engine exploitation series
 - Project Zero browser bugs; doyensec course; d8/V8 CTF
 - Reuses eBPF type-confusion skills
+- Optional `08-04`: **JSC/WebKit exploitation** — JavaScriptCore GC/JIT tiers, one known JSC CVE end to end. The engine behind ForcedEntry/Trident/Pegasus; closes the V8→WebKit gap before Phase 9.
 - **Exit:** exploit known CVE in sandboxed d8
 
 ## Phase 9 · Real-world chains (capstone)
@@ -251,6 +256,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W33: stealth + hardware — how keystroke injection is detected (HID cadence, VID/PID, Sysmon), write the detections for your own device; USB-C CC/power, inline-board path, KiCad stretch
 - W34: network-adapter pivot — WiFi client joins victim network + attacker AP with NAT bridging (LAN-Turtle mode); exfil over victim network; pivot + HID in one plug-in
 - W35: advanced firmware — composite USB (HID + CDC + vendor), exfil queue w/ retry, multi-payload + encrypted config, signed OTA, self-destruct/panic (plugandpwn feature set)
+- W36 (parallel, **stretch**): fault injection/glitching (`07-fault-injection-glitching`) — voltage/EM glitch basics, one working glitch on owned hardware (chipWhisperer-class or Pico DIY), TEE/firmware bypass theory; the hardware complement to checkm8. Costs money, cut first if budget is tight.
 - W36: capstone — full chain on one device (plug → auto-run → exfil over AP *and* victim net → pivot → UI) + defender round-trip + writeup
 - **Exit:** **M23** — plugandpwn/O.MG-class device works end-to-end; stretch: fabricated inline PCB
 
@@ -259,7 +265,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 ## Load control & priorities (W20+ crowded middle)
 - **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B.** Pick one mobile platform primary; the other goes secondary (re-run later).
 - **>2 concurrent tracks in a week → defer, don't grind.** Track J (W44–56) is the exception — most prior tracks are done; treat it as the graduation project.
-- First cuts if behind: Track I (Android malware — Track E concepts transfer), Track B stretch (APU, extra mappers), and Track N (embedded USB — needs cheap hardware, no deadline pressure). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half can slip.
+- First cuts if behind: Track I (Android malware — Track E concepts transfer), Track B stretch (APU, extra mappers), and Track N (embedded USB — needs cheap hardware, no deadline pressure), incl. the 22-07 fault-injection stretch (hardware cost). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half can slip. Track O (career, Phase 23) runs post-M23 — zero load on the study window.
 - W34–46 is the worst squeeze (iOS Phase 7 + Track D + Track H + sandbox + DFIR capstone): stagger capstones, lean on the defer rule.
 
 ---
@@ -275,7 +281,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 | 10–14 | Exploit fundamentals | — |
 | 12–16 | — | Metal macOS app |
 | 12–28 | — | Graphics (Track C) |
-| 14–20 | Linux → XNU | — |
+| 14–20 | Linux → XNU + Rust (08) | — |
 | 14–20 | — | Applied crypto (Track L) |
 | 16–18 | — | iOS app |
 | 16–20 | — | Reverse engineering |
@@ -287,7 +293,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 | 28–41 | — | Driver dev all OS (Track G) |
 | 29–30 | — | Windows userland expl (Track D pre) |
 | 30–36 | — | Detection/DFIR (Track M) |
-| 28–36 | — | Embedded USB device dev (Track N) |
+| 28–36 | — | Embedded USB device dev + fault injection stretch (Track N) |
 | 30–44 | — | Windows kernel (Track D) |
 | 34–39 | Sandbox escapes (parallel) | — |
 | 35–46 | iOS exploits / jailbreak / Dopamine | — |
@@ -295,8 +301,9 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 | 40–48 | — | Android malware dev (Track I) |
 | 44–56 | — | Rootkit/bootkit (Track J) |
 | 47+ | Browser → chains | — |
+| post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
@@ -324,9 +331,10 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - [ ] M21: weak crypto scheme broken end-to-end (W20, Track L)
 - [ ] M22: memory+disk+logs → root cause → detection rule (W36, Track M)
 - [ ] M23: plugandpwn/O.MG-class attack-USB device works end-to-end (W36, Track N)
+- [ ] M24: career launch — portfolio live + ≥1 disclosed advisory + resume v2 (post-M23, Track O)
 
 ## Resources master list
 - Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)
-- Sites: MIT 6.S081, pwn.college, ROP Emporium, pwnable.tw, exploit.education, ctf-wiki.org, xairy list, Project Zero, Quarkslab, pattern-f, gbdev.io, OSDev wiki, saelo.github.io, Hacking with Swift, Apple Metal docs + WWDC sessions, "A Trip Through the Graphics Pipeline" (Giesen), HEVD (HackSysTeam), ired.team, maldevacademy.com, Sliver docs, loldrivers.io, Sigma repo, USB in a Nutshell, USB Made Simple, Linux kernel USB docs, usbguard, Facedancer/GreatFET, syzkaller USB, USBView/USBPcap, WDK/KMDF samples, Apple DriverKit docs + WWDC sessions, virtio spec, Ghidra, jtool/kcache_id/kerneldiff, crackmes.one, Flare-On archive, AOSP security docs + Android security bulletins, Frida, objection, drozer, apktool/jadx/smali, Play Protect, Mobile Threat Catalogue, BlackLotus analyses (ESET, SentinelOne), Diamorphine, UEFI spec, efi-mimikatz, QEMU/OVMF, MinHook/Detours, fishhook, LSPosed/Xposed, bhook/Dobby, LD_PRELOAD + dyld interpose docs, cryptopals.com, cryptohack.org, *The Fuzzing Book* (Zeller), Trail of Bits Fuzzing 101, Volatility 3 docs, corelan.be + FuzzySecurity (Windows userland expl), Apple Hypervisor.framework docs
+- Sites: MIT 6.S081, pwn.college, ROP Emporium, pwnable.tw, exploit.education, ctf-wiki.org, xairy list, Project Zero, Quarkslab, pattern-f, gbdev.io, OSDev wiki, saelo.github.io, Hacking with Swift, Apple Metal docs + WWDC sessions, "A Trip Through the Graphics Pipeline" (Giesen), HEVD (HackSysTeam), ired.team, maldevacademy.com, Sliver docs, loldrivers.io, Sigma repo, USB in a Nutshell, USB Made Simple, Linux kernel USB docs, usbguard, Facedancer/GreatFET, syzkaller USB, USBView/USBPcap, WDK/KMDF samples, Apple DriverKit docs + WWDC sessions, virtio spec, Ghidra, jtool/kcache_id/kerneldiff, crackmes.one, Flare-On archive, AOSP security docs + Android security bulletins, Frida, objection, drozer, apktool/jadx/smali, Play Protect, Mobile Threat Catalogue, BlackLotus analyses (ESET, SentinelOne), Diamorphine, UEFI spec, efi-mimikatz, QEMU/OVMF, MinHook/Detours, fishhook, LSPosed/Xposed, bhook/Dobby, LD_PRELOAD + dyld interpose docs, cryptopals.com, cryptohack.org, *The Fuzzing Book* (Zeller), Trail of Bits Fuzzing 101, Volatility 3 docs, corelan.be + FuzzySecurity (Windows userland expl), Apple Hypervisor.framework docs, The Rust Book + Rustonomicon (`04-08`), WebKit source + Project Zero WebKit posts (`08-04`), ChipWhisperer docs (`22-07`), CERT/CC disclosure guidance + GitHub security advisories (Phase 23)
 - Code: xv6-riscv, torvalds/linux, apple-oss-distributions/xnu, felix-pb/kfd, opa334/Dopamine, checkra1n
 

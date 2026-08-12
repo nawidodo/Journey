@@ -1,6 +1,6 @@
-# 22-07 · Capstone: plugandpwn-Class Attack-USB Device 🚩 M23
+# 22-08 · Capstone: plugandpwn-Class Attack-USB Device 🚩 M23
 
-**Week:** W36 · **Track:** N · **Prev:** [`../06-advanced-firmware`](../06-advanced-firmware/README.md)
+**Week:** W36 · **Track:** N · **Prev:** [`../07-fault-injection-glitching`](../07-fault-injection-glitching/README.md)
 
 ## Objective
 Ship a working attack-USB device, end to end — the O.MG-cable **and** plugandpwn feature sets on one stick: plug-in auto-run → keystroke injection → exfil (over AP *and* the victim's network) → network pivot → managed from a phone. M23 checkpoint — re-derive 22-01→22-06 with the notes closed before starting.
