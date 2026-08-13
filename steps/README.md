@@ -31,7 +31,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `11-Windows-Kernel` | userland exploit dev → internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 29–44 | D |
 | `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) | 18–30 | E |
 | `13-USB-Security` | protocol/stack → Linux driver → attack surface → fuzzing/emulation → iOS/Windows links → capstone | 24–32 | F |
-| `14-Cross-OS-Driver-Dev` | Linux craft → MMIO/DMA/IRQ → Windows KMDF → macOS dext → cross-OS fuzzing → real USB device + userspace driver + app → capstone | 28–41 | G |
+| `14-Cross-OS-Driver-Dev` | Linux craft → MMIO/DMA/IRQ → Windows KMDF → macOS dext → cross-OS fuzzing → real USB device + userspace driver + app → gamepad turbo (attach to existing controller, all OSes) → capstone | 28–41 | G |
 | `15-Reverse-Engineering` | Ghidra → kernelcache → crackmes/Flare-On → patch-diff → crash triage | 16–20 | — |
 | `16-Android-Exploitation` | security model → app surface → binder/kernel → real CVEs → root → capstone | 34–44 | H |
 | `17-Android-Malware-Dev` | APK/dex/smali → implant → C2/evasion → fraud → detection → capstone | 40–48 | I |
@@ -61,7 +61,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 - [ ] **M12** 2 HEVD classes + 1 real CVE → `11-Windows-Kernel/06-capstone-hevd-cve`
 - [ ] **M13** implant survives own Sigma rules → `12-Malware-Dev/06-capstone-implant`
 - [ ] **M14** USB attack + own detection rules → `13-USB-Security/06-capstone-usb-attack`
-- [ ] **M15** driver on Linux+Windows+macOS → `14-Cross-OS-Driver-Dev/07-capstone-cross-os-driver`
+- [ ] **M15** driver on Linux+Windows+macOS → `14-Cross-OS-Driver-Dev/08-capstone-cross-os-driver`
 - [ ] **M16** crash → root cause chain → `15-Reverse-Engineering/05-capstone-crash-triage`
 - [ ] **M17** Android root from exploit chain → `16-Android-Exploitation/06-capstone-android-root-chain`
 - [ ] **M18** Android implant survives own detections → `17-Android-Malware-Dev/06-capstone-android-implant`

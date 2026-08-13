@@ -1,6 +1,6 @@
-# 14-07 · Capstone: One Driver on All Three OSes 🚩 M15
+# 14-08 · Capstone: One Driver on All Three OSes 🚩 M15
 
-**Week:** W38–41 · **Track:** G · **Prev:** [`../06-usb-device-driver-app`](../06-usb-device-driver-app/README.md)
+**Week:** W38–41 · **Track:** G · **Prev:** [`../07-gamepad-turbo-cross-os`](../07-gamepad-turbo-cross-os/README.md)
 
 ## Objective
 A single driver idea shipped on Linux, Windows, and macOS — plus a deliberate bug documented from the defender's side (hand-off to Track D). The default target is now **real hardware**: the USB device you built in 14-06.

@@ -21,7 +21,7 @@ PE/APIs → injection/persistence → AMSI/ETW evasion → C2 implant → detect
 Stack/protocol → Linux USB driver dev → attack surface → fuzzing/device emulation → iOS/Windows links → capstone
 
 ## Track G — Cross-OS driver development
-Linux driver craft → hardware-facing (MMIO/DMA/IRQ) → Windows KMDF → macOS DriverKit (dext) → cross-OS fuzzing → real USB device + userspace driver + app → capstone on all 3 OSes
+Linux driver craft → hardware-facing (MMIO/DMA/IRQ) → Windows KMDF → macOS DriverKit (dext) → cross-OS fuzzing → real USB device + userspace driver + app → gamepad turbo on an existing controller (hidraw/uinput · ViGEm · IOHIDUserDevice, kernel filter stretch) → capstone on all 3 OSes
 
 ## Track H — Android exploitation
 Security model → app attack surface → Binder/kernel → real CVEs → root/bootloader/TEE → capstone chain
@@ -181,6 +181,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W33–35: macOS DriverKit (dext) — kexts are dead on Apple Silicon; IOUserClient methods
 - W35–37: cross-OS patterns + fuzzing your own drivers (syzkaller / IOCTL harness / dext fuzz)
 - W37–38: real USB device + userspace driver + app — Raspberry Pi Pico (TinyUSB) vendor-class device, IOKit + libusb userspace drivers, SwiftUI control app
+- W36–38: gamepad turbo — attach to an *existing* USB controller (Xbox-style HID): HID report parsing, turbo state machine (button hold → N Hz auto-fire), per-OS interception + virtual-device injection (Linux hidraw+uinput / Windows Raw Input+ViGEmBus / macOS IOHIDManager+IOHIDUserDevice); kernel filter stretch (Linux HID driver / KMDF HID filter); macOS is userspace-only by design (no third-party kexts on Apple Silicon)
 - W38–41: capstone — one driver on Linux + Windows + macOS, driving your real 14-06 USB device; deliberate bug handed to Track D
 - **Exit:** **M15** — working driver trio + cross-OS comparison
 
