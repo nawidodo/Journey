@@ -262,6 +262,13 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 
 ---
 
+## Phase 25 · Privilege escalation tool internals — Track Q (W20+, parallel)
+Privesc is the payoff of every exploit phase, and its tools are usually black boxes. This track opens them, all OSes: boundary model (step 01) → linpeas/pspy internals + own mini-scanner (02) → SUID/caps/sudo mechanics (03) → cron/systemd/container/NFS classes (04) → Windows token model (05) → mimikatz from source (06) → potato family: Rogue Potato/PrintSpoofer/GodPotato (07) → WinPEAS/PowerUp/UAC/CVEs (08) → AD: BloodHound/Kerberoast/delegation/impacket (09) → macOS TCC/SIP/task_for_pid/launchd (10) → Android Magisk + iOS jailbreak-as-privesc (11) → capstone: cross-OS triage tool + tool-internals wiki + re-derive mimikatz & Rogue Potato (12).
+- **Exit:** **M25** — cross-OS triage tool + ≥10-tool internals wiki + re-derives pass (writeup closed)
+- Pairs with Phase 3 (exploit fundamentals), 5 (kernel ladder), 11 (Track D — service misconfigs feed HEVD), 12 (Track E), 16 (Track H), and feeds Track M detection round-trips. Defer rule applies (>2 concurrent tracks).
+
+---
+
 ## Load control & priorities (W20+ crowded middle)
 - **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B.** Pick one mobile platform primary; the other goes secondary (re-run later).
 - **>2 concurrent tracks in a week → defer, don't grind.** Track J (W44–56) is the exception — most prior tracks are done; treat it as the graduation project.
@@ -332,6 +339,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - [ ] M22: memory+disk+logs → root cause → detection rule (W36, Track M)
 - [ ] M23: plugandpwn/O.MG-class attack-USB device works end-to-end (W36, Track N)
 - [ ] M24: career launch — portfolio live + ≥1 disclosed advisory + resume v2 (post-M23, Track O)
+- [ ] M25: cross-OS privesc triage tool + ≥10-tool internals wiki + mimikatz/potato re-derived (W20+ parallel, Track Q)
 
 ## Resources master list
 - Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)

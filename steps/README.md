@@ -42,6 +42,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone | 28–36 | N |
 | `23-Career` | writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone | post-M23 | O |
 | `24-Make-Your-Own` | own OS → own DB → own git → own shell → own TCP/IP → own regex → own assembler → micro-transformer (security-relevant from-scratch reinforcement) | W46+ opt | P |
+| `25-Privilege-Escalation` | privesc tool internals, all OSes — boundary model → linpeas/pspy → SUID/caps/sudo → mimikatz → potato family → WinPEAS/PowerUp → BloodHound/AD → macOS TCC → mobile root (Magisk/jailbreak) → capstone triage tool + re-derive | W20+ parallel | Q |
 
 ## Checkpoint tracker (from LEARNING_PLAN.md)
 - [ ] **M1** trace xv6 syscall → `01-xv6-riscv/03-lab-syscall`
@@ -70,6 +71,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 - [ ] **M22** memory+disk+logs → root cause → detection rule → `21-Detection-DFIR/05-capstone-ir-scenario`
 - [ ] **M23** plugandpwn/O.MG-class attack-USB device (injection + pivot + exfil) → `22-Embedded-USB/08-capstone-attack-device`
 - [ ] **M24** portfolio live + one disclosed advisory + resume v2 → `23-Career/04-capstone-career-launch`
+- [ ] **M25** cross-OS privesc triage tool + 10-tool internals wiki + mimikatz/potato re-derived → `25-Privilege-Escalation/12-capstone-tool-triage`
 
 ## Path
 Track A sequential: `00` → `01` → `03` → `04` → `05` → `06` → `07` → `08` → `09`
@@ -89,5 +91,6 @@ Track M parallel (start W30, the defensive counterweight to Track D/F): `21`
 Track N parallel (start W28, low-priority, after Track F protocol basics; builds the device Track F attacks): `22`
 Track O (start post-M23, career — writeups/portfolio, resume/interview, coordinated disclosure): `23`
 Track P (start W46+, optional, make-your-own systems from scratch mapped to build-your-own-x): `24`
+Track Q parallel (start W20+, pairs with Phase 3/5/11/12/16 — privesc is the payoff of every exploit phase; defer rule applies): `25`
 
 Start: [`00-Foundations/01-c-knr-ch1-6`](00-Foundations/01-c-knr-ch1-6/README.md)
