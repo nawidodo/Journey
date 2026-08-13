@@ -1,6 +1,6 @@
 # 14-06 · Real USB Device + Userspace Driver + App
 
-**Week:** W37–38 · **Track:** G · **Prev:** [`../05-cross-os-patterns-fuzzing`](../05-cross-os-patterns-fuzzing/README.md) · **Next:** [`../07-capstone-cross-os-driver`](../07-capstone-cross-os-driver/README.md)
+**Week:** W37–38 · **Track:** G · **Prev:** [`../05-cross-os-patterns-fuzzing`](../05-cross-os-patterns-fuzzing/README.md) · **Next:** [`../07-gamepad-turbo-cross-os`](../07-gamepad-turbo-cross-os/README.md)
 
 ## Objective
 Build something real you can hold: an actual USB device (Raspberry Pi Pico, ~$5, breadboard, no soldering), a userspace driver, and a macOS app that controls it. This is the missing **real-hardware** link — 14-02 drove a virtual device, 13-02 emulated one. Key fact that makes this easy: USB is one of the few buses where userspace drivers are first-class — a vendor-class device is fully controllable from an app with **zero kernel code**.
