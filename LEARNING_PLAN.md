@@ -1,6 +1,6 @@
 # MASTER ROADMAP — Systems Security Engineer
 
-Fifteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F), Track O (career — post-plan professional completion, Phase 23).
+Seventeen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F), Track O (career — post-plan professional completion, Phase 23), Track Q parallel (privilege escalation tool internals, all OSes — Phase 25), Track R parallel (Bluetooth device development — Phase 26).
 
 ## Track A — security core
 Foundations → xv6-riscv → exploit basics → Linux → Linux kernel exploits → sandbox escapes → XNU → iOS exploits/jailbreak → browser → chains
@@ -270,6 +270,13 @@ Privesc is the payoff of every exploit phase, and its tools are usually black bo
 
 ---
 
+## Phase 26 · Bluetooth device development — Track R (W36–48, parallel, low priority)
+Build real Bluetooth devices end to end. Stack theory BR/EDR vs BLE (01) → first BLE peripheral on nRF52840/ESP32-C3, poked from Linux/macOS/Windows/Android (02) → HID-over-GATT gamepad — real hardware for the Track G 14-07 turbo idea (03) → host-side + HCI/air sniffing of your own devices (04) → classic: A2DP audio + SPP serial (05) → pairing/security attacks on own hardware + detection mirror (06) → capstone: BLE HID turbo gamepad with hardware turbo, secure pairing, OTA, on ≥2 OSes (07).
+- **Exit:** **M26** — working BLE HID turbo gamepad + security review + sniffed handoff to Track M
+- Pairs with Track G (14-07 report map + turbo core), Phase 7 (CoreBluetooth), Track N (embedded build practice), Track F (protocol/sniffing discipline). Low priority; defer under the >2-tracks rule.
+
+---
+
 ## Load control & priorities (W20+ crowded middle)
 - **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B.** Pick one mobile platform primary; the other goes secondary (re-run later).
 - **>2 concurrent tracks in a week → defer, don't grind.** Track J (W44–56) is the exception — most prior tracks are done; treat it as the graduation project.
@@ -308,10 +315,11 @@ Privesc is the payoff of every exploit phase, and its tools are usually black bo
 | 34–44 | — | Android exploitation (Track H) |
 | 40–48 | — | Android malware dev (Track I) |
 | 44–56 | — | Rootkit/bootkit (Track J) |
+| 36–48 | — | Bluetooth device dev (Track R) |
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead. Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
@@ -341,6 +349,7 @@ Privesc is the payoff of every exploit phase, and its tools are usually black bo
 - [ ] M23: plugandpwn/O.MG-class attack-USB device works end-to-end (W36, Track N)
 - [ ] M24: career launch — portfolio live + ≥1 disclosed advisory + resume v2 (post-M23, Track O)
 - [ ] M25: cross-OS privesc triage tool + ≥10-tool internals wiki + mimikatz/potato re-derived (W20+ parallel, Track Q)
+- [ ] M26: BLE HID turbo gamepad — hardware turbo + secure pairing + OTA, ≥2 OSes (W46, Track R)
 
 ## Resources master list
 - Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)
