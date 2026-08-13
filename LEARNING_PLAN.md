@@ -1,6 +1,6 @@
 # MASTER ROADMAP — Systems Security Engineer
 
-Seventeen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F), Track O (career — post-plan professional completion, Phase 23), Track Q parallel (privilege escalation tool internals, all OSes — Phase 25), Track R parallel (Bluetooth device development — Phase 26).
+Eighteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F), Track O (career — post-plan professional completion, Phase 23), Track Q parallel (privilege escalation tool internals, all OSes — Phase 25), Track R parallel (Bluetooth device development — Phase 26), Track S parallel (C2 framework development — Phase 27).
 
 ## Track A — security core
 Foundations → xv6-riscv → exploit basics → Linux → Linux kernel exploits → sandbox escapes → XNU → iOS exploits/jailbreak → browser → chains
@@ -277,6 +277,13 @@ Build real Bluetooth devices end to end. Stack theory BR/EDR vs BLE (01) → fir
 
 ---
 
+## Phase 27 · C2 framework development — Track S (W30–38, parallel)
+Build your own command-and-control framework, not a Sliver config. Architecture + dissect real C2s (01) → your own wire protocol (framing, AES-GCM, key exchange) + HTTP/S beacon and listener (02) → cross-platform Go agent: tasking, in-memory-only, sleep obfuscation, kill switch (03) → teamserver + operator UI, multi-operator, audit log (04) → DNS / SMB-pipe / WebSocket transports + redirectors, failover (05) → capstone: full op on own VMs then detection round-trip — write the Sigma/YARA/Sysmon rules that catch your own beacon, fix, re-run (06).
+- **Exit:** **M27** — own C2 survives its own detection rules, full-op runbook + before/after data
+- Prerequisite: Track E core (12-01–04, W18–30) — this phase is the "your own" path Track E 04 points at. Feeds Track M detection targets; pairs Track D (SMB pipes). Lab-only per safety rules.
+
+---
+
 ## Load control & priorities (W20+ crowded middle)
 - **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B.** Pick one mobile platform primary; the other goes secondary (re-run later).
 - **>2 concurrent tracks in a week → defer, don't grind.** Track J (W44–56) is the exception — most prior tracks are done; treat it as the graduation project.
@@ -315,6 +322,7 @@ Build real Bluetooth devices end to end. Stack theory BR/EDR vs BLE (01) → fir
 | 34–44 | — | Android exploitation (Track H) |
 | 40–48 | — | Android malware dev (Track I) |
 | 44–56 | — | Rootkit/bootkit (Track J) |
+| 30–38 | — | C2 framework (Track S) |
 | 36–48 | — | Bluetooth device dev (Track R) |
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
@@ -350,6 +358,7 @@ Build real Bluetooth devices end to end. Stack theory BR/EDR vs BLE (01) → fir
 - [ ] M24: career launch — portfolio live + ≥1 disclosed advisory + resume v2 (post-M23, Track O)
 - [ ] M25: cross-OS privesc triage tool + ≥10-tool internals wiki + mimikatz/potato re-derived (W20+ parallel, Track Q)
 - [ ] M26: BLE HID turbo gamepad — hardware turbo + secure pairing + OTA, ≥2 OSes (W46, Track R)
+- [ ] M27: own C2 framework survives its own detection rules — multi-transport, full op, before/after (W38, Track S)
 
 ## Resources master list
 - Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)
