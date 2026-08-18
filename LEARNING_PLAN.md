@@ -1,6 +1,6 @@
 # MASTER ROADMAP — Systems Security Engineer
 
-Eighteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F), Track O (career — post-plan professional completion, Phase 23), Track Q parallel (privilege escalation tool internals, all OSes — Phase 25), Track R parallel (Bluetooth device development — Phase 26), Track S parallel (C2 framework development — Phase 27).
+Eighteen tracks. Track A sequential (security core), Track B parallel (hardware/Apple), Track C parallel (graphics: Metal + Vulkan/DX, shaders, SIMD, software renderer), Track D parallel (Windows kernel), Track E parallel (malware dev), Track F parallel (USB security), Track G parallel (cross-OS driver dev), Track H parallel (Android exploitation), Track I parallel (Android malware dev), Track J parallel (rootkit/bootkit, all OSes), Track K parallel (runtime hooking, all OSes), Track L parallel (applied cryptography), Track M parallel (detection engineering + DFIR), Track N parallel (embedded USB device development — the build-half of Track F), Track O (career — post-plan professional completion, Phase 23), Track Q parallel (privilege escalation tool internals, all OSes — Phase 25), Track R parallel (Bluetooth device development — Phase 26), Track S parallel (C2 framework development — Phase 27), Track T parallel (Wi-Fi security — Phase 28, low priority).
 
 ## Track A — security core
 Foundations → xv6-riscv → exploit basics → Linux → Linux kernel exploits → sandbox escapes → XNU → iOS exploits/jailbreak → browser → chains
@@ -46,6 +46,9 @@ USB device firmware + HID injection (TinyUSB on RP2040) → own DuckyScript engi
 
 ## Track O — Career (post-M23, Phase 23, no week load)
 Writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone (M24). The job-conversion half: publication of labs, diligence on the disclosure process, mock interviews. Runs after the technical plan, so it competes for zero study weeks.
+
+## Track T — Wi-Fi security (Phase 28, low priority, defer rule applies)
+802.11 stack + monitor mode → WPA2/WPA3 attack classes (PMKID, KRACK, Dragonblood) → enterprise EAP relay + captive portal → rogue-AP red-team hosting + MITM + pivot → WIDS/detection mirror → capstone: full engagement + own detection round-trip. The radio twin of Track N (wired pivots) and Track R (air discipline); feeds Track M Wi-Fi detection rules. Own lab airspace only — attack only APs you own.
 
 ---
 
@@ -163,6 +166,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W25–26: detection/defense — Sysmon, Sigma rules against your own implants
 - W26–28: capstone — full implant, survives its own detections
 - W28–30: advanced in-memory + evasion (Sektor7-class) — reflective PE/DLL + COFF loaders, 32/64-bit migration, hidden storage, exception-driven control flow, custom RPC-like tasking, userland process hiding
+- W30 (stretch): anti-forensics — timestomping ($MFT SI vs FN), ShimCache/Amcache/Prefetch/SRUM shimming, event-log gaps, browser history laundering; before/after artifact comparison; the disk mirror of Track M 04. See `08-anti-forensics`.
 - **Exit:** **M13** — implant passes its own Sigma rules end-to-end
 
 ## Phase 13 · USB security — Track F (W24–32, parallel)
@@ -191,6 +195,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W18–19: practice — crackmes.one, Flare-On archive, microcorruption
 - W19–20: patch-diffing CVE workflow — one fix commit per week, root cause from the patch alone
 - W20: capstone — triage one real crash log → root cause chain with Ghidra walkthrough
+- W19–20 (parallel, stretch): symbolic execution — angr/KLEE/Triton; 3 angr challenge solves, one Triton deobfuscation, KLEE vs libFuzzer comparison. The concolic half of the fuzzing story (05-11). See `06-symbolic-execution`.
 - **Exit:** **M16** — crash → root cause chain from an unsymbolicated image
 
 ## Phase 16 · Android exploitation — Track H (W34–44, parallel)
@@ -246,6 +251,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W32–34: detection-as-code — production-quality Sigma + YARA, validation/conversion, FP engineering, adversary-in-the-loop tuning
 - W34–35: disk/artifact forensics — timelines, persistence hunting (the Track J list, inverted), carving, evidence hygiene
 - W35–36: capstone — one IR scenario across memory + disk + logs → root cause → shipping detection rule
+- W36+ (stretch): own mini-EDR — invert Track J's primitives into telemetry (ETW/kernel callbacks/minifilter, auditd/eBPF, macOS ESF) + own YARA memory scanner; your own Track E/J artifacts in a VM must alert on ≥2 OSes. See `06-own-mini-edr` (**M29**).
 - **Exit:** **M22** — full IR chain + detection rule
 
 ---
@@ -259,6 +265,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W35: advanced firmware — composite USB (HID + CDC + vendor), exfil queue w/ retry, multi-payload + encrypted config, signed OTA, self-destruct/panic (plugandpwn feature set)
 - W36 (parallel, **stretch**): fault injection/glitching (`07-fault-injection-glitching`) — voltage/EM glitch basics, one working glitch on owned hardware (chipWhisperer-class or Pico DIY), TEE/firmware bypass theory; the hardware complement to checkm8. Costs money, cut first if budget is tight.
 - W36: capstone — full chain on one device (plug → auto-run → exfil over AP *and* victim net → pivot → UI) + defender round-trip + writeup
+- W36+ (stretch): embedded firmware exploitation — extract router-class firmware (binwalk/squashfs), QEMU-emulate, ROP chain on ARM32/MIPS (no ASLR/NX); own hardware only. See `09-embedded-firmware-exploitation`.
 - **Exit:** **M23** — plugandpwn/O.MG-class device works end-to-end; stretch: fabricated inline PCB
 
 ---
@@ -284,10 +291,15 @@ Build your own command-and-control framework, not a Sliver config. Architecture 
 
 ---
 
+## Phase 28 · Wi-Fi security — Track T (W28–40, parallel, low priority)
+The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a bigger real-world target than either. Monitor mode + one USB adapter is the only hardware cost. Stack theory + capture (01) → WPA2/WPA3 attacks: PMKID/handshake crack, KRACK, Dragonblood downgrades (02) → enterprise: EAP relay (hostapd-wpe/EAPhammer), captive portal, probe-triggered evil twin (03) → rogue-AP red-team hosting: hostapd+dnsmasq+iptables NAT, MITM, Wi-Fi→wired pivot (04) → detection mirror: WIDS/clock-skew/rogue-AP classes, own Sigma/Suricata air rules (05) → capstone: full engagement + detection round-trip (06).
+- **Exit:** **M28** — rogue AP + client compromise + pivot on own lab, caught by own detection rules (before/after data)
+- Pairs Track N 05 (network-adapter pivot — the wired twin), Track R (air/sniffing discipline), Track M (detection round-trip). Low priority; defer under the >2-tracks rule. Own lab airspace only.
+
 ## Load control & priorities (W20+ crowded middle)
-- **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B.** Pick one mobile platform primary; the other goes secondary (re-run later).
+- **Priority: A (core) > C (graphics) > D (Windows) > G (feeds D) > H (Android) > K (feeds E) > F > E > I > B > T (Wi-Fi, low).** Pick one mobile platform primary; the other goes secondary (re-run later).
 - **>2 concurrent tracks in a week → defer, don't grind.** Track J (W44–56) is the exception — most prior tracks are done; treat it as the graduation project.
-- First cuts if behind: Track I (Android malware — Track E concepts transfer), Track B stretch (APU, extra mappers), and Track N (embedded USB — needs cheap hardware, no deadline pressure), incl. the 22-07 fault-injection stretch (hardware cost). Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half can slip. Track O (career, Phase 23) runs post-M23 — zero load on the study window.
+- First cuts if behind: Track I (Android malware — Track E concepts transfer), Track B stretch (APU, extra mappers), and Track N (embedded USB — needs cheap hardware, no deadline pressure), incl. the 22-07 fault-injection stretch (hardware cost). Track T (Wi-Fi, Phase 28) is low priority by design — cut before T. Track K's desktop half (W20–27) feeds Track E — keep it; its mobile half can slip. Track O (career, Phase 23) runs post-M23 — zero load on the study window.
 - W34–46 is the worst squeeze (iOS Phase 7 + Track D + Track H + sandbox + DFIR capstone): stagger capstones, lean on the defer rule.
 
 ---
@@ -324,6 +336,7 @@ Build your own command-and-control framework, not a Sliver config. Architecture 
 | 44–56 | — | Rootkit/bootkit (Track J) |
 | 30–38 | — | C2 framework (Track S) |
 | 36–48 | — | Bluetooth device dev (Track R) |
+| 28–40 | — | Wi-Fi security (Track T, low priority) |
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
@@ -359,9 +372,11 @@ Build your own command-and-control framework, not a Sliver config. Architecture 
 - [ ] M25: cross-OS privesc triage tool + ≥10-tool internals wiki + mimikatz/potato re-derived (W20+ parallel, Track Q)
 - [ ] M26: BLE HID turbo gamepad — hardware turbo + secure pairing + OTA, ≥2 OSes (W46, Track R)
 - [ ] M27: own C2 framework survives its own detection rules — multi-transport, full op, before/after (W38, Track S)
+- [ ] M28: Wi-Fi capstone — rogue AP + client compromise + pivot on own lab, caught by own detection rules (W40, Track T)
+- [ ] M29: own mini-EDR detects its own implant/rootkit artifact on ≥2 OSes, FP-engineered (W36+, Track M)
 
 ## Resources master list
 - Books: K&R, *Art of Exploitation*, CS:APP, OSTEP, *Linux Kernel Development*, *TCP/IP Illustrated* V1, *RISC-V Reader*, *Mac OS X/iOS Internals* V1–2 (Levin), *Metal by Tutorials*, *Swift Programming Language*, *Programming Massively Parallel Processors* (Kirk/Hwu), *Windows Internals* (Russinovich), *Practical Malware Analysis* (Sikorski), *Practical Reverse Engineering* (Dang), *Practical Binary Analysis* (Andriesse), *Reverse Engineering for Beginners* (Yurichev), *Android Security Internals* (Elenkov), *Android Hacker's Handbook*, *The Android Malware Handbook* (Diogène), *Rootkits: Subverting the Windows Kernel* (Hoglund/Butler), *The Rootkit Arsenal* (Blunden), *Serious Cryptography* (Aumasson), *Cryptography Engineering* (Ferguson/Schneier), *The Art of Memory Forensics* (Ligh)
-- Sites: MIT 6.S081, pwn.college, ROP Emporium, pwnable.tw, exploit.education, ctf-wiki.org, xairy list, Project Zero, Quarkslab, pattern-f, gbdev.io, OSDev wiki, saelo.github.io, Hacking with Swift, Apple Metal docs + WWDC sessions, "A Trip Through the Graphics Pipeline" (Giesen), HEVD (HackSysTeam), ired.team, maldevacademy.com, Sliver docs, loldrivers.io, Sigma repo, USB in a Nutshell, USB Made Simple, Linux kernel USB docs, usbguard, Facedancer/GreatFET, syzkaller USB, USBView/USBPcap, WDK/KMDF samples, Apple DriverKit docs + WWDC sessions, virtio spec, Ghidra, jtool/kcache_id/kerneldiff, crackmes.one, Flare-On archive, AOSP security docs + Android security bulletins, Frida, objection, drozer, apktool/jadx/smali, Play Protect, Mobile Threat Catalogue, BlackLotus analyses (ESET, SentinelOne), Diamorphine, UEFI spec, efi-mimikatz, QEMU/OVMF, MinHook/Detours, fishhook, LSPosed/Xposed, bhook/Dobby, LD_PRELOAD + dyld interpose docs, cryptopals.com, cryptohack.org, *The Fuzzing Book* (Zeller), Trail of Bits Fuzzing 101, Volatility 3 docs, corelan.be + FuzzySecurity (Windows userland expl), Apple Hypervisor.framework docs, The Rust Book + Rustonomicon (`04-08`), WebKit source + Project Zero WebKit posts (`08-04`), ChipWhisperer docs (`22-07`), CERT/CC disclosure guidance + GitHub security advisories (Phase 23)
+- Sites: MIT 6.S081, pwn.college, ROP Emporium, pwnable.tw, exploit.education, ctf-wiki.org, xairy list, Project Zero, Quarkslab, pattern-f, gbdev.io, OSDev wiki, saelo.github.io, Hacking with Swift, Apple Metal docs + WWDC sessions, "A Trip Through the Graphics Pipeline" (Giesen), HEVD (HackSysTeam), ired.team, maldevacademy.com, Sliver docs, loldrivers.io, Sigma repo, USB in a Nutshell, USB Made Simple, Linux kernel USB docs, usbguard, Facedancer/GreatFET, syzkaller USB, USBView/USBPcap, WDK/KMDF samples, Apple DriverKit docs + WWDC sessions, virtio spec, Ghidra, jtool/kcache_id/kerneldiff, crackmes.one, Flare-On archive, AOSP security docs + Android security bulletins, Frida, objection, drozer, apktool/jadx/smali, Play Protect, Mobile Threat Catalogue, BlackLotus analyses (ESET, SentinelOne), Diamorphine, UEFI spec, efi-mimikatz, QEMU/OVMF, MinHook/Detours, fishhook, LSPosed/Xposed, bhook/Dobby, LD_PRELOAD + dyld interpose docs, cryptopals.com, cryptohack.org, *The Fuzzing Book* (Zeller), Trail of Bits Fuzzing 101, Volatility 3 docs, corelan.be + FuzzySecurity (Windows userland expl), Apple Hypervisor.framework docs, The Rust Book + Rustonomicon (`04-08`), WebKit source + Project Zero WebKit posts (`08-04`), ChipWhisperer docs (`22-07`), CERT/CC disclosure guidance + GitHub security advisories (Phase 23), aircrack-ng, KRACK + Dragonblood papers (Vanhoef), hostapd-wpe/EAPhammer, wifiphisher, bettercap, WIDS clock-skew research (Phase 28), angr + Triton + KLEE docs (`15-06`), ETW (Pavel Yosifovich), Falco/Tetragon, Apple Endpoint Security docs (`21-06`), ForensicArtifacts repo (`12-08`), binwalk + IoTGoat + Damn Vulnerable Router (`22-09`)
 - Code: xv6-riscv, torvalds/linux, apple-oss-distributions/xnu, felix-pb/kfd, opa334/Dopamine, checkra1n
 

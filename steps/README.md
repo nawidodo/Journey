@@ -29,22 +29,23 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `09-Real-World-Chains` | ForcedEntry, Pegasus, Pwn2Own | capstone | A |
 | `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone | 12–28 | C |
 | `11-Windows-Kernel` | userland exploit dev → internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 29–44 | D |
-| `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) | 18–30 | E |
+| `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) → anti-forensics (08, stretch) | 18–30 | E |
 | `13-USB-Security` | protocol/stack → Linux driver → attack surface → fuzzing/emulation → iOS/Windows links → capstone | 24–32 | F |
 | `14-Cross-OS-Driver-Dev` | Linux craft → MMIO/DMA/IRQ → Windows KMDF → macOS dext → cross-OS fuzzing → real USB device + userspace driver + app → gamepad turbo (attach to existing controller, all OSes) → capstone | 28–41 | G |
-| `15-Reverse-Engineering` | Ghidra → kernelcache → crackmes/Flare-On → patch-diff → crash triage | 16–20 | — |
+| `15-Reverse-Engineering` | Ghidra → kernelcache → crackmes/Flare-On → patch-diff → crash triage (+ symbolic execution 06, stretch) | 16–20 | — |
 | `16-Android-Exploitation` | security model → app surface → binder/kernel → real CVEs → root → capstone | 34–44 | H |
 | `17-Android-Malware-Dev` | APK/dex/smali → implant → C2/evasion → fraud → detection → capstone | 40–48 | I |
 | `18-Rootkit-Bootkit` | principles → Linux LKM/eBPF → Windows rootkit → UEFI bootkit → macOS → mobile → capstone | 44–56 | J |
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
 | `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone | 14–20 | L |
-| `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone | 30–36 | M |
-| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone | 28–36 | N |
+| `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone (+ own mini-EDR 06, M29) | 30–36 | M |
+| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone (+ embedded firmware exploitation 09, stretch) | 28–36 | N |
 | `23-Career` | writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone | post-M23 | O |
 | `24-Make-Your-Own` | own OS → own DB → own git → own shell → own TCP/IP → own regex → own assembler → micro-transformer (security-relevant from-scratch reinforcement) | W46+ opt | P |
 | `25-Privilege-Escalation` | privesc tool internals, all OSes — boundary model → linpeas/pspy → SUID/caps/sudo → mimikatz → potato family → WinPEAS/PowerUp → BloodHound/AD → macOS TCC → mobile root (Magisk/jailbreak) → capstone triage tool + re-derive | W20+ parallel | Q |
 | `26-Bluetooth-Devices` | BT stack theory → first BLE peripheral (nRF/ESP32) → HID-over-GATT gamepad → host-side + sniffing → classic (A2DP/SPP) → pairing/security → capstone BLE HID turbo gamepad (M26) | 36–48 | R |
 | `27-C2-Framework` | C2 architecture → wire protocol + HTTP/S beacon → cross-platform agent → teamserver + operator UI → DNS/SMB/WS transports + redirectors → capstone full op + own-detection round-trip (M27) | 30–38 | S |
+| `28-WiFi-Security` | 802.11 stack + monitor mode → WPA2/WPA3 attacks (PMKID/KRACK/Dragonblood) → enterprise EAP relay + captive portal → rogue-AP hosting + MITM + pivot → WIDS detection mirror → capstone rogue-AP engagement + own detection round-trip (M28) | 28–40 | T |
 
 ## Checkpoint tracker (from LEARNING_PLAN.md)
 - [ ] **M1** trace xv6 syscall → `01-xv6-riscv/03-lab-syscall`
@@ -76,6 +77,8 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 - [ ] **M25** cross-OS privesc triage tool + 10-tool internals wiki + mimikatz/potato re-derived → `25-Privilege-Escalation/12-capstone-tool-triage`
 - [ ] **M26** BLE HID turbo gamepad (hardware turbo + secure pairing + OTA, ≥2 OSes) → `26-Bluetooth-Devices/07-capstone-turbo-pad`
 - [ ] **M27** own C2 framework survives its own detection rules (multi-transport, full op, before/after) → `27-C2-Framework/06-capstone-full-op`
+- [ ] **M28** Wi-Fi capstone — rogue AP + client compromise + pivot on own lab, caught by own detection rules → `28-WiFi-Security/06-capstone-rogue-ap`
+- [ ] **M29** own mini-EDR detects its own implant/rootkit artifact on ≥2 OSes, FP-engineered → `21-Detection-DFIR/06-own-mini-edr`
 
 ## Path
 Track A sequential: `00` → `01` → `03` → `04` → `05` → `06` → `07` → `08` → `09`
@@ -98,5 +101,6 @@ Track P (start W46+, optional, make-your-own systems from scratch mapped to buil
 Track Q parallel (start W20+, pairs with Phase 3/5/11/12/16 — privesc is the payoff of every exploit phase; defer rule applies): `25`
 Track R parallel (start W36, alongside Phase 7/Track G; BT is the wireless twin of Track N — pairs with 14-07 turbo + Phase 7 CoreBluetooth; low priority, defer rule applies): `26`
 Track S parallel (start W30, after Track E core W18–30 — its implant/evasion skills are prerequisites; feeds Track M detection targets): `27`
+Track T parallel (start W28, low priority; Wi-Fi security — radio twin of Track N; pairs Track F/R/M; defer rule applies): `28`
 
 Start: [`00-Foundations/01-c-knr-ch1-6`](00-Foundations/01-c-knr-ch1-6/README.md)
