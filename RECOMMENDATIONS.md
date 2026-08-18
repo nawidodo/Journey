@@ -3,6 +3,7 @@
 All advice in one place. Applied items marked ✅, open items have a "when" trigger.
 
 ## Applied (Aug 2026)
+- ✅ **EMULATOR-VM-PATH.md added**: gated E1..E7 machine-building lane — CHIP-8 → NES (6502/PPU/APU/mappers) → GBA/SNES second CPU → **PS1 (MIPS/GTE/raster/GPU/SPU)** → RISC-V + hypervisor/unikernel VM layer → Unicorn/WASM-JIT/gdb-stub/profiler tooling → close-notes capstone (boot + tests + frame rate + one extension); rest-week fun cores (Game Boy/Atari 2600).
 - ✅ **DESKTOP-OFFENSIVE-PATH.md added**: gated W1..W8 desktop offensive lane — Linux kernel module→exploit→own-OS+gdb-stub depth (W1–2), macOS userland+kernel-side (W3–4), Windows HEVD/KMDF/ETW (W5–6), malware dev+C2 (W7), rootkit/bootkit+full engagement (W8); own-VM labs, no-skip artifacts, complete the "all platforms offensive" trio with the two mobile docs.
 - ✅ **MOBILE-OFFENSIVE-PATH.md added**: the full iOS/Android offensive surface beyond kernel — gated M0..M7 (instrument → app RE → on-device traffic → storage/Keychain → implant/persistence → evasion round-trip vs own detectors → BT/USB/TEE hardware-adjacent → full-stack engagement capstone), same no-skip artifact rules, interleaves with the kernel lanes.
 - ✅ **JAILBREAK-ROOT-PATH.md added**: prerequisite-locked dual-lane chain (G0 foundations → iOS L1–8 → Android R1–6) with per-gate artifacts, no-gate-skip rule, own-device/safety guardrails, re-derive-not-copy bar, and an un-packed ~12-month timeline — the gated route through existing steps (04/07/09/24 for iOS; 16/21/17/24 for Android), zero new steps needed.
