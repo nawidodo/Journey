@@ -83,3 +83,5 @@ Prereq: US0–US11. **Close all notes.** Fresh qemu VM: cold-reconstruct your ch
 
 ## Where this lives
 DRIVER-COURSE V0–V6 is the floor; phase 22's embedded/USB steps (09-12) acknowledge this course's depth; NETWORK-DRIVER'S ring/offload thinking carries into USB's transfer model; the security lens feeds EDR/detection lanes. One bus, one busmaster, one pair of hands.
+
+Device-side twin — the same wire from the other end: your own USB gamepad firmware enumerating on every major OS: [`USB-GAMEPAD-COURSE.md`](USB-GAMEPAD-COURSE.md) UG0–UG12.
