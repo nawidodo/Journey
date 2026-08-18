@@ -268,6 +268,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W20+ (stretch, pairs 10-14): GPU password cracker — PBKDF2 + bcrypt kernels in CUDA (Colab T4) + Metal; benchmark vs hashcat, why bcrypt is GPU-hostile by design. See `08-gpu-password-cracker`.
 - W20 (stretch): ML-KEM (Kyber) from FIPS 203 — NTT, PKE → KEM (FO transform), pass NIST test vectors, interop openssl; harvest-now-decrypt-later writeup. See `09-ml-kem-kyber`.
 - W20 (stretch): toy zk-SNARK — R1CS → QAP → KZG commitment → pairing check; prove one statement, reject tampered proofs. See `10-toy-zk-snark`.
+- W20 (stretch): own E2EE messaging — X3DH prekey bundles + Double Ratchet (forward secrecy, post-compromise recovery), two local peers; compromise simulation + tamper/replay rejection. See `11-own-e2ee-messaging`.
 - **Exit:** **M21** — weak scheme broken end-to-end
 
 ## Phase 21 · Detection engineering + DFIR — Track M (W30–36, parallel)
@@ -371,7 +372,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
