@@ -83,3 +83,4 @@ Prereq: GE0–GE11. **Close all notes.** Build ONE complete small game in your e
 
 ## Where this lives
 Built on the GPU course (U1–U6), Python-path's data ideas, and 10-05's software raster. Pairs EMULATOR work (a console = an engine with fixed hardware; you're now writing both sides of that world).
+Script-layer upgrade at capstone time: embed your own language — [`INTERPRETER-COURSE.md`](INTERPRETER-COURSE.md) I0–I12's sscript drives game logic from your engine.

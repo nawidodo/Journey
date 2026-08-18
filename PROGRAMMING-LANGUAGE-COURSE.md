@@ -84,3 +84,4 @@ Prereq: PL0–PL11. **Close all notes.** Re-create the bytecode VM cold (the gau
 ## Where this lives
 `steps/` unchanged (route: 24-47, 24-09, 24-87, 02-17). Pairs the EMULATOR course (a language and a CPU are the same idea — decode + act — once you've built both) and the LLM-ML work (every transformer is a program; now you know what programs are made of).
 Backend-borrowed twin — the same frontend skills, LLVM doing optimization+native+JIT: [`LLVM-LANGUAGE-COURSE.md`](LLVM-LANGUAGE-COURSE.md) (LL0–LL12). Together: build the whole pipeline by hand, then build the same language on a real backend.
+Embedded-interpreter corner — script-into-C, the Lua position: [`INTERPRETER-COURSE.md`](INTERPRETER-COURSE.md) (I0–I12).
