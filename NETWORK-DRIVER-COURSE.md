@@ -83,3 +83,5 @@ Prereq: ND0–ND11. **Close all notes.** Fresh VM: cold-reconstruct the TX+RX+NA
 
 ## Where this lives
 DRIVER-COURSE V0–V6 is the floor; LINUX-SECURITY K-units the module basics; your 24-20 sniffer understanding grows into driver-context parsing. Pairs the EMULATOR path (a device model you emulate + a driver you write = full ownership of one NIC) and network-defense lanes (21-07) on the other side of the wire.
+
+All-OS dialect course — your skeleton re-spelled FreeBSD/NDIS/IONetwork: [`NETWORK-DRIVER-ALLOS-COURSE.md`](NETWORK-DRIVER-ALLOS-COURSE.md) OSN0–OSN8.
