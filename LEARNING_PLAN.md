@@ -170,6 +170,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W26–28: capstone — full implant, survives its own detections
 - W28–30: advanced in-memory + evasion (Sektor7-class) — reflective PE/DLL + COFF loaders, 32/64-bit migration, hidden storage, exception-driven control flow, custom RPC-like tasking, userland process hiding
 - W30 (stretch): anti-forensics — timestomping ($MFT SI vs FN), ShimCache/Amcache/Prefetch/SRUM shimming, event-log gaps, browser history laundering; before/after artifact comparison; the disk mirror of Track M 04. See `08-anti-forensics`.
+- W30 (stretch): build a mini-loader — PE parse → map → imports → relocations → entry; reflective variant into a live process; ELF second pass. The 12-07 primitive from scratch. See `09-mini-loader`.
 - **Exit:** **M13** — implant passes its own Sigma rules end-to-end
 
 ## Phase 13 · USB security — Track F (W24–32, parallel)
@@ -199,6 +200,8 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W19–20: patch-diffing CVE workflow — one fix commit per week, root cause from the patch alone
 - W20: capstone — triage one real crash log → root cause chain with Ghidra walkthrough
 - W19–20 (parallel, stretch): symbolic execution — angr/KLEE/Triton; 3 angr challenge solves, one Triton deobfuscation, KLEE vs libFuzzer comparison. The concolic half of the fuzzing story (05-11). See `06-symbolic-execution`.
+- W20 (parallel, stretch): build a mini-debugger — ptrace, int3 breakpoints, single-step, regs/mem dump; reproduce 04-01's overflow under your own debugger. See `07-mini-debugger`.
+- W20 (parallel, stretch): build a mini-disassembler — one arch from the manual (x86-64 REX/ModRM/SIB or ARM64 subset), validated against objdump on ≥20 binaries. See `08-mini-disassembler`.
 - **Exit:** **M16** — crash → root cause chain from an unsymbolicated image
 
 ## Phase 16 · Android exploitation — Track H (W34–44, parallel)
