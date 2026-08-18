@@ -70,6 +70,9 @@ Writeups/portfolio → resume/interview → coordinated disclosure → career-la
 CHIP-8 CLI → NES core (6502 + PPU + APU + mappers) → Metal renderer → iOS app (JIT blocked — interpreter-only). Stretch W18+: CPU emulation as a security tool — Unicorn Engine: shellcode tracing, unpacking, angr backend, unicorn fuzzing harnesses (cross-ref 15-06, 12-03, 05-11). See `09-unicorn-cpu-emulation`.
 - W18+ (stretch): GBA emulator — ARM7TDMI core (ARM+THUMB), PPU tilemaps/affine/OBJ, APU, cycle-accurate timing; passes AGB test ROMs + one commercial game to attract mode. See `10-gba-emulator`.
 - W18+ (stretch): RISC-V emulator — rv32ima from the spec, bare-metal firmware boots, GDB stub (pairs 15-07 protocol), debug 22-09-class firmware with it. See `11-riscv-emulator`.
+- W18+ (stretch): SNES emulator — 65C816 (extend own 6502 core), Mode 7 math, SPC700 audio coprocessor (second CPU lesson). See `12-snes-emulator`.
+- W18+ (stretch): Genesis emulator — 68000 (new CISC ISA) + Z80 coprocessor, planar VDP, FM audio. See `13-genesis-emulator`.
+- W18+ (stretch): PS1 emulator — MIPS R3000 (delay slots, coprocessors), GTE geometry unit, GPU; the MIPS half pairs 22-09 MIPS firmware RE (write the cross-note). See `14-ps1-emulator`.
 - W6–10: CHIP-8 CLI in C (CPU/instructions)
 - W8–14: NES core in portable C (CPU, PPU, APU) — OneLoneCoder, gbdev Pan Docs
 - W12–16: macOS app — Swift + SwiftUI shell, **Metal MTKView renderer** (Kodeco *Metal by Tutorials*, WWDC sessions)
