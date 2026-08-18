@@ -7,7 +7,7 @@ Prereq: **G0 completed** (JAILBREAK-ROOT-PATH.md foundations: C → xv6 → expl
 ---
 
 ## W1 — Linux kernel rookie: module → exploit
-Prereq: G0 (absolute beginner? complete [`LINUX-SECURITY-COURSE.md`](../LINUX-SECURITY-COURSE.md) K0–K12 first — feeds W1 with the module + kernel-PoC already done).
+Prereq: G0 (absolute beginner? two floors first: [`LINUX-SECURITY-COURSE.md`](../LINUX-SECURITY-COURSE.md) K0–K12, then the driver-build side [`DRIVER-COURSE.md`](../DRIVER-COURSE.md) V0–V12 — same trainer device under Linux/macOS/Windows).
 Finish: `05-01` modprobe (first kernel trigger) → `05-02` ret2usr → `05-03` Dirty COW → `05-05` Dirty Pipe → `04-03` write a Linux module (the craft side) + `14-01` driver craft.
 **Gate artifact:** `labs/linux-k1.md` — you wrote a vulnerable toy module, then exploited it with a PoC you wrote (module + exploit + log evidence in `code/`+`labs/`). → unlocks W2.
 
