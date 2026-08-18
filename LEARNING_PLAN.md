@@ -78,6 +78,7 @@ Writeups/portfolio → resume/interview → coordinated disclosure → career-la
 - Buffer overflow, UAF, OOB, type confusion; ROP/JOP, shellcode
 - Mitigations: ASLR, canaries, NX, SMEP/SMAP, PAC
 - Practice: pwn.college; PwnFunction/LiveOverflow videos; **practice-platform ladder (W11–14, parallel): ROP Emporium (all 8) → pwnable.tw → exploit.education — the reps that make 03-02 fluent**
+- W14–16 (parallel): network recon — nmap/RustScan, Amass/CT logs/passive DNS, Shodan/Censys surface, scan-detection awareness (pairs 21-07). The pre-exploit half Phase 9's chains assume. See `07-network-recon`.
 - **CTF cadence: one CTF per phase (~2/yr) — picoCTF, then HTB / ctftime archive; forces skills at real targets**
 - **Exit:** pwn.college labs solo
 
@@ -252,6 +253,8 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W34–35: disk/artifact forensics — timelines, persistence hunting (the Track J list, inverted), carving, evidence hygiene
 - W35–36: capstone — one IR scenario across memory + disk + logs → root cause → shipping detection rule
 - W36+ (stretch): own mini-EDR — invert Track J's primitives into telemetry (ETW/kernel callbacks/minifilter, auditd/eBPF, macOS ESF) + own YARA memory scanner; your own Track E/J artifacts in a VM must alert on ≥2 OSes. See `06-own-mini-edr` (**M29**).
+- W36+ (stretch): network detection — Zeek scripts + Suricata rules on the wire; detect your own Track S beacon and 28-04 rogue AP; the host-vs-network coverage table. See `07-network-detection-zeek`.
+- W36+ (stretch): honeypots & deception — Kippo/Cowrie + web honeypot, one attacker session mined into Sigma + Zeek/Suricata rules; the intel loop closed. See `08-honeypots`.
 - **Exit:** **M22** — full IR chain + detection rule
 
 ---
@@ -317,6 +320,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 12–28 | — | Graphics (Track C) |
 | 14–20 | Linux → XNU + Rust (08) | — |
 | 14–20 | — | Applied crypto (Track L) |
+| 14–16 | — | Network recon (04-07) |
 | 16–18 | — | iOS app |
 | 16–20 | — | Reverse engineering |
 | 18–30 | — | Malware dev (Track E) |
