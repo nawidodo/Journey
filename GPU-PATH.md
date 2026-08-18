@@ -51,4 +51,4 @@ Prereq: S1–S7. Pick (a) **renderer**: `10-13` path tracer (BVH + GPU) or exten
 4. Realistic bar: a benchmarked kernel + one shipped project + honest read-level ceiling — the professional GPU-programmer proof.
 
 ## Where this lives
-`steps/` unchanged (route: 10-01..16, 24-111, 02-16, 24-30/92, 20-08). Feeds back into the other lanes: EMULATOR shaders (S3), LLM compute meets 12-07/24-79 detection ML, path tracer = fun-year build.
+`steps/` unchanged (route: 10-01..16, 24-111, 02-16, 24-30/92, 20-08). Feeds back into the other lanes: EMULATOR shaders (S3), LLM compute meets 12-07/24-79 detection ML, path tracer = fun-year build. Fun-build sibling, the same loop discipline: [`GAME-ENGINE-COURSE.md`](GAME-ENGINE-COURSE.md) — your OWN engine shipping a real 10-minute game after GE0–GE12.
