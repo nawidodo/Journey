@@ -78,3 +78,5 @@ Prereq: T0–T11. **Close all notes.** Fresh rebuild of the full pipeline (colle
 
 ## Where this lives
 `steps/` unchanged (route: 21-01..10, 24-103, 24-119, 24-105, 24-79). Pairs the offensive courses: every attacker technique from your platform courses becomes a T4/T6/T8 rule — the loop closes.
+
+Input-layer sibling — transparent listener + detector pair per OS (no stealth, consent-first): [`INPUT-SECURITY-COURSE.md`](INPUT-SECURITY-COURSE.md) IS0–IS10.
