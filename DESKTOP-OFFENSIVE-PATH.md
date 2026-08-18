@@ -24,7 +24,7 @@ Prereq: W3. Finish: `18-05` macOS rootkit (kext/dext study) + `14-04` DriverKit 
 **Gate artifact:** `labs/macos-k.md` — your own driver-runtime experiment on own VM (dext or kext-class stub), caught by your own EDR rule (W5 pairs), with the trust-chain diagram of what protected you from yourself. → unlocks W5.
 
 ## W5 — Windows kernel & drivers via HEVD
-Prereq: W2 (Linux mindset transfers). Finish: `11-01` userland exploit dev → `11-02` Windows internals/debugger → `11-03` driver RE (HEVD) → `11-04` pool-overflow/token stealing → `11-05` real CVEs → `11-06` mitigations/ROP → `14-03` KMDF driver craft → `11-07` capstone.
+Prereq: W2 (absolute beginner? complete [`WINDOWS-SECURITY-COURSE.md`](../WINDOWS-SECURITY-COURSE.md) N0–N12 first — HEVD re-creation, token privesc, AD attacks, and the driver build are already done there). Finish: `11-01` userland exploit dev → `11-02` Windows internals/debugger → `11-03` driver RE (HEVD) → `11-04` pool-overflow/token stealing → `11-05` real CVEs → `11-06` mitigations/ROP → `14-03` KMDF driver craft → `11-07` capstone.
 **Gate artifact:** `labs/windows-k.md` — two HEVD classes exploited + one real CVE re-derived on your own Windows VM + your own KMDF driver compiled and loaded. → unlocks W6.
 
 ## W6 — Windows telemetry & the detection you must beat

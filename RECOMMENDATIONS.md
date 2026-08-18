@@ -3,6 +3,8 @@
 All advice in one place. Applied items marked ✅, open items have a "when" trigger.
 
 ## Applied (Aug 2026)
+- ✅ **WINDOWS-SECURITY-COURSE.md added**: zero-knowledge gated N0–N12 (hello+PE→token/integrity→PE parser-lite→ntdll/native API→first controlled RIP→GS/ASLR/DEP/CFG tradeoffs→token/service privesc→own KMDF driver→HEVD SYSTEM→ETW self-detection→build own AD domain+Kerberos→Kerberoast/pass-the-hash/golden ticket on own lab→closed-notes capstone), eval-ISO+snapshot lab safety, feeds DESKTOP-OFFENSIVE-PATH W5/W7.
+- New zero-knowledge platform courses set complete: **Linux (K0–K12), Apple (A0–A12), Android (D0–D12), Windows (N0–N12)** — four floors, each gated with verification+own-words quizzes and a closed-notes capstone, each feeding its advanced gated path.
 - ✅ **LINUX-SECURITY-COURSE.md added**: zero-knowledge gated course K0–K12 (hello in VM→process model→ASLR live→syscalls→ELF loader+LD_PRELOAD→first RIP control→full mitigation bypass chain→own kernel module→Dirty COW/Pipe-class re-creation root→SUID/caps privesc→LSM/AppArmor fences→detection of rootkits→closed-notes capstone), VM-snapshot safety, verification+quiz gates; feeds DESKTOP-OFFENSIVE-PATH W1 + pre-warms Android kernel units.
 - Also same-round Apple (A0–A12) and Android (D0–D12) zero-knowledge courses: the 3-course “floor” set — Linux is the shared kernel spine for all platforms.
 - ✅ **ANDROID-SECURITY-COURSE.md added**: zero-knowledge gated course D0–D12 (hello APK→signing→APK/DEX smali tamper→Zygote/uid→Binder→sandbox/SELinux→NDK crash→first controlled crash→canary/ASLR bypass→Linux-kernel connect→AVB/dm-verity boot chain→own root-primitive re-creation→closed-notes capstone), emulator-first, verification+quiz gates; feeds JAILBREAK-ROOT-PATH Lane B R4.
