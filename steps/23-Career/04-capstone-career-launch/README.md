@@ -21,3 +21,4 @@ The journey's real capstone: portfolio live, resume final, ≥1 disclosure out t
 
 ## Links
 - Reuse 23-01…23-03 links; job boards per target role (HN Who's Hiring, company careers pages)
+- [How to Write an Impactful Writeup](https://research.checkpoint.com/2021/writing-a-great-security-advisory/)

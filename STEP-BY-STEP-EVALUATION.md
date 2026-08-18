@@ -178,6 +178,28 @@ Tier 2 (fun banks): quantum `28`, chess `37`, raycaster `63`, Sokoban `93`, chip
 
 That's ≈130 steps (35% of 372) — essential spine + 8–10 builders + fun weeks. Everything O/F beyond that is the second year, not pressure.
 
+## The proof rule — “if I can't build it, I don't understand it”
+
+Every one of the 371 steps already ends in Exit Criteria boxes whose artifact is a build you can run: `labs/`+`code/` by default, `notes/` where the step is legitimately read-based (career, research-archive reading). The capstone is the *closed-book rebuild*: close the tutorial, rebuild the artifact, and then destroy-and-rebuild once more. That is the pass/fail — not time spent. The step is done only when every box is ticked and the artifact exists (the tracker definition in `steps/README.md`).
+
+Multi-platform ground-up coverage is already enforced by phase (all steps reference a prior build):
+
+| World | Covered by |
+|---|---|
+| OS ground-up | 01-xv6, 24-01 own-OS, 24-10 µkernel, 24-31 bootloader, 24-84 init |
+| Kernel | 04, 05, 24-82 gdb stub, 14 drivers |
+| Network | 24-20 sniffer → 24-17/19/21/67 → 24-18/23/24/53, 04-08 |
+| Database/storage | 24-02 storage engine, 24-26 LSM, 24-51 TSDB, 24-15 fs, 24-32/33/99 parsers |
+| Compilers/toolchain | 24-09 C compiler, 24-87 linker, 24-39 package manager, 24-38 editor |
+| macOS | 04-06/07, 07, 24-103/104/105/109/110/111 |
+| iOS | 07, 24-97/115, 02-08 |
+| Linux | 04/05/06, 24-118, 10-14/15 artifacts |
+| Android | 16, 17, 07 pairs |
+| Windows | 11, 25, 24-119, 24-45 |
+| Consoles Chip8→PS5/Xbox | 02 all, 24-117 GB, 29-01..07, 06-06 HV |
+
+Nothing stays read-only except the steps that are explicitly study/archive (career coaching, deep-dive reading) — and those still demand a written artifact as the exit.
+
 ## The honest verdict
 - **Build-up verified**: each E spine phase cites a prior phase as prereq; low-level ordering holds (C → memory → OS-guts → exploitation → RE → crypto → detection), and the newest Apple/console work sits exactly on the 01/02/04/24 foundations it needs.
 - **Not packed**: 130/372 ≈ 35% by the end of year one; the rest is choice, structured by this doc's tags.

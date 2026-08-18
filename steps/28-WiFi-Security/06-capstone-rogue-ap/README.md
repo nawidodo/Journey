@@ -20,3 +20,5 @@ One complete op on your own lab, from recon to credential to pivot — then prov
 
 ## Links
 - [Track M detection discipline](../21-Detection-DFIR/03-detect-as-code-sigma-yara/README.md)
+- [WiFi Pineapple docs (rogue-AP reference)](https://docs.hak5.org/hak5-usb-armory/)
+- [hostapd-wpe docs](https://github.com/quantumcore/roguehostapd)

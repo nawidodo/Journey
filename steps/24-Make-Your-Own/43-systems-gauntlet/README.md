@@ -22,3 +22,4 @@ The way to know you understood a build is to rebuild it without looking. Pick a 
 
 ## Links
 - [steps/README.md](../README.md) (the full catalog)
+- [build-your-own-x masterlist](https://github.com/codecrafters-io/build-your-own-x) (per-project tutorials)
