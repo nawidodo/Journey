@@ -129,6 +129,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - VMM: hypervisor fundamentals; device-emulation escapes; guest-tools CVEs
 - Stretch (W38–39): **write your own hypervisor once** (Hypervisor.framework on Apple Silicon or KVM) — the escapes then read like your own code. See `09-own-hypervisor`.
 - W39 (stretch): build a seccomp sandbox — filter DSL → BPF, install on a target, then escape your own filter (pairs 06-02) and close the hole. Both sides of the boundary in one artifact. See `10-seccomp-sandbox-builder`.
+- W30–36 (stretch): own malware-analysis sandbox — seccomp + ptrace syscall tracing + tmpfs/network shadowing; detonate own 12-06 implant + 27-06 beacon → flagged, benign → clean; Sigma export. See `11-own-malware-sandbox`.
 - **Exit:** container escape re-derived (**S1**); VM escape re-derived (**S2**)
 
 ## Phase 7 · XNU/iOS exploitation = jailbreak (W35–46)
@@ -272,6 +273,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W20 (stretch): ML-KEM (Kyber) from FIPS 203 — NTT, PKE → KEM (FO transform), pass NIST test vectors, interop openssl; harvest-now-decrypt-later writeup. See `09-ml-kem-kyber`.
 - W20 (stretch): toy zk-SNARK — R1CS → QAP → KZG commitment → pairing check; prove one statement, reject tampered proofs. See `10-toy-zk-snark`.
 - W20 (stretch): own E2EE messaging — X3DH prekey bundles + Double Ratchet (forward secrecy, post-compromise recovery), two local peers; compromise simulation + tamper/replay rejection. See `11-own-e2ee-messaging`.
+- W20 (stretch): own password manager — XChaCha20-Poly1305 vault, Argon2id master-key derivation (memory-hard, from 20-08), zeroization + clipboard auto-clear; offline-attack lab vs own 20-08 GPU kernels. See `12-own-password-manager`.
 - **Exit:** **M21** — weak scheme broken end-to-end
 
 ## Phase 21 · Detection engineering + DFIR — Track M (W30–36, parallel)
