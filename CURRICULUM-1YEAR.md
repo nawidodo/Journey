@@ -37,6 +37,7 @@ How to spend 52 weeks: the spines that must hold, the tracks you pick by interes
 3. `24-115` iOS app static analyzer (ipa/mach-O class surface + entitlements — the no-device RE entry)
 4. Phase 07 study (checkm8→dopamine) for the jailed-ecosystem theory (read-only, keep W39–44)
 5. `24-106`..`24-107` only if fun: iOS ships A/V — knowledge transfers from your MP4/dash builds
+   iPadOS = same kernel + API surface; the iOS steps above transfer 1:1 (Stage Manager/multitasking differ, the security model does not).
 
 ## Priority list: macOS security (your daily OS — own-machine labs)
 
@@ -69,6 +70,38 @@ How to spend 52 weeks: the spines that must hold, the tracks you pick by interes
 - **Hoshino Lina's channel** (game/tool binary RE: cracking, patching, decompiling with IDA/Ghidra) — the applied version of Phase 15. Do her exercises with your own copies of open-source or abanddonware binaries.
 - **John Levine / W. Richard Stevens archive**: the original low-level canonical reads (TCP/IP Illustrated); the network version of the RE reading.
 - **Monthly CTF** (03-06): one beginner challenge a week keeps every skill from rotting.
+
+## Topic index — where each discipline lives (keyword → phase/steps)
+
+| Cluster | Phases / steps |
+|---|---|
+| Memory corruption, heap/stack/UAF, exploit dev | 03, 04-05, 05, 11, 16 (Android), 29-02 |
+| Fuzzing, coverage fuzzer, (to)Bug hunting | 05-12, 08, 22-07, 24-118 |
+| Obfuscation, evasion, packing | 12-05/10, 15-09, 24-79 |
+| Static/dynamic analysis, malware analysis, binary analysis | 15, 12, 21-09/10, 24-97/115 |
+| Debugging, mini-debugger, gdb stub | 15-07, 05-capstone, 24-82, 29-02 |
+| Assembly, machine code, ABI, calling conventions | 02, 15-08, 24-110, 24-09 |
+| Computer architecture, CPU emulation | 02, 24-117, 29-06 |
+| OS, kernel dev, drivers, bootloaders | 01, 04, 05-13, 24-01/10/31/82/84, 14-G |
+| System programming, compilers, linkers, loaders | 24-09/87/38/39, 15 |
+| Executable formats (Mach-O/ELF/PE/APFS/NTFS/DMG/plist/registry) | 24-97/32/33/99/109/45, 24-71 |
+| Virtualization, hypervisors, sandboxes, containers | 06, 24-13/81, 29-04, 02-17 |
+| Hardware RE, firmware analysis, IoT/embedded, USB | 22, 29, 16-07, 26 |
+| Android security, iOS security, mobile root/jailbreak | 16, 07, 07-06, 24-115/110 |
+| Rootkits, bootkits, hooking, EDR evasion | 12-08, J track, K track, 24-86, 05-14 |
+| Cryptography, TLS, side channels, ZKP, ML-KEM | 20 (07..13), 24-64/70/91 |
+| Network low-level, protocols, packet crafting, DNS | 04-08, 24-20/23/19/21/67, 24-56/57 |
+| Wireless (Wi-Fi, BLE/BT, radio-adjacent) | 28, 26, 24-116 |
+| Windows internals, privesc, ETW, PE | 11, 25, 24-119, 24-45 |
+| Linux internals, eBPF, io_uring, kernel exploits | 04/05, 05-14/16, 24-118 |
+| macOS internals, dyld, unified logging, TCC | 07, 19, 24-103/104/105/109 |
+| GPU compute, graphics, shaders, raytracing | 10, 24-111, 24-63, 02-16 |
+| Digital forensics, IR, threat intel, detection/EDR | 21, 24-105/119, 24-79 |
+| Game/console security, cheat/RE tooling | 29 (01..06), 24-112, 24-117 |
+| C2, malware dev, supply chain, CI/CD security | 27, 12, 24-74/75/78/91 |
+| CTF, cryptography contests, hardware wargames | 03-06, 20, 22-07 |
+
+If a keyword from the list isn't here by name, it's a synonym of a row above (e.g. "Incident Response" = 21, "Assembly Language" = 02/15-08/24-110).
 
 ## The year's exit test
 

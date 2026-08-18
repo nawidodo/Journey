@@ -341,7 +341,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 ---
 
 ## Phase 29 · Console security — Track U (W41+ opt, niche)
-The last closed platform family: consoles sign everything and treat the owner as hostile — the extreme version of every OS you studied. Trust model landscape + entry-surface inventory (01) → PS4/PS5 Orbis (FreeBSD 9 derived) webkit→kernel chain archaeology + own-VM UAF-class re-creation and hardening (02) → Nintendo Switch Tegra/TrustZone/RCM/fuses (boot-chain study + NCA parser + boot-verifier simulation) (03) → Xbox Hyper-V-grown HV + Secure Kernel (isolation-lab proof) (04) → capstone: full platform matrix vs iOS/desktop + one research-grade deep-dive (05).
+The last closed platform family: consoles sign everything and treat the owner as hostile — the extreme version of every OS you studied. Trust model landscape + entry-surface inventory (01) → PS4/PS5 Orbis (FreeBSD 9 derived) webkit→kernel chain archaeology + own-VM UAF-class re-creation and hardening (02) → Nintendo Switch Tegra/TrustZone/RCM/fuses (boot-chain study + NCA parser + boot-verifier simulation) (03) → Xbox Hyper-V-grown HV + Secure Kernel (isolation-lab proof) (04) → capstone: full platform matrix vs iOS/desktop + one research-grade deep-dive (05) → long-tail archive: retro/media-tray/3D-era/handheld/micro-PC handheld/VR/cloud classes + own Atari 2600 core (06).
 - **Exit:** **M29** — platform matrix + one re-created chain-class with defense synthesis (before/after lab data)
 - Pairs Phase 02 emulators (PS1/PSP silicon RE), 24-01 (own kernel), 07 (iOS trust chain). Own consoles lab-only; every lab runs in own VMs/parsers/emulators. Niche — schedule when platforms interest you, zero concurrency cost.
 
