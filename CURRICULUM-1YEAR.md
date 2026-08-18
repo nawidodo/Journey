@@ -28,7 +28,7 @@ How to spend 52 weeks: the spines that must hold, the tracks you pick by interes
 | Offensive engineer | 11 Windows kernel, 12 malware, 16 Android, 28 Wi-Fi (low priority) |
 | Apple engineer | 07 XNU/iOS study, 19-04 macOS hooking, 25-10 macOS privesc |
 | Platform-agnostic builder | Phase 24 Track P builds tied to your priorities (see lists) |
-| Researcher | 02 emulators, 20-08..13 crypto labs, 10-16 quantization |
+| Researcher | Phase 29 console security (W41+ opt, niche), 02 emulators, 20-08..13 crypto labs, 10-16 quantization |
 
 ## Priority list: iOS security (own-hardware, no jailbreak needed)
 
@@ -49,6 +49,15 @@ How to spend 52 weeks: the spines that must hold, the tracks you pick by interes
 ## Priority list: kernel (deep)
 
 - 01-xv6 labs are sacred. Then: `05-13` qemu device model, `05-16` Spectre (stretch), 24-01 (own kernel), `24-10` own RISC-V µkernel (on your own emulator), `24-82` kernel gdb stub, `24-84` init system. Asahi-style bringup is the exotic version — hardware-gated, read the engineering blogs (below) for the thinking, don't buy hardware for it.
+
+## Priority list: console / game hardware (own consoles lab-only)
+
+1. `29-01` trust-model matrix (boot chain, key authority, hardening, sandbox, entry surfaces — the questions you ask ANY signed-everything platform)
+2. `29-02` PS4/PS5 Orbis: run the kernel's FreeBSD lineage in own VM, re-create the UAF class, harden it — the 2017-era chain made concrete
+3. `29-03` Switch Tegra: NCA format parser (24-99 discipline) + boot-verifier flip simulation — TrustZone/RCM/fuses on paper
+4. `29-04` Xbox: guest-under-hypervisor isolation proof in your own VM — the HV-as-norm future
+5. `29-05` capstone: the full matrix vs iOS (07) + desktop (24-01) — one research-grade deep-dive
+   Emulation first (Phase 02); hardware only if you own it. Zero concurrency cost.
 
 ## Priority list: low-level networking
 
