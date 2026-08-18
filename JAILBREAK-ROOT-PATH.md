@@ -32,7 +32,7 @@ Prereq: L2. Finish: `06-01`→`06-03` (container/seccomp escapes — the class) 
 **Gate artifact:** `labs/sandbox-escape-card.md` — for each iOS app-sandbox boundary (file, mach, network), one escape primitive and which public chain used it (Trident era: the JS→sandbox→kernel path). → unlocks L4.
 
 ### L4 — kernel exploit primitives, iOS era
-Prereq: L3. Finish: `07-01` checkm8 (bootrom — how the chain fires from reset) → `07-05` KFD (the current engine) — read the public analysis until you can explain each stage — → `05-03` Dirty COW + `05-05` Dirty Pipe (the shared page-cache/UAF ancestry of iOS kernel bugs).
+Prereq: L3 (absolute beginner? complete [`APPLE-SECURITY-COURSE.md`](../APPLE-SECURITY-COURSE.md) A0–A12 first — it feeds straight in here). Finish: `07-01` checkm8 (bootrom — how the chain fires from reset) → `07-05` KFD (the current engine) — read the public analysis until you can explain each stage — → `05-03` Dirty COW + `05-05` Dirty Pipe (the shared page-cache/UAF ancestry of iOS kernel bugs).
 **Gate artifact:** `labs/kfd-stage-map.md` — KFD's stages (oof/physpuppet/cVE getter) re-explained with your own diagrams and one PoC-class re-creation on your own device captured as evidence (syslog + exit-boxes). → unlocks L5.
 
 ### L5 — PAC/pointer-auth bypass

@@ -3,6 +3,7 @@
 All advice in one place. Applied items marked ✅, open items have a "when" trigger.
 
 ## Applied (Aug 2026)
+- ✅ **APPLE-SECURITY-COURSE.md added**: zero-knowledge gated course A0–A12 (hello→signature→Mach-O→syscall→sandbox→first controlled crash→canary bypass→xv6/XNU kernel-connect→kernelcache→jailbreak-era map→own KFD-class re-creation→closed-notes capstone), verification+lesson-check gates; feeds JAILBREAK-ROOT-PATH Lane A L4.
 - ✅ **GPU-BEGINNER-COURSE.md upgraded**: per-unit written lesson checks (own-words quiz gates before advancing), verification-first structure, + new U11 closed-notes capstone (emulator shader pack / compute library / graphics toy) — GPU-PATH S4 entry locked behind capstone pass.
 - ✅ **GPU-BEGINNER-COURSE.md added**: zero-knowledge course U0–U10 — Metal mental model, full runnable first kernel (U1), thread/coalescing/shared-memory lessons with benchmark homework, triangle+textures, **emulator scanline/CRT shader milestone (U7)**, profiler discipline, matrix-multiply (LLM-forerunner), then entry into GPU-PATH S4.
 - ✅ **GPU-PATH.md added**: gated S1..S8 GPU lane, easiest-first Metal → Vulkan(MoltenVK) → DX12(reading) — arch/SIMD/software-render baseline → Metal compute → emulator shaders (ties into your NES/PS1 cores) → profiling discipline → Vulkan port → DX12 study-note ceiling → LLM/ML compute (Metal MNIST + int8 quantization; CUDA-T4 stays reading per repo rule) → close-notes capstone (path tracer / Metal inference / FFT).
