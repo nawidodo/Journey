@@ -144,11 +144,13 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - Project Zero browser bugs; doyensec course; d8/V8 CTF
 - Reuses eBPF type-confusion skills
 - Optional `08-04`: **JSC/WebKit exploitation** — JavaScriptCore GC/JIT tiers, one known JSC CVE end to end. The engine behind ForcedEntry/Trident/Pegasus; closes the V8→WebKit gap before Phase 9.
+- Optional `08-05`: **own JS-engine exploit** — plant a UAF in your own 24-47 interpreter, heap-feng-shui (own 24-16 allocator) → arbitrary read/write → code exec in your sandboxed harness; then the fix diff. See `05-own-js-engine-exploit`.
 - **Exit:** exploit known CVE in sandboxed d8
 
 ## Phase 9 · Real-world chains (capstone)
 - ForcedEntry (P0), Pegasus (Quarkslab), Pwn2Own Mobile
 - Optional: original research (syzkaller on XNU)
+- Optional `09-05`: **own exploit chain** — capstone: chain your own components (08-05 JS UAF → own 06-11 sandbox escape → xv6 LPE) with primitives and hand-offs fully instrumentable. See `05-own-exploit-chain`.
 
 ## Phase 10 · Graphics programming — Track C (W12–28, parallel)
 - W12–13: GPU architecture concepts (SIMT, warps, occupancy, memory hierarchy; Kirk/Hwu)
@@ -381,7 +383,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17, own WireGuard-lite 18, own DNS resolver 19, own packet sniffer/crafter 20, own BGP speaker 21, own onion router 22, own QUIC-lite 23, own NAT/router 24, own compression 25, own LSM-tree 26, own PNG decoder 27, own quantum simulator 28, own Kademlia DHT 29, own sampling profiler 30, own bootloader 31, own NTFS parser 32, own APFS parser 33, own mail server 34, own JPEG decoder 35, own BitTorrent client 36, own chess engine 37, own text editor 38, own package manager 39, own audio synth 40, own search engine 41, own key-value cache 42, systems gauntlet 43, own TPM lab 44, own registry parser 45, own MQTT broker 46, own JS interpreter 47, own orchestrator 48, own font renderer 49, own logic analyzer 50, own time-series DB 51, own message queue 52, own Tailscale-lite 53, own video container 54, own 3D model loader 55). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17, own WireGuard-lite 18, own DNS resolver 19, own packet sniffer/crafter 20, own BGP speaker 21, own onion router 22, own QUIC-lite 23, own NAT/router 24, own compression 25, own LSM-tree 26, own PNG decoder 27, own quantum simulator 28, own Kademlia DHT 29, own sampling profiler 30, own bootloader 31, own NTFS parser 32, own APFS parser 33, own mail server 34, own JPEG decoder 35, own BitTorrent client 36, own chess engine 37, own text editor 38, own package manager 39, own audio synth 40, own search engine 41, own key-value cache 42, systems gauntlet 43, own TPM lab 44, own registry parser 45, own MQTT broker 46, own JS interpreter 47, own orchestrator 48, own font renderer 49, own logic analyzer 50, own time-series DB 51, own message queue 52, own Tailscale-lite 53, own video container 54, own 3D model loader 55, own network scanner 56, own IDS engine 57). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
