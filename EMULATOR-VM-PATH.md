@@ -1,5 +1,7 @@
 # Emulator & VM Path — write your own machine, from CHIP-8 to PS1 to hypervisor
 
+Absolute beginner? Start with the zero-knowledge course first: [`LOWLEVEL-EMULATOR-COURSE.md`](LOWLEVEL-EMULATOR-COURSE.md) (B0–B12: bare-metal hello → CHIP-8 → 6502 → NES → RISC-V → **your PS1 core** → PS5 honest-blooker roadmap; enters here at E3).
+
 Goal: build machines from scratch — a working PS1 (PlayStation) emulator and a real virtualization layer — so the CPU/GPU/timing/agent boundary stops being a black box. Same contract: **gate unlocks next only when artifact exists**; no skip; own machine; artifact = runnable (boots a ROM/demo + test-suite pass), not prose.
 
 Prereq: **G0 (JAILBREAK-ROOT-PATH.md): C (00-01), memory model (00-02)**. The xv6 lane helps timing/OS-interface intuition but is not required here.
