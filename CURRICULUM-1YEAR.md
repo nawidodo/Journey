@@ -1,6 +1,7 @@
 # One-Year Curriculum — Essential vs Optional, Per-Platform Priorities
 
 Per-step E/O/F tags and the week-by-week schedule: see [`STEP-BY-STEP-EVALUATION.md`](STEP-BY-STEP-EVALUATION.md).
+Want to build your own jailbreak/root? The prerequisite-locked gate chain (own-device, re-derive-don't-copy) is [`JAILBREAK-ROOT-PATH.md`](JAILBREAK-ROOT-PATH.md).
 
 How to spend 52 weeks: the spines that must hold, the tracks you pick by interest, the niches that make you rare. This doc marks every phase E (essential core), O (optional-but-recommended), or S (stretch/interest-only). Track P (Make-Your-Own, 109 builds) is the engine room — see the cadence rule below.
 
