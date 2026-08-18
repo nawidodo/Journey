@@ -162,6 +162,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W27–28: capstone — N-body **or** renderer (software rasterizer + Metal + Vulkan ports)
 - W28 (stretch): GPU path tracer — Metal compute ray tracer: spheres → BVH → materials → denoise; converges to CPU reference. The capstone's opposite. See `13-path-tracer`.
 - W28+ (stretch): CUDA for AI compute — the era API from a Metal base: thread/block/grid → memory model → warp-shuffle reduction → PyTorch custom kernel (GELU/softmax) in a real training loop; run free Colab T4; Metal/CUDA comparison table. See `14-cuda-ai-compute`.
+- W28+ (stretch): own neural network — forward/backprop/SGD from scratch, MNIST ~97% (no frameworks), SIMD/GPU speedup, FGSM adversarial attack + tiny defense on your own net. See `15-own-neural-network`.
 - **Exit:** **M11** — chosen capstone at target (N-body FPS or 3-way renderer)
 
 ## Phase 11 · Windows kernel exploitation — Track D (W29–44, parallel)
@@ -372,7 +373,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17, own WireGuard-lite 18, own DNS resolver 19, own packet sniffer/crafter 20). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
