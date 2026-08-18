@@ -68,6 +68,8 @@ Writeups/portfolio → resume/interview → coordinated disclosure → career-la
 
 ## Phase 2 · Track B — emulator on macOS/iOS (W6–18, parallel)
 CHIP-8 CLI → NES core (6502 + PPU + APU + mappers) → Metal renderer → iOS app (JIT blocked — interpreter-only). Stretch W18+: CPU emulation as a security tool — Unicorn Engine: shellcode tracing, unpacking, angr backend, unicorn fuzzing harnesses (cross-ref 15-06, 12-03, 05-11). See `09-unicorn-cpu-emulation`.
+- W18+ (stretch): GBA emulator — ARM7TDMI core (ARM+THUMB), PPU tilemaps/affine/OBJ, APU, cycle-accurate timing; passes AGB test ROMs + one commercial game to attract mode. See `10-gba-emulator`.
+- W18+ (stretch): RISC-V emulator — rv32ima from the spec, bare-metal firmware boots, GDB stub (pairs 15-07 protocol), debug 22-09-class firmware with it. See `11-riscv-emulator`.
 - W6–10: CHIP-8 CLI in C (CPU/instructions)
 - W8–14: NES core in portable C (CPU, PPU, APU) — OneLoneCoder, gbdev Pan Docs
 - W12–16: macOS app — Swift + SwiftUI shell, **Metal MTKView renderer** (Kodeco *Metal by Tutorials*, WWDC sessions)
@@ -110,6 +112,7 @@ Sources: xairy/linux-kernel-exploitation, pwn.college kernel pwn, ctf-wiki.org, 
 Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges before each CVE step, Medium during, re-derive rule. See `10-kernel-exploit-dojo` step.
 Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ harness, crash triage (minimize/dedupe/root-cause), **syzkaller on XNU promoted up from Phase 9 optional into this step**. See `05-11`.
 - W26–30 (parallel, stretch): build your own coverage-guided fuzzer — forkserver + shared-memory coverage bitmap + mutator/queue; rediscover a bug libFuzzer found in 05-11 with your own engine. See `12-own-coverage-fuzzer`.
+- W20–30 (parallel, stretch): custom QEMU device model — virtio-class MMIO/IRQ/DMA device, own kernel module driver, DMA round-trip; fuzz the device with your own 05-12 fuzzer (intentionally buggy device, found + minimized). See `13-qemu-device-model`.
 **Exit:** re-derive Vermin from scratch
 
 ## Phase 6 · Sandbox escape (W34–39, parallel with Phases 5/7)

@@ -19,10 +19,10 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 |---|---|---|---|
 | `00-Foundations` | C, memory model, tooling, Swift | 1–3 | A (+B Swift) |
 | `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
-| `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn CPU emulation 09, stretch) | 6–18 | B |
+| `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn 09 + GBA 10 + RISC-V 11, stretch) | 6–18 | B |
 | `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms (+ network recon 07, parallel) | 10–14 | A |
 | `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security (+ Rust, 08) | 14–20 | A |
-| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology + own coverage-guided fuzzer (12, stretch) | 20–30 | A |
+| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology + own coverage-guided fuzzer 12 + QEMU device model 13 (stretch) | 20–30 | A |
 | `06-Sandbox-Escape` | seccomp → container escapes → Seatbelt → VM escapes + own hypervisor (stretch) + seccomp sandbox builder (10, stretch) | 34–39 | A |
 | `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
 | `08-Browser-Exploitation` | JS engines → d8 CVE → JSC/WebKit (04, optional) | 47+ | A |
