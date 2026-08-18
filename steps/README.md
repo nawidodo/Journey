@@ -19,7 +19,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 |---|---|---|---|
 | `00-Foundations` | C, memory model, tooling, Swift | 1–3 | A (+B Swift) |
 | `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
-| `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn 09 + GBA 10 + RISC-V 11 + SNES 12 + Genesis 13 + PS1 14 + PSP 15, stretch) | 6–18 | B |
+| `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn 09 + GBA 10 + RISC-V 11 + SNES 12 + Genesis 13 + PS1 14 + PSP 15 + emulator shaders 16, stretch) | 6–18 | B |
 | `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms (+ network recon 07, parallel) | 10–14 | A |
 | `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security (+ Rust, 08) | 14–20 | A |
 | `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology + own coverage-guided fuzzer 12 + QEMU device model 13 (stretch) | 20–30 | A |
@@ -27,7 +27,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
 | `08-Browser-Exploitation` | JS engines → d8 CVE → JSC/WebKit (04, optional) | 47+ | A |
 | `09-Real-World-Chains` | ForcedEntry, Pegasus, Pwn2Own | capstone | A |
-| `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone | 12–28 | C |
+| `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone (+ path tracer 13, stretch) | 12–28 | C |
 | `11-Windows-Kernel` | userland exploit dev → internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 29–44 | D |
 | `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) → anti-forensics 08 + mini-loader 09 + own packer 10 (stretch) | 18–30 | E |
 | `13-USB-Security` | protocol/stack → Linux driver → attack surface → fuzzing/emulation → iOS/Windows links → capstone | 24–32 | F |

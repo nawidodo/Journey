@@ -74,6 +74,7 @@ CHIP-8 CLI → NES core (6502 + PPU + APU + mappers) → Metal renderer → iOS 
 - W18+ (stretch): Genesis emulator — 68000 (new CISC ISA) + Z80 coprocessor, planar VDP, FM audio. See `13-genesis-emulator`.
 - W18+ (stretch): PS1 emulator — MIPS R3000 (delay slots, coprocessors), GTE geometry unit, GPU; the MIPS half pairs 22-09 MIPS firmware RE (write the cross-note). See `14-ps1-emulator`.
 - W18+ (stretch): PSP emulator — Allegrex (MIPS R4000-family, extends the 02-14 core), VFPU vector unit, Media Engine dual-core, closed-doc RE (leaked SDK vs GBATEK era). The single-person ceiling; PS2/PS3+ out of scope. See `15-psp-emulator`.
+- W18+ (stretch): emulator shaders — NES/SNES PPU rewritten as Metal compute (bit-identical to CPU PPU on test ROMs) + CRT shader pack (scanlines, aperture grille, phosphor). Emulator×GPU crossover. See `16-emulator-shaders`.
 - W6–10: CHIP-8 CLI in C (CPU/instructions)
 - W8–14: NES core in portable C (CPU, PPU, APU) — OneLoneCoder, gbdev Pan Docs
 - W12–16: macOS app — Swift + SwiftUI shell, **Metal MTKView renderer** (Kodeco *Metal by Tutorials*, WWDC sessions)
@@ -157,6 +158,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W24–25: profiling — Xcode Metal HUD, GPU frame capture
 - W25–27: cross-API — Vulkan via MoltenVK (port the Metal renderer); DX12 stretch on the Windows VM (W30+)
 - W27–28: capstone — N-body **or** renderer (software rasterizer + Metal + Vulkan ports)
+- W28 (stretch): GPU path tracer — Metal compute ray tracer: spheres → BVH → materials → denoise; converges to CPU reference. The capstone's opposite. See `13-path-tracer`.
 - **Exit:** **M11** — chosen capstone at target (N-body FPS or 3-way renderer)
 
 ## Phase 11 · Windows kernel exploitation — Track D (W29–44, parallel)
