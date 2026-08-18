@@ -83,3 +83,5 @@ Prereq: NE0–NE11. **Close all notes.** Assemble/re-create "lab-nxc": cred pars
 
 ## Where this lives
 The fourth pillar on the Windows lab: `WINDOWS-SECURITY-COURSE` (use), `AUTH-TOOLING-COURSE` (wires), `POTATO-COURSE` (privesc), this course (fleet-automation) — plus `EDR-COURSE` (the blue half) — one lab, four tools, both sides of the table.
+
+Network-tooling sibling from the interception side: sniffer + TLS-MITM proxy like mitmproxy/Proxyman — [`PROXY-MITM-COURSE.md`](PROXY-MITM-COURSE.md) PM0–PM12 (your traffic only).
