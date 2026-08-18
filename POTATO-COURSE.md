@@ -82,4 +82,4 @@ Prereq: O0–O11. **Close all notes.** On the era-correct Server VM (fresh snaps
 5. Honest bar: real potato tools are researcher years; this course's bar = you hand-built pipe-impersonation, COM-activation escalation, the production of a guarded CLI, the hardening history, and the detections — the floor for Windows token research and privesc engineering, proven cold at the capstone. Modern patched environments are the point of O9/O10: knowing the vector died is as valuable as running it once.
 
 ## Where this lives
-Pairs with `WINDOWS-SECURITY-COURSE` N6 (token/privesc intro) and N9/N11; the same lab serves `AUTH-TOOLING-COURSE` — token research, credential research, and detection built by one pair of hands.
+Pairs with `WINDOWS-SECURITY-COURSE` N6/N9/N11; the same lab serves `AUTH-TOOLING-COURSE` (credentials) and the fleet-automation twin [`NETEXEC-COURSE.md`](NETEXEC-COURSE.md) — token research, credential research, fleet automation, and detection built by one pair of hands.
