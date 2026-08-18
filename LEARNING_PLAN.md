@@ -116,6 +116,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - Apple: App Sandbox / Seatbelt profiles; macOS/iOS sandbox escape techniques
 - VMM: hypervisor fundamentals; device-emulation escapes; guest-tools CVEs
 - Stretch (W38–39): **write your own hypervisor once** (Hypervisor.framework on Apple Silicon or KVM) — the escapes then read like your own code. See `09-own-hypervisor`.
+- W39 (stretch): build a seccomp sandbox — filter DSL → BPF, install on a target, then escape your own filter (pairs 06-02) and close the hole. Both sides of the boundary in one artifact. See `10-seccomp-sandbox-builder`.
 - **Exit:** container escape re-derived (**S1**); VM escape re-derived (**S2**)
 
 ## Phase 7 · XNU/iOS exploitation = jailbreak (W35–46)
