@@ -214,6 +214,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W19–20 (parallel, stretch): symbolic execution — angr/KLEE/Triton; 3 angr challenge solves, one Triton deobfuscation, KLEE vs libFuzzer comparison. The concolic half of the fuzzing story (05-11). See `06-symbolic-execution`.
 - W20 (parallel, stretch): build a mini-debugger — ptrace, int3 breakpoints, single-step, regs/mem dump; reproduce 04-01's overflow under your own debugger. See `07-mini-debugger`.
 - W20 (parallel, stretch): build a mini-disassembler — one arch from the manual (x86-64 REX/ModRM/SIB or ARM64 subset), validated against objdump on ≥20 binaries. See `08-mini-disassembler`.
+- W20 (parallel, stretch): build a mini-decompiler — stack-frame recovery, CFG structuring (if/while/switch from dominators), usage-based type inference; decompile your own 24-09-compiled functions and diff vs source. See `09-own-decompiler`.
 - **Exit:** **M16** — crash → root cause chain from an unsymbolicated image
 
 ## Phase 16 · Android exploitation — Track H (W34–44, parallel)
@@ -261,6 +262,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W17–18: TLS 1.2/1.3 internals — handshake decoded from a live capture; Bleichenbacher/POODLE/CRIME/ALPACA history
 - W18–19: OS crypto stores — Keychain/Data Protection/SEP, Android Keystore/StrongBox, DPAPI/BitLocker, LUKS/TPM — the "where keys live" map Phase 7/Track D/H consume
 - W19–20: capstone — build a deliberately-weak multi-layer scheme, break it end-to-end, re-design it properly
+- W20 (stretch): build a mini-TLS — record layer (AEAD vs MAC-then-encrypt), TLS 1.3 handshake (ECDHE, cert verify, transcript hash), interop vs `openssl s_client` both directions + tamper test. See `07-own-tls`.
 - **Exit:** **M21** — weak scheme broken end-to-end
 
 ## Phase 21 · Detection engineering + DFIR — Track M (W30–36, parallel)
@@ -364,7 +366,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead. Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
