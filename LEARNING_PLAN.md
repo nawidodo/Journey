@@ -159,6 +159,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W25–27: cross-API — Vulkan via MoltenVK (port the Metal renderer); DX12 stretch on the Windows VM (W30+)
 - W27–28: capstone — N-body **or** renderer (software rasterizer + Metal + Vulkan ports)
 - W28 (stretch): GPU path tracer — Metal compute ray tracer: spheres → BVH → materials → denoise; converges to CPU reference. The capstone's opposite. See `13-path-tracer`.
+- W28+ (stretch): CUDA for AI compute — the era API from a Metal base: thread/block/grid → memory model → warp-shuffle reduction → PyTorch custom kernel (GELU/softmax) in a real training loop; run free Colab T4; Metal/CUDA comparison table. See `14-cuda-ai-compute`.
 - **Exit:** **M11** — chosen capstone at target (N-body FPS or 3-way renderer)
 
 ## Phase 11 · Windows kernel exploitation — Track D (W29–44, parallel)

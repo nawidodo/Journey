@@ -3,6 +3,7 @@
 All advice in one place. Applied items marked ✅, open items have a "when" trigger.
 
 ## Applied (Aug 2026)
+- ✅ **CUDA step added** (`10-14-cuda-ai-compute`, stretch). The era API from a Metal base: thread/block/grid → memory model → warp-shuffle reduction → PyTorch custom kernel (GELU/softmax) in a real training loop. Free Colab T4 for HW; Metal/CUDA comparison table as the concept-transfer deliverable. DX12 stays stretch-only (Windows-gaming niche, no AI value).
 - ✅ **GPU rendering steps added** (2, stretch): `02-16-emulator-shaders` (NES/SNES PPU as Metal compute, bit-identical to CPU on test ROMs + CRT shader pack: scanlines/aperture-grille/phosphor) and `10-13-path-tracer` (Metal compute ray tracer: spheres → BVH → materials → denoise, converges to CPU reference). Emulator×GPU crossover + the capstone's opposite.
 - ✅ **PSP emulator step added** (`02-15-psp-emulator`, stretch). The single-person console ceiling: Allegrex (MIPS R4000-family, extends the 02-14 R3000 core), VFPU 128-bit vector unit, Media Engine dual-core, closed-doc RE (leaked SDK vs GBATEK era). PS2/GC/PS3/360/PS4/PS5 deliberately out of scope — team-year-class targets, documented in the step.
 - ✅ **Console emulation steps added** (3, stretch, Track B): `02-12-snes-emulator` (65C816 extends own 6502 core, Mode 7, SPC700 coprocessor), `02-13-genesis-emulator` (68000 CISC + Z80, planar VDP, FM audio), `02-14-ps1-emulator` (MIPS R3000 delay-slot/coprocessor model, GTE, GPU; MIPS cross-note pairs 22-09 firmware RE). GB skipped as 1-week-easy; N64/PS2 out of scope (3D complexity).

@@ -27,7 +27,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
 | `08-Browser-Exploitation` | JS engines → d8 CVE → JSC/WebKit (04, optional) | 47+ | A |
 | `09-Real-World-Chains` | ForcedEntry, Pegasus, Pwn2Own | capstone | A |
-| `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone (+ path tracer 13, stretch) | 12–28 | C |
+| `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone (+ path tracer 13 + CUDA for AI 14, stretch) | 12–28 | C |
 | `11-Windows-Kernel` | userland exploit dev → internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 29–44 | D |
 | `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) → anti-forensics 08 + mini-loader 09 + own packer 10 (stretch) | 18–30 | E |
 | `13-USB-Security` | protocol/stack → Linux driver → attack surface → fuzzing/emulation → iOS/Windows links → capstone | 24–32 | F |
