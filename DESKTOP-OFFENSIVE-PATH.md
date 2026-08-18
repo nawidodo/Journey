@@ -32,7 +32,7 @@ Prereq: W5. Finish: `24-119` ETW consumer (build the blue telemetry yourself) + 
 **Gate artifact:** `labs/windows-detection.md` — your W5 exploit activity captured by your own ETW consumer, then a mitigation that evades it, then a rule that catches that — before/after table. → unlocks W7.
 
 ## W7 — malware dev & C2 (the offensive product layer)
-Prereq: W6 (absolute beginner? complete [`WINDOWS-MALWARE-COURSE.md`](../WINDOWS-MALWARE-COURSE.md) F1–F5+M1–M12 first — loader, persistence, AMSI, packing, beacon+C2, exfil, and the detection round-trip are all yours). Finish: `12-01` PE/API → `12-02` injection/persistence → `12-03` evasion → `12-04` C2 implant → `12-05` detection → `12-06..10` sektor7/anti-forensics/mini-loader/own-packer builders + `27-01..06` full C2 (wire protocol, agent, teamserver, transports, capstone).
+Prereq: W6 (absolute beginners: three floors first — drivers [`DRIVER-COURSE.md`](../DRIVER-COURSE.md) V0–V12, the watcher-builders [`EDR-COURSE.md`](../EDR-COURSE.md) T0–T12, then the malware/C2 twin [`WINDOWS-MALWARE-COURSE.md`](../WINDOWS-MALWARE-COURSE.md) F1–F5+M1–M12 — attacker and defender built by the same hands). Finish: `12-01` PE/API → `12-02` injection/persistence → `12-03` evasion → `12-04` C2 implant → `12-05` detection → `12-06..10` sektor7/anti-forensics/mini-loader/own-packer builders + `27-01..06` full C2 (wire protocol, agent, teamserver, transports, capstone).
 **Gate artifact:** `labs/implant-c2.md` — your implant under your C2, full op on own VMs (deploy→persist→exfil→kill-switch), caught by your own YARA/Sigma+EDR (21-03/21-06), fixed, re-run. → unlocks W8.
 
 ## W8 — rootkit/bootkit + the full-engagement capstone
