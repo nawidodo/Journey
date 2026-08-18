@@ -80,3 +80,5 @@ Prereq: K0–K11 passed. **Close all notes.** Write `labs/linux-capstone.md`: di
 3. 2h/unit timebox; stuck past that = previous unit's verification again.
 4. Snapshots: VM snapshot before every kernel/exploit unit; restore after. Own hardware only; re-create public classes only.
 5. Honest bar: a shipping-Linux 0-day is career research. This course's bar = you can build, trace, parse, inject, crash, defeat every mitigation, write kernel code, re-create a public root, and detect hiding — the competence floor for Linux security work, proven cold at the capstone.
+
+Kernel exploitation deep-dive (bugs YOU plant in YOUR module, in YOUR VM): [`KERNEL-EXPLOIT-COURSE.md`](KERNEL-EXPLOIT-COURSE.md) X0–X12.
