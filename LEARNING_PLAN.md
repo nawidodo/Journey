@@ -73,6 +73,7 @@ CHIP-8 CLI → NES core (6502 + PPU + APU + mappers) → Metal renderer → iOS 
 - W18+ (stretch): SNES emulator — 65C816 (extend own 6502 core), Mode 7 math, SPC700 audio coprocessor (second CPU lesson). See `12-snes-emulator`.
 - W18+ (stretch): Genesis emulator — 68000 (new CISC ISA) + Z80 coprocessor, planar VDP, FM audio. See `13-genesis-emulator`.
 - W18+ (stretch): PS1 emulator — MIPS R3000 (delay slots, coprocessors), GTE geometry unit, GPU; the MIPS half pairs 22-09 MIPS firmware RE (write the cross-note). See `14-ps1-emulator`.
+- W18+ (stretch): PSP emulator — Allegrex (MIPS R4000-family, extends the 02-14 core), VFPU vector unit, Media Engine dual-core, closed-doc RE (leaked SDK vs GBATEK era). The single-person ceiling; PS2/PS3+ out of scope. See `15-psp-emulator`.
 - W6–10: CHIP-8 CLI in C (CPU/instructions)
 - W8–14: NES core in portable C (CPU, PPU, APU) — OneLoneCoder, gbdev Pan Docs
 - W12–16: macOS app — Swift + SwiftUI shell, **Metal MTKView renderer** (Kodeco *Metal by Tutorials*, WWDC sessions)
