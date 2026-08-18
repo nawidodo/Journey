@@ -49,3 +49,5 @@ Prereq: W7. Finish: `18-01..07` rootkit/bootkit across Linux/Windows/macOS + `09
 
 ## Where this lives
 `steps/` unchanged (route: 05, 04, 14, 24, 25, 11, 12, 27, 18, 19, 21). Three docs now form the complete offensive curriculum: `JAILBREAK-ROOT-PATH.md` (mobile kernel), `MOBILE-OFFENSIVE-PATH.md` (mobile surface), this doc (desktop kernel+malware+C2).
+
+Rootkit-mechanics minus evasion + the audit suite that catches them: [`ROOTKIT-DEFENSE-COURSE.md`](ROOTKIT-DEFENSE-COURSE.md) RK0–RK10 (the W7 gate's defensive twin).
