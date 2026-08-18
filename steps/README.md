@@ -19,7 +19,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 |---|---|---|---|
 | `00-Foundations` | C, memory model, tooling, Swift | 1–3 | A (+B Swift) |
 | `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
-| `02-Emulator` | CHIP-8 → NES → Metal → iOS app | 6–18 | B |
+| `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn CPU emulation 09, stretch) | 6–18 | B |
 | `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms (+ network recon 07, parallel) | 10–14 | A |
 | `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security (+ Rust, 08) | 14–20 | A |
 | `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology (11 steps) | 20–30 | A |
