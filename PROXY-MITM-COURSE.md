@@ -83,3 +83,5 @@ Prereq: PM0–PM11. **Close all notes.** Cold rebuild: capture loop + CONNECT ha
 
 ## Where this lives
 Built on your 24-20 sniffer, ND/US header skills, and NETEXEC's protocol fluency; the C2/beacon shape of WINDOWS-MALWARE M8 is this proxy with a different spirit — knowing both sides is the point. AUTH-TOOLING's Kerberos/SMB work shows the same wire-reading discipline one layer down.
+
+The building twin — a VPN is the proxy's mirror (proxy TEARS TLS apart; VPN BUILDS the same bytes into a tunnel): [`VPN-COURSE.md`](VPN-COURSE.md) VP0–VP12.
