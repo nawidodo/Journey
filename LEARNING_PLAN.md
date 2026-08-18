@@ -97,6 +97,7 @@ CHIP-8 CLI → NES core (6502 + PPU + APU + mappers) → Metal renderer → iOS 
 - Security: Apple *Platform Security Guide* — code signing, entitlements, sandbox, KTRR/PPL/PAC/APRR, SSV
 - ARM64 basics (Azeria) — RISC-V transfers; ARM64 specifics for iOS later
 - Rust for systems programming (`04-08`, W14–20 parallel): ownership/borrowing/lifetimes, `unsafe` rules and audit, reimplement one Phase 1/4 kernel-adjacent structure in Rust, read the Linux kernel `rust/` subsystem. The memory-safety half of modern kernel work (Linux/Android/Windows all moving).
+- W14–20 (parallel): FreeBSD deep dive (`09-freebsd-deep-dive`) — jails (container ancestor), ZFS (snapshot forensics), pf, DTrace (the probe model behind 05-14 eBPF); jail-breakout attempt + ZFS-rollback labs on own VM. Closes the last popular-OS gap.
 - **Exit:** skb lifecycle from memory; KTRR/PPL/PAC attack matrix
 
 ## Phase 5 · Linux kernel exploitation ladder (W20–30)
@@ -227,6 +228,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W39–41: real CVEs re-derived — binder UAF (CVE-2019-2215), gpio (CVE-2020-0041), media
 - W41–43: rooting, Magisk, bootloader/AVB, TrustZone/TEE
 - W43–44: capstone — exploit chain (app vuln → kernel bug → root) on your own AVD/device
+- W44+ (stretch): TEE lab (`07-tee-op-tee-lab`) — OP-TEE on QEMU, own trusted app via SMC path; TA fuzz lab shows secure-world crash vs Android survival; SEP comparison writeup.
 - **Exit:** **M17** — working chain + a detection rule for it
 
 ## Phase 17 · Android malware development — Track I (W40–48, parallel)
@@ -298,6 +300,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W36+ (stretch): embedded signals — mic → analog front-end → I²S ADC → FFT/band-pass DSP → log on ESP32; optical laser-pickup stretch (transimpedance amp + demodulate). The analog/DSP layer the plan lacked. See `10-embedded-signals-dsp`.
 - W36+ (stretch): DIY radio gadgets — sub-GHz keyfob replay (CC1101), RFID/NFC cloner (PN532, crypto-1 reverse), ultrasonic covert channel (2×ESP32, FFT decode). New radio domains; pairs 22-10 + Track L. See `11-diy-radio-gadgets`.
 - W36+ (stretch): DIY CAN bus injector — ESP32 + CAN transceiver, sniff own car (parked), ID map, replay/inject verified frames; why CAN has no sender auth. Own vehicle only. See `12-can-bus-injection`.
+- W28–36 (stretch): own RTOS scheduler (`13-own-rtos-scheduler`) — TCBs, priority preemption, semaphores, SysTick/PendSV context switch on QEMU ARM + ESP32; TCB-corruption attack lab → canaries + MPU region.
 - **Exit:** **M23** — plugandpwn/O.MG-class device works end-to-end; stretch: fabricated inline PCB
 
 ---
@@ -373,7 +376,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17, own WireGuard-lite 18, own DNS resolver 19, own packet sniffer/crafter 20, own BGP speaker 21, own onion router 22, own QUIC-lite 23, own NAT/router 24, own compression 25, own LSM-tree 26, own PNG decoder 27, own quantum simulator 28, own Kademlia DHT 29, own sampling profiler 30). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17, own WireGuard-lite 18, own DNS resolver 19, own packet sniffer/crafter 20, own BGP speaker 21, own onion router 22, own QUIC-lite 23, own NAT/router 24, own compression 25, own LSM-tree 26, own PNG decoder 27, own quantum simulator 28, own Kademlia DHT 29, own sampling profiler 30, own bootloader 31). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
