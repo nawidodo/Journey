@@ -121,6 +121,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W26–30 (parallel, stretch): build your own coverage-guided fuzzer — forkserver + shared-memory coverage bitmap + mutator/queue; rediscover a bug libFuzzer found in 05-11 with your own engine. See `12-own-coverage-fuzzer`.
 - W20–30 (parallel, stretch): custom QEMU device model — virtio-class MMIO/IRQ/DMA device, own kernel module driver, DMA round-trip; fuzz the device with your own 05-12 fuzzer (intentionally buggy device, found + minimized). See `13-qemu-device-model`.
 - W20–30 (parallel, stretch): own eBPF tool — CO-RE/BTF tracer (exec/open/connect → BPF ringbuf → userspace) feeding your 21-06 mini-EDR as telemetry source; one C2-beacon exec alert end-to-end. See `14-own-ebpf-tool`.
+- W20–30 (parallel, stretch): own Spectre PoC — mistrained branch + speculative read + cache-timing leak of your own buffer; lfence/masking fix kills leak; where the CPU security boundary really is. See `16-own-spectre-poc`.
 **Exit:** re-derive Vermin from scratch
 
 ## Phase 6 · Sandbox escape (W34–39, parallel with Phases 5/7)
@@ -274,6 +275,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W20 (stretch): toy zk-SNARK — R1CS → QAP → KZG commitment → pairing check; prove one statement, reject tampered proofs. See `10-toy-zk-snark`.
 - W20 (stretch): own E2EE messaging — X3DH prekey bundles + Double Ratchet (forward secrecy, post-compromise recovery), two local peers; compromise simulation + tamper/replay rejection. See `11-own-e2ee-messaging`.
 - W20 (stretch): own password manager — XChaCha20-Poly1305 vault, Argon2id master-key derivation (memory-hard, from 20-08), zeroization + clipboard auto-clear; offline-attack lab vs own 20-08 GPU kernels. See `12-own-password-manager`.
+- W20 (stretch): own cache side-channel lab — Flush+Reload / Prime+Probe vs your own non-constant-time compare + AES S-box; recover secret, then constant-time fix flattens timing. See `13-own-cache-side-channel`.
 - **Exit:** **M21** — weak scheme broken end-to-end
 
 ## Phase 21 · Detection engineering + DFIR — Track M (W30–36, parallel)
@@ -378,7 +380,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17, own WireGuard-lite 18, own DNS resolver 19, own packet sniffer/crafter 20, own BGP speaker 21, own onion router 22, own QUIC-lite 23, own NAT/router 24, own compression 25, own LSM-tree 26, own PNG decoder 27, own quantum simulator 28, own Kademlia DHT 29, own sampling profiler 30, own bootloader 31, own NTFS parser 32, own APFS parser 33, own mail server 34, own JPEG decoder 35, own BitTorrent client 36, own chess engine 37, own text editor 38, own package manager 39, own audio synth 40, own search engine 41, own key-value cache 42, systems gauntlet 43). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14, own filesystem 15, own memory allocator 16, own HTTP server 17, own WireGuard-lite 18, own DNS resolver 19, own packet sniffer/crafter 20, own BGP speaker 21, own onion router 22, own QUIC-lite 23, own NAT/router 24, own compression 25, own LSM-tree 26, own PNG decoder 27, own quantum simulator 28, own Kademlia DHT 29, own sampling profiler 30, own bootloader 31, own NTFS parser 32, own APFS parser 33, own mail server 34, own JPEG decoder 35, own BitTorrent client 36, own chess engine 37, own text editor 38, own package manager 39, own audio synth 40, own search engine 41, own key-value cache 42, systems gauntlet 43, own TPM lab 44). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
