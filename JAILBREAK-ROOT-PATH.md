@@ -66,7 +66,7 @@ Prereq: R2. Finish: `16-05` rooting/bootloader/TrustZone + `16-07` OP-TEE lab (t
 **Gate artifact:** `labs/boot-chain.md` — your device's unlock→boot→TEE chain; what root kits must bypass, which part is open (vendor unlock) vs closed (SLA). → unlocks R4.
 
 ### R4 — assemble YOUR root
-Prereq: R3. Finish: `16-06` capstone root-chain study + `24-118` io_uring (kernel-API literacy) + `24-119` ETW (telemetry reverse view).
+Prereq: R3 (absolute beginner? complete [`ANDROID-SECURITY-COURSE.md`](../ANDROID-SECURITY-COURSE.md) D0–D12 first — it feeds straight in here). Finish: `16-06` capstone root-chain study + `24-118` io_uring (kernel-API literacy) + `24-119` ETW (telemetry reverse view).
 **Gate artifact:** on your own device: root achieved via your own assembled chain (KernelSU-style init or re-derived vendor-gap), `labs/my-root.md` with adb evidence. → unlocks R5.
 
 ### R5 — detection round-trip

@@ -3,6 +3,7 @@
 All advice in one place. Applied items marked ✅, open items have a "when" trigger.
 
 ## Applied (Aug 2026)
+- ✅ **ANDROID-SECURITY-COURSE.md added**: zero-knowledge gated course D0–D12 (hello APK→signing→APK/DEX smali tamper→Zygote/uid→Binder→sandbox/SELinux→NDK crash→first controlled crash→canary/ASLR bypass→Linux-kernel connect→AVB/dm-verity boot chain→own root-primitive re-creation→closed-notes capstone), emulator-first, verification+quiz gates; feeds JAILBREAK-ROOT-PATH Lane B R4.
 - ✅ **APPLE-SECURITY-COURSE.md added**: zero-knowledge gated course A0–A12 (hello→signature→Mach-O→syscall→sandbox→first controlled crash→canary bypass→xv6/XNU kernel-connect→kernelcache→jailbreak-era map→own KFD-class re-creation→closed-notes capstone), verification+lesson-check gates; feeds JAILBREAK-ROOT-PATH Lane A L4.
 - ✅ **GPU-BEGINNER-COURSE.md upgraded**: per-unit written lesson checks (own-words quiz gates before advancing), verification-first structure, + new U11 closed-notes capstone (emulator shader pack / compute library / graphics toy) — GPU-PATH S4 entry locked behind capstone pass.
 - ✅ **GPU-BEGINNER-COURSE.md added**: zero-knowledge course U0–U10 — Metal mental model, full runnable first kernel (U1), thread/coalescing/shared-memory lessons with benchmark homework, triangle+textures, **emulator scanline/CRT shader milestone (U7)**, profiler discipline, matrix-multiply (LLM-forerunner), then entry into GPU-PATH S4.
