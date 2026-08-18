@@ -109,6 +109,7 @@ Easy→hard; skill = re-derive writeups with POC closed.
 Sources: xairy/linux-kernel-exploitation, pwn.college kernel pwn, ctf-wiki.org, chuj.blog
 Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges before each CVE step, Medium during, re-derive rule. See `10-kernel-exploit-dojo` step.
 Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ harness, crash triage (minimize/dedupe/root-cause), **syzkaller on XNU promoted up from Phase 9 optional into this step**. See `05-11`.
+- W26–30 (parallel, stretch): build your own coverage-guided fuzzer — forkserver + shared-memory coverage bitmap + mutator/queue; rediscover a bug libFuzzer found in 05-11 with your own engine. See `12-own-coverage-fuzzer`.
 **Exit:** re-derive Vermin from scratch
 
 ## Phase 6 · Sandbox escape (W34–39, parallel with Phases 5/7)
@@ -171,6 +172,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W28–30: advanced in-memory + evasion (Sektor7-class) — reflective PE/DLL + COFF loaders, 32/64-bit migration, hidden storage, exception-driven control flow, custom RPC-like tasking, userland process hiding
 - W30 (stretch): anti-forensics — timestomping ($MFT SI vs FN), ShimCache/Amcache/Prefetch/SRUM shimming, event-log gaps, browser history laundering; before/after artifact comparison; the disk mirror of Track M 04. See `08-anti-forensics`.
 - W30 (stretch): build a mini-loader — PE parse → map → imports → relocations → entry; reflective variant into a live process; ELF second pass. The 12-07 primitive from scratch. See `09-mini-loader`.
+- W30 (stretch): build your own packer — encrypt sections, assembly stub decryptor, new entry; entropy measurement + low-entropy mode; detection round-trip against your own 12-03 checks (own VM). See `10-own-packer`.
 - **Exit:** **M13** — implant passes its own Sigma rules end-to-end
 
 ## Phase 13 · USB security — Track F (W24–32, parallel)
@@ -276,6 +278,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W36+ (stretch): embedded firmware exploitation — extract router-class firmware (binwalk/squashfs), QEMU-emulate, ROP chain on ARM32/MIPS (no ASLR/NX); own hardware only. See `09-embedded-firmware-exploitation`.
 - W36+ (stretch): embedded signals — mic → analog front-end → I²S ADC → FFT/band-pass DSP → log on ESP32; optical laser-pickup stretch (transimpedance amp + demodulate). The analog/DSP layer the plan lacked. See `10-embedded-signals-dsp`.
 - W36+ (stretch): DIY radio gadgets — sub-GHz keyfob replay (CC1101), RFID/NFC cloner (PN532, crypto-1 reverse), ultrasonic covert channel (2×ESP32, FFT decode). New radio domains; pairs 22-10 + Track L. See `11-diy-radio-gadgets`.
+- W36+ (stretch): DIY CAN bus injector — ESP32 + CAN transceiver, sniff own car (parked), ID map, replay/inject verified frames; why CAN has no sender auth. Own vehicle only. See `12-can-bus-injection`.
 - **Exit:** **M23** — plugandpwn/O.MG-class device works end-to-end; stretch: fabricated inline PCB
 
 ---

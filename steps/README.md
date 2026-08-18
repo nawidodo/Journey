@@ -22,14 +22,14 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn CPU emulation 09, stretch) | 6–18 | B |
 | `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms (+ network recon 07, parallel) | 10–14 | A |
 | `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security (+ Rust, 08) | 14–20 | A |
-| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology (11 steps) | 20–30 | A |
+| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology + own coverage-guided fuzzer (12, stretch) | 20–30 | A |
 | `06-Sandbox-Escape` | seccomp → container escapes → Seatbelt → VM escapes + own hypervisor (stretch) + seccomp sandbox builder (10, stretch) | 34–39 | A |
 | `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
 | `08-Browser-Exploitation` | JS engines → d8 CVE → JSC/WebKit (04, optional) | 47+ | A |
 | `09-Real-World-Chains` | ForcedEntry, Pegasus, Pwn2Own | capstone | A |
 | `10-GPU-Compute` | concepts → CPU SIMD → Metal compute → memory → software renderer → Metal graphics → shaders (MSL/GLSL/HLSL) → textures → async → profiling → Vulkan/DX12 → capstone | 12–28 | C |
 | `11-Windows-Kernel` | userland exploit dev → internals/WinDbg → HEVD → pool/token → real CVEs → mitigations → capstone | 29–44 | D |
-| `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) → anti-forensics 08 + mini-loader 09 (stretch) | 18–30 | E |
+| `12-Malware-Dev` | PE/APIs → injection → evasion → C2 → detection → capstone → advanced in-memory (Sektor7-class) → anti-forensics 08 + mini-loader 09 + own packer 10 (stretch) | 18–30 | E |
 | `13-USB-Security` | protocol/stack → Linux driver → attack surface → fuzzing/emulation → iOS/Windows links → capstone | 24–32 | F |
 | `14-Cross-OS-Driver-Dev` | Linux craft → MMIO/DMA/IRQ → Windows KMDF → macOS dext → cross-OS fuzzing → real USB device + userspace driver + app → gamepad turbo (attach to existing controller, all OSes) → capstone | 28–41 | G |
 | `15-Reverse-Engineering` | Ghidra → kernelcache → crackmes/Flare-On → patch-diff → crash triage (+ symbolic execution 06 + mini-debugger 07 + mini-disassembler 08, stretch) | 16–20 | — |
@@ -39,7 +39,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
 | `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone | 14–20 | L |
 | `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone (+ own mini-EDR 06, M29; + network detection 07 + honeypots 08, stretch) | 30–36 | M |
-| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone (+ embedded firmware exploitation 09 + embedded signals 10 + DIY radio gadgets 11, stretch) | 28–36 | N |
+| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone (+ embedded firmware exploitation 09 + embedded signals 10 + DIY radio gadgets 11 + CAN bus injector 12, stretch) | 28–36 | N |
 | `23-Career` | writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone | post-M23 | O |
 | `24-Make-Your-Own` | own OS → own DB → own git → own shell → own TCP/IP → own regex → own assembler → micro-transformer (security-relevant from-scratch reinforcement) | W46+ opt | P |
 | `25-Privilege-Escalation` | privesc tool internals, all OSes — boundary model → linpeas/pspy → SUID/caps/sudo → mimikatz → potato family → WinPEAS/PowerUp → BloodHound/AD → macOS TCC → mobile root (Magisk/jailbreak) → capstone triage tool + re-derive | W20+ parallel | Q |
