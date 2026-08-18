@@ -83,3 +83,5 @@ Prereq: VP0–VP11. **Close all notes.** Cold rebuild the core (tun setup + fram
 
 ## Where this lives
 Feeds from 20-crypto steps (07 own-TLS, 11 e2ee, 13 side-channel awareness), 24-20 sniffer, and your PROXY-MITM course (the decrypting twin: a proxy TEARS TLS apart, a VPN BUILDS it — same bytes, opposite directions; knowing both sides is the point). AUTH-TOOLING's Kerberos/SSL work is the same discipline one protocol higher.
+
+All-OS pipe course — same protocol, five tunnel interfaces (wintun/utun/tun/VpnService/NE): [`VPN-ALLOS-COURSE.md`](VPN-ALLOS-COURSE.md) VA0–VA8.
