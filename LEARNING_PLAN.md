@@ -371,7 +371,7 @@ The radio surface Track F (USB) and Track R (BT) never covered — 802.11 is a b
 | 47+ | Browser → chains | — |
 | post-M23 | — | Career: portfolio/disclosure/interviews (Track O) |
 
-**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
+**Total:** ~18 months focused / ~25 moderate to jailbreak+root literate (+ GPU/Windows/driver/Android/rootkit/hooking/crypto/DFIR tracks). Browser: open-ended. Phase 23 (career) runs after — the plan ends when skills convert, not when the labs do. Make-Your-Own (Phase 24, Track P) is optional W46+ — run only if other tracks are ahead (stretch adds: own C compiler 09, own RISC-V microkernel on your 02-11 emulator 10, own SQLite file format 11, own SSH server 12, own container runtime 13, own terminal emulator 14). Track Q (privesc, W20+) and Track R (BT devices, W36+) are parallel add-ons — defer under the >2-concurrent-tracks rule.
 
 ## Checkpoints
 - [ ] M1: trace xv6 syscall (W9)
