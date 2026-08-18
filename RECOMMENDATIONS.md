@@ -116,11 +116,12 @@ All advice in one place. Applied items marked ✅, open items have a "when" trig
 - Notes rule: if you can't explain it in `notes/` in 5 lines, you haven't finished the step
 
 ## Curriculum audit (Aug 2026)
-**Verdict: coherent, complete, runnable.** 313 steps / 30 phases; every phase has numbered build-up → capstone; all new steps now carry notes/code/labs dirs.
+**Verdict: coherent, complete, runnable.** 321 steps / 30 phases; every phase has numbered build-up → capstone; all new steps now carry notes/code/labs dirs.
 - **Structure strengths**: parallel tracks (A offensive / B kernel-adjacent / C graphics / D Windows / E macOS-GPU / F hardware / G detection / H C6 + P make-your-own); read-then-build alternation (Phases 8–9 now end in own-engine exploit `08-05` + own chain `09-05`, closing the only passive-only corridor); every tool-build step ties to at least one prior lab (pair links in README headers).
-- **Gap closure**: browser phase had 4 steps all consumption — now `08-05` (plant + exploit own UAF) and `09-05` (chain own JS exec → own sandbox escape → xv6 LPE) restore hands-on. Track P grew 43→67 covering networking (scanner/IDS/SOCKS/LB/adblock-DNS), formats (QR/TrueType/AVI/registry/logic), infra (orchestrator/object-store/TSDB/MQ/queue/sync), ML (quantization/spam), crypto-key (HD wallet/TPM), DSP (audio modem), fun (raycaster/chess).
+- **Gap closure**: browser phase had 4 steps all consumption — now `08-05` (plant + exploit own UAF) and `09-05` (chain own JS exec → own sandbox escape → xv6 LPE) restore hands-on. Track P grew 43→75 covering networking (scanner/IDS/SOCKS/LB/adblock-DNS), formats (QR/TrueType/AVI/registry/logic/SVG), infra (orchestrator/object-store/TSDB/MQ/sync/CI/registry), ML (quantization/spam/spreadsheet), crypto-key (HD wallet/TPM/WebAuthn/CA/encrypted-overlay), DSP (audio modem), devtools (terminal multiplexer), fun (raycaster/chess).
+- **Mechanical integrity**: link-audit verifies all Prev/Next chains resolve (1 real defect found+fixed: Spectre `05-16` pointed at `24-30` across phases); all new READMEs carry Obj/Tasks/Resources/Exit-Criteria/Links; original steps use legacy section names (Method/Ladder=Tasks) — compatible, untouched.
 - **Known ceilings (by design, hardware/cloud-gated — do not force)**: SDR/packet-radio, baseband/modem RE, confidential-computing HW, kube on real clusters, real-cloud SIEM ops. Paraphrase: everything cloud-free and own-hardware has a step; everything that needs red infrastructure is sandbox-flagged in RECOMMENDATIONS.
-- **Improvement if returning**: run 3 top-priority steps end-to-end, then tighten step durations from empirical times; re-audit cross-phase Prev/Next chains after any renumber (renumbering is forbidden now — numbers are stable identifiers).
+- **Improvement if returning**: run top-priority steps end-to-end, tighten step durations from empirical times; re-audit Prev/Next chains after any renumber (renumbering is forbidden now — numbers are stable identifiers).
 
 ## Timeline sanity
 - Total ~15–19 months is honest for jailbreak literacy. Browser phase (47+) is open-ended by design — don't schedule a finish date for it.
