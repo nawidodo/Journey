@@ -270,6 +270,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W36 (parallel, **stretch**): fault injection/glitching (`07-fault-injection-glitching`) — voltage/EM glitch basics, one working glitch on owned hardware (chipWhisperer-class or Pico DIY), TEE/firmware bypass theory; the hardware complement to checkm8. Costs money, cut first if budget is tight.
 - W36: capstone — full chain on one device (plug → auto-run → exfil over AP *and* victim net → pivot → UI) + defender round-trip + writeup
 - W36+ (stretch): embedded firmware exploitation — extract router-class firmware (binwalk/squashfs), QEMU-emulate, ROP chain on ARM32/MIPS (no ASLR/NX); own hardware only. See `09-embedded-firmware-exploitation`.
+- W36+ (stretch): embedded signals — mic → analog front-end → I²S ADC → FFT/band-pass DSP → log on ESP32; optical laser-pickup stretch (transimpedance amp + demodulate). The analog/DSP layer the plan lacked. See `10-embedded-signals-dsp`.
 - **Exit:** **M23** — plugandpwn/O.MG-class device works end-to-end; stretch: fabricated inline PCB
 
 ---
