@@ -83,3 +83,5 @@ Prereq: V0–V11. **Close all notes.** Re-create: the edu driver working on Linu
 
 ## Where this lives
 `steps/` unchanged (route: 04-03/04, 14-01..08). The kernel-exploit courses (K7/K8, N7/N8) and this course are two sides of one coin: yours is the build side; they are the break side — finish both and you own the whole seam.
+
+Network NIC variant — the same driver lab, rings+DMA+NAPI+offloads on QEMU virtio-net: [`NETWORK-DRIVER-COURSE.md`](NETWORK-DRIVER-COURSE.md) ND0–ND12.
