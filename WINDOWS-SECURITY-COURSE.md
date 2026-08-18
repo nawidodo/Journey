@@ -1,6 +1,7 @@
 # Windows Security — Absolute-Beginner Course (hello → kernel exploit → Active Directory, gated)
 
 Same Windows VM lab but malware/C2-focused twin course: [`WINDOWS-MALWARE-COURSE.md`](WINDOWS-MALWARE-COURSE.md).
+Research side — write your OWN Mimikatz/Impacket-class tools instead of running them: [`AUTH-TOOLING-COURSE.md`](AUTH-TOOLING-COURSE.md).
 
 Zero Windows-security knowledge assumed. You need: a host with 16+ GB RAM and two VMs — one Windows 10/11 eval (free from Microsoft, iso) and one Windows Server eval (for the Active Directory units); UTM/QEMU/Parallels all work. No GPU needed. Each unit: concept → do → runnable verification → **lesson check (own words, `notes/nN-quiz.md`)**. No advance without both. ~2h/unit, 12 lessons + capstone ≈ 5–6 weeks. When done you enter [`DESKTOP-OFFENSIVE-PATH.md`](DESKTOP-OFFENSIVE-PATH.md) at W5 with the HEVD ladder pre-warmed.
 
