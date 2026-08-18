@@ -263,6 +263,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W18–19: OS crypto stores — Keychain/Data Protection/SEP, Android Keystore/StrongBox, DPAPI/BitLocker, LUKS/TPM — the "where keys live" map Phase 7/Track D/H consume
 - W19–20: capstone — build a deliberately-weak multi-layer scheme, break it end-to-end, re-design it properly
 - W20 (stretch): build a mini-TLS — record layer (AEAD vs MAC-then-encrypt), TLS 1.3 handshake (ECDHE, cert verify, transcript hash), interop vs `openssl s_client` both directions + tamper test. See `07-own-tls`.
+- W20+ (stretch, pairs 10-14): GPU password cracker — PBKDF2 + bcrypt kernels in CUDA (Colab T4) + Metal; benchmark vs hashcat, why bcrypt is GPU-hostile by design. See `08-gpu-password-cracker`.
 - **Exit:** **M21** — weak scheme broken end-to-end
 
 ## Phase 21 · Detection engineering + DFIR — Track M (W30–36, parallel)

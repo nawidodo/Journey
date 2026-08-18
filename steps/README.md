@@ -37,8 +37,8 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `17-Android-Malware-Dev` | APK/dex/smali → implant → C2/evasion → fraud → detection → capstone | 40–48 | I |
 | `18-Rootkit-Bootkit` | principles → Linux LKM/eBPF → Windows rootkit → UEFI bootkit → macOS → mobile → capstone | 44–56 | J |
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
-| `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone (+ own mini-TLS 07, stretch) | 14–20 | L |
-| `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone (+ own mini-EDR 06, M29; + network detection 07 + honeypots 08, stretch) | 30–36 | M |
+| `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone (+ own mini-TLS 07 + GPU password cracker 08, stretch) | 14–20 | L |
+| `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone (+ own mini-EDR 06, M29; + network detection 07 + honeypots 08 + YARA engine 09 + memory scanner 10, stretch) | 30–36 | M |
 | `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone (+ embedded firmware exploitation 09 + embedded signals 10 + DIY radio gadgets 11 + CAN bus injector 12, stretch) | 28–36 | N |
 | `23-Career` | writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone | post-M23 | O |
 | `24-Make-Your-Own` | own OS → own DB → own git → own shell → own TCP/IP → own regex → own assembler → micro-transformer (+ own C compiler 09 + own RISC-V microkernel on your 02-11 emulator 10, stretch; security-relevant from-scratch reinforcement) | W46+ opt | P |
