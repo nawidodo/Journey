@@ -75,6 +75,7 @@ CHIP-8 CLI → NES core (6502 + PPU + APU + mappers) → Metal renderer → iOS 
 - W18+ (stretch): PS1 emulator — MIPS R3000 (delay slots, coprocessors), GTE geometry unit, GPU; the MIPS half pairs 22-09 MIPS firmware RE (write the cross-note). See `14-ps1-emulator`.
 - W18+ (stretch): PSP emulator — Allegrex (MIPS R4000-family, extends the 02-14 core), VFPU vector unit, Media Engine dual-core, closed-doc RE (leaked SDK vs GBATEK era). The single-person ceiling; PS2/PS3+ out of scope. See `15-psp-emulator`.
 - W18+ (stretch): emulator shaders — NES/SNES PPU rewritten as Metal compute (bit-identical to CPU PPU on test ROMs) + CRT shader pack (scanlines, aperture grille, phosphor). Emulator×GPU crossover. See `16-emulator-shaders`.
+- W18+ (stretch): own WebAssembly runtime — decoder/validator → stack-machine interpreter → x86-64 JIT, WASI-style host ABI; break your own sandbox (OOB, stack overrun, host-call confusion). Pairs 08 browser track. See `17-wasm-runtime`.
 - W6–10: CHIP-8 CLI in C (CPU/instructions)
 - W8–14: NES core in portable C (CPU, PPU, APU) — OneLoneCoder, gbdev Pan Docs
 - W12–16: macOS app — Swift + SwiftUI shell, **Metal MTKView renderer** (Kodeco *Metal by Tutorials*, WWDC sessions)
@@ -118,6 +119,7 @@ Practice ladder (parallel, W20–30): Kernel-Exploit-Dojo — Easy challenges be
 Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ harness, crash triage (minimize/dedupe/root-cause), **syzkaller on XNU promoted up from Phase 9 optional into this step**. See `05-11`.
 - W26–30 (parallel, stretch): build your own coverage-guided fuzzer — forkserver + shared-memory coverage bitmap + mutator/queue; rediscover a bug libFuzzer found in 05-11 with your own engine. See `12-own-coverage-fuzzer`.
 - W20–30 (parallel, stretch): custom QEMU device model — virtio-class MMIO/IRQ/DMA device, own kernel module driver, DMA round-trip; fuzz the device with your own 05-12 fuzzer (intentionally buggy device, found + minimized). See `13-qemu-device-model`.
+- W20–30 (parallel, stretch): own eBPF tool — CO-RE/BTF tracer (exec/open/connect → BPF ringbuf → userspace) feeding your 21-06 mini-EDR as telemetry source; one C2-beacon exec alert end-to-end. See `14-own-ebpf-tool`.
 **Exit:** re-derive Vermin from scratch
 
 ## Phase 6 · Sandbox escape (W34–39, parallel with Phases 5/7)
@@ -264,6 +266,8 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W19–20: capstone — build a deliberately-weak multi-layer scheme, break it end-to-end, re-design it properly
 - W20 (stretch): build a mini-TLS — record layer (AEAD vs MAC-then-encrypt), TLS 1.3 handshake (ECDHE, cert verify, transcript hash), interop vs `openssl s_client` both directions + tamper test. See `07-own-tls`.
 - W20+ (stretch, pairs 10-14): GPU password cracker — PBKDF2 + bcrypt kernels in CUDA (Colab T4) + Metal; benchmark vs hashcat, why bcrypt is GPU-hostile by design. See `08-gpu-password-cracker`.
+- W20 (stretch): ML-KEM (Kyber) from FIPS 203 — NTT, PKE → KEM (FO transform), pass NIST test vectors, interop openssl; harvest-now-decrypt-later writeup. See `09-ml-kem-kyber`.
+- W20 (stretch): toy zk-SNARK — R1CS → QAP → KZG commitment → pairing check; prove one statement, reject tampered proofs. See `10-toy-zk-snark`.
 - **Exit:** **M21** — weak scheme broken end-to-end
 
 ## Phase 21 · Detection engineering + DFIR — Track M (W30–36, parallel)

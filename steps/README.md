@@ -19,10 +19,10 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 |---|---|---|---|
 | `00-Foundations` | C, memory model, tooling, Swift | 1–3 | A (+B Swift) |
 | `01-xv6-riscv` | MIT 6.S081/6.1810 labs incl. net lab | 4–9 | A |
-| `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn 09 + GBA 10 + RISC-V 11 + SNES 12 + Genesis 13 + PS1 14 + PSP 15 + emulator shaders 16, stretch) | 6–18 | B |
+| `02-Emulator` | CHIP-8 → NES → Metal → iOS app (+ Unicorn 09 + GBA 10 + RISC-V 11 + SNES 12 + Genesis 13 + PS1 14 + PSP 15 + emulator shaders 16 + WASM runtime 17, stretch) | 6–18 | B |
 | `03-Exploitation-Fundamentals` | overflow → ROP → heap → mitigations + practice platforms (+ network recon 07, parallel) | 10–14 | A |
 | `04-Real-Kernels-Linux-XNU` | Linux kernel → XNU → Apple security (+ Rust, 08) | 14–20 | A |
-| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology + own coverage-guided fuzzer 12 + QEMU device model 13 (stretch) | 20–30 | A |
+| `05-Linux-Kernel-Exploitation` | ladder L1→L3 + Dojo practice + fuzzing methodology + own coverage-guided fuzzer 12 + QEMU device model 13 + eBPF tool 14 (stretch) | 20–30 | A |
 | `06-Sandbox-Escape` | seccomp → container escapes → Seatbelt → VM escapes + own hypervisor (stretch) + seccomp sandbox builder (10, stretch) | 34–39 | A |
 | `07-XNU-iOS-Exploitation` | checkm8 → KFD → Dopamine | 35–46 | A |
 | `08-Browser-Exploitation` | JS engines → d8 CVE → JSC/WebKit (04, optional) | 47+ | A |
@@ -37,7 +37,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `17-Android-Malware-Dev` | APK/dex/smali → implant → C2/evasion → fraud → detection → capstone | 40–48 | I |
 | `18-Rootkit-Bootkit` | principles → Linux LKM/eBPF → Windows rootkit → UEFI bootkit → macOS → mobile → capstone | 44–56 | J |
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
-| `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone (+ own mini-TLS 07 + GPU password cracker 08, stretch) | 14–20 | L |
+| `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone (+ own mini-TLS 07 + GPU cracker 08 + ML-KEM 09 + zk-SNARK 10, stretch) | 14–20 | L |
 | `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone (+ own mini-EDR 06, M29; + network detection 07 + honeypots 08 + YARA engine 09 + memory scanner 10, stretch) | 30–36 | M |
 | `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone (+ embedded firmware exploitation 09 + embedded signals 10 + DIY radio gadgets 11 + CAN bus injector 12, stretch) | 28–36 | N |
 | `23-Career` | writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone | post-M23 | O |
