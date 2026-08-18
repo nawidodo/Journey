@@ -83,3 +83,5 @@ Prereq: I0–I11. **Close all notes.** Re-create the core evaluator cold (values
 
 ## Where this lives
 `steps/` unchanged (route: 24-47, 24-09). Sibling map: [`PROGRAMMING-LANGUAGE-COURSE.md`](PROGRAMMING-LANGUAGE-COURSE.md) (whole pipeline by hand, compiler-leaning) and [`LLVM-LANGUAGE-COURSE.md`](LLVM-LANGUAGE-COURSE.md) (native backend) — this course is the *embedded-interpreter* corner: script-into-C, the Lua position. Embed sscript into your [`GAME-ENGINE-COURSE.md`](GAME-ENGINE-COURSE.md) engine at the capstone — one pair of hands writes both the engine and its scripting language. Extend the pair: sscript can also drive your own SQL database — [`DATABASE-COURSE.md`](DATABASE-COURSE.md) Q10 embeds qb behind script calls.
+
+The exploit twin of everything you built: your sscript/engine becomes the BE-course lab — [`BROWSER-EXPLOIT-COURSE.md`](BROWSER-EXPLOIT-COURSE.md) BE0–BE12 plants and exploits engine bugs (OOB/type-confusion/GC-UAF) in what you wrote.
