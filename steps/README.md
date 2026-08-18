@@ -39,7 +39,7 @@ Every step's `## Links` section holds the concrete URLs (docs, repos, blogs, pra
 | `19-Runtime-Hooking` | fundamentals → own Windows/Linux/macOS/iOS/Android hooks → capstone engine | 20–32 | K |
 | `20-Cryptography` | symmetric/modes → RSA/ECC → hashes/MACs/side-channels → TLS → OS crypto stores → capstone | 14–20 | L |
 | `21-Detection-DFIR` | memory forensics → log analysis/hunting → Sigma/YARA → disk artifacts → IR capstone (+ own mini-EDR 06, M29; + network detection 07 + honeypots 08, stretch) | 30–36 | M |
-| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone (+ embedded firmware exploitation 09 + embedded signals 10, stretch) | 28–36 | N |
+| `22-Embedded-USB` | USB device firmware + HID → DuckyScript engine → ESP32 WiFi C2 → stealth/hardware → network-adapter pivot → advanced firmware (composite/OTA/self-destruct) → fault injection (07, stretch) → plugandpwn-class capstone (+ embedded firmware exploitation 09 + embedded signals 10 + DIY radio gadgets 11, stretch) | 28–36 | N |
 | `23-Career` | writeups/portfolio → resume/interview → coordinated disclosure → career-launch capstone | post-M23 | O |
 | `24-Make-Your-Own` | own OS → own DB → own git → own shell → own TCP/IP → own regex → own assembler → micro-transformer (security-relevant from-scratch reinforcement) | W46+ opt | P |
 | `25-Privilege-Escalation` | privesc tool internals, all OSes — boundary model → linpeas/pspy → SUID/caps/sudo → mimikatz → potato family → WinPEAS/PowerUp → BloodHound/AD → macOS TCC → mobile root (Magisk/jailbreak) → capstone triage tool + re-derive | W20+ parallel | Q |

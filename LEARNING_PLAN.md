@@ -271,6 +271,7 @@ Fuzzing method (parallel, W26–30): general VR discipline — libFuzzer/AFL++ h
 - W36: capstone — full chain on one device (plug → auto-run → exfil over AP *and* victim net → pivot → UI) + defender round-trip + writeup
 - W36+ (stretch): embedded firmware exploitation — extract router-class firmware (binwalk/squashfs), QEMU-emulate, ROP chain on ARM32/MIPS (no ASLR/NX); own hardware only. See `09-embedded-firmware-exploitation`.
 - W36+ (stretch): embedded signals — mic → analog front-end → I²S ADC → FFT/band-pass DSP → log on ESP32; optical laser-pickup stretch (transimpedance amp + demodulate). The analog/DSP layer the plan lacked. See `10-embedded-signals-dsp`.
+- W36+ (stretch): DIY radio gadgets — sub-GHz keyfob replay (CC1101), RFID/NFC cloner (PN532, crypto-1 reverse), ultrasonic covert channel (2×ESP32, FFT decode). New radio domains; pairs 22-10 + Track L. See `11-diy-radio-gadgets`.
 - **Exit:** **M23** — plugandpwn/O.MG-class device works end-to-end; stretch: fabricated inline PCB
 
 ---
