@@ -1,6 +1,6 @@
 # GPU Programming Path — Metal → Vulkan → DX12, parallel compute → shaders → LLM inference
 
-Absolute beginner? Start with the hands-on course first: [`GPU-BEGINNER-COURSE.md`](GPU-BEGINNER-COURSE.md) (U0–U10, each unit runnable, lands with a shader inside your emulator). This path takes over from gate S4.
+Absolute beginner? Start with the hands-on course first: [`GPU-BEGINNER-COURSE.md`](GPU-BEGINNER-COURSE.md) (U0–U11: per-unit runnable verification + written lesson-check gates, ends with a closed-notes capstone, entry to GPU-PATH S4). This path takes over from gate S4.
 
 Goal: own GPU programming on every major API, ordered easiest-first (Metal on your Mac → Vulkan via MoltenVK on the same GPU → DX12 as reading), applied to three real goals: **parallel processing, emulator shaders, LLM compute**. Same contract: gate unlocks next only when runnable artifact exists; no skip; own hardware.
 

@@ -3,6 +3,7 @@
 All advice in one place. Applied items marked ✅, open items have a "when" trigger.
 
 ## Applied (Aug 2026)
+- ✅ **GPU-BEGINNER-COURSE.md upgraded**: per-unit written lesson checks (own-words quiz gates before advancing), verification-first structure, + new U11 closed-notes capstone (emulator shader pack / compute library / graphics toy) — GPU-PATH S4 entry locked behind capstone pass.
 - ✅ **GPU-BEGINNER-COURSE.md added**: zero-knowledge course U0–U10 — Metal mental model, full runnable first kernel (U1), thread/coalescing/shared-memory lessons with benchmark homework, triangle+textures, **emulator scanline/CRT shader milestone (U7)**, profiler discipline, matrix-multiply (LLM-forerunner), then entry into GPU-PATH S4.
 - ✅ **GPU-PATH.md added**: gated S1..S8 GPU lane, easiest-first Metal → Vulkan(MoltenVK) → DX12(reading) — arch/SIMD/software-render baseline → Metal compute → emulator shaders (ties into your NES/PS1 cores) → profiling discipline → Vulkan port → DX12 study-note ceiling → LLM/ML compute (Metal MNIST + int8 quantization; CUDA-T4 stays reading per repo rule) → close-notes capstone (path tracer / Metal inference / FFT).
 - ✅ **EMULATOR-VM-PATH.md added**: gated E1..E7 machine-building lane — CHIP-8 → NES (6502/PPU/APU/mappers) → GBA/SNES second CPU → **PS1 (MIPS/GTE/raster/GPU/SPU)** → RISC-V + hypervisor/unikernel VM layer → Unicorn/WASM-JIT/gdb-stub/profiler tooling → close-notes capstone (boot + tests + frame rate + one extension); rest-week fun cores (Game Boy/Atari 2600).
